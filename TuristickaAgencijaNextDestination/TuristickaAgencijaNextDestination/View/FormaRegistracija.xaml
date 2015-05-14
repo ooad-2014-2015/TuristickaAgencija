@@ -2,9 +2,6 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Next Destination - Sign up" Height="366.971" Width="644.179">
-    <Window.Background>
-        <ImageBrush ImageSource="C:\Users\Lejla\Documents\Lejla\Fakultet\4. semestar\OOAD\Projekat\TuristickaAgencijaNextDestination\TuristickaAgencijaNextDestination\Slika3.jpg"/>
-    </Window.Background>
     <Grid>
         <Label x:Name="lblIme" Content="Ime" HorizontalAlignment="Left" Margin="317,38,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblPrezime" Content="Prezime" HorizontalAlignment="Left" Margin="295,64,0,0" VerticalAlignment="Top"/>
