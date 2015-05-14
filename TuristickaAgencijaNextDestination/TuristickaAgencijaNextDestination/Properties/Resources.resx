@@ -121,4 +121,16 @@
   <data name="ikona" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ikona.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Slika1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Slika1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Slika2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Slika2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Slika3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Slika3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Slika5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Slika5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
