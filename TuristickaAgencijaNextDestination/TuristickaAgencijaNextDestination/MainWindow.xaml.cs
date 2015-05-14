@@ -23,6 +23,24 @@ namespace TuristickaAgencijaNextDestination
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen; // postavila sam na centar ekrana da se pojavljuje(Lejla)
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            FormaPrijava prijava = new FormaPrijava();
+            prijava.ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+            FormaRegistracija registracija = new FormaRegistracija();
+            registracija.ShowDialog();
         }
     }
 }
