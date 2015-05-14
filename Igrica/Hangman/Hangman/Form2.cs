@@ -37,6 +37,10 @@ namespace Hangman
             level = _level;
             field = _field;
 
+            if (field == "Cities")
+                label3.Visible = true;
+            else label4.Visible = true;
+
             easyCities.Add("RIM");
             easyCities.Add("OSLO");
             easyCities.Add("RIGA");
