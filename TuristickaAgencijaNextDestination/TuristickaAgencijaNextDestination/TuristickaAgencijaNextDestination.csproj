@@ -54,6 +54,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\iRacun.cs" />
+    <Compile Include="Model\NalogPutovanja.cs" />
+    <Compile Include="Model\Putovanje.cs" />
+    <Compile Include="View\FormaBrisanjeNaloga.xaml.cs">
+      <DependentUpon>FormaBrisanjeNaloga.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormaPlacanje.xaml.cs">
+      <DependentUpon>FormaPlacanje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormaPredlozenaPutovanja.xaml.cs">
+      <DependentUpon>FormaPredlozenaPutovanja.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FormaPrijava.xaml.cs">
       <DependentUpon>FormaPrijava.xaml</DependentUpon>
     </Compile>
@@ -63,6 +75,18 @@
     <Compile Include="Model\Klijent.cs" />
     <Compile Include="Model\KorisnickiNalog.cs" />
     <Compile Include="Model\TuristickiAgent.cs" />
+    <Page Include="View\FormaBrisanjeNaloga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormaPlacanje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormaPredlozenaPutovanja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\FormaPrijava.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
