@@ -23,12 +23,6 @@ namespace TuristickaAgencijaNextDestination
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
-            lblIme.Foreground = new SolidColorBrush(Colors.White);
-            lblPrezime.Foreground = new SolidColorBrush(Colors.White);
-            lblEmail.Foreground = new SolidColorBrush(Colors.White);
-            lblUsername.Foreground = new SolidColorBrush(Colors.White);
-            lblPassword.Foreground = new SolidColorBrush(Colors.White);
-            lblStatus.Foreground = new SolidColorBrush(Colors.White);
         }
     }
 }
