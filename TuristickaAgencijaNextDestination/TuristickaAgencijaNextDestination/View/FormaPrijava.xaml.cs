@@ -28,7 +28,7 @@ namespace TuristickaAgencijaNextDestination
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string userName = txbUsername.Text;
-            string password = txbPassword.Text;
+            string password = txbPassword.Password.ToString();
             bool pronasao = false;
             for (int i = 0; i < KorisnickiNalog.listaKNaloga.Count; i++)
             {
@@ -45,7 +45,7 @@ namespace TuristickaAgencijaNextDestination
             {
                 MessageBox.Show("Korisnicki nalog sa ovim podacima nije registrovan.", "Poruka");
                 txbUsername.Text = "";
-                txbPassword.Text = "";
+                txbPassword.Password = "";
             }
         }
     }
