@@ -24,6 +24,8 @@ namespace TuristickaAgencijaNextDestination
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen; // postavila sam na centar ekrana da se pojavljuje(Lejla)
+            Klijent admin = new Klijent(0, "Admin", "Admin", "", 000, StatusKlijenta.ostalo);
+            KorisnickiNalog.listaKNaloga.Add(new KorisnickiNalog(0, admin, "admin", "admin"));
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -34,14 +36,13 @@ namespace TuristickaAgencijaNextDestination
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
-            FormaPergledPutovanja pregled = new FormaPergledPutovanja();
-            pregled.Show();
-            //Close();
+            //FormaPergledPutovanja pregled = new FormaPergledPutovanja();
+            //pregled.Show();
+            Close();
         }
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
-           
             FormaRegistracija registracija = new FormaRegistracija();
             registracija.ShowDialog();
         }

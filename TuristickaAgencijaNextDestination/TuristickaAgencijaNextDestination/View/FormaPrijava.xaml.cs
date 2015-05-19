@@ -24,5 +24,29 @@ namespace TuristickaAgencijaNextDestination
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            string userName = txbUsername.Text;
+            string password = txbPassword.Text;
+            bool pronasao = false;
+            for (int i = 0; i < KorisnickiNalog.listaKNaloga.Count; i++)
+            {
+                if (KorisnickiNalog.listaKNaloga[i].username == userName &&
+                    KorisnickiNalog.listaKNaloga[i].password == password)
+                {
+                    Close();
+                    FormaPergledPutovanja pregled = new FormaPergledPutovanja();
+                    pregled.Show();
+                    pronasao = true;
+                }
+            }
+            if (!pronasao)
+            {
+                MessageBox.Show("Korisnicki nalog sa ovim podacima nije registrovan.", "Poruka");
+                txbUsername.Text = "";
+                txbPassword.Text = "";
+            }
+        }
     }
 }

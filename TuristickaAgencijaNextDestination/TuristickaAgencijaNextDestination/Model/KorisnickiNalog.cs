@@ -16,15 +16,19 @@ namespace TuristickaAgencijaNextDestination
 
         public String password { get; set; }
 
+        public static List<KorisnickiNalog> listaKNaloga = new List<KorisnickiNalog>();
+
         public KorisnickiNalog()
         {
-
+            
         }
 
-        public KorisnickiNalog(int _id, Klijent _vlasnik)
+        public KorisnickiNalog(int _id, Klijent _vlasnik, string _userName, string _password)
         {
             id = _id;
             vlasnikNaloga = _vlasnik;
+            username = _userName;
+            password = _password;
         }
 
         public void ispisKorisnickogNaloga()
@@ -35,8 +39,9 @@ namespace TuristickaAgencijaNextDestination
         public KorisnickiNalog unosKorisnickogNAloga()
         {
             KorisnickiNalog kn;
-            kn = new KorisnickiNalog(id, vlasnikNaloga);
+            kn = new KorisnickiNalog(id, vlasnikNaloga, username, password);
             return kn;
         }
+
     }
 }

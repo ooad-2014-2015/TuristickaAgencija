@@ -14,12 +14,16 @@
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="352,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="23" Margin="352,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="352,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cmbStatus" HorizontalAlignment="Left" Margin="352,188,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox x:Name="cmbStatus" HorizontalAlignment="Left" Margin="352,192,0,0" VerticalAlignment="Top" Width="120">
             <ListBoxItem Content="Student"/>
             <ListBoxItem Content="Penzioner"/>
             <ListBoxItem Content="Ostalo"/>
         </ComboBox>
-        <Button x:Name="btnSignUp" Content="SignUp" HorizontalAlignment="Left" Margin="352,232,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.504,0.008"/>
+        <Button x:Name="btnSignUp" Content="SignUp" HorizontalAlignment="Left" Margin="352,257,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.504,0.008" Click="btnSignUp_Click" ForceCursor="True">
+        </Button>
+        <Label x:Name="lblBrojKreditneKartice" Content="Broj kreditne kartice" HorizontalAlignment="Left" Margin="231,219,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBrojKreditneKartice" HorizontalAlignment="Left" Height="23" Margin="352,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120">
+        </TextBox>
 
     </Grid>
 </Window>
