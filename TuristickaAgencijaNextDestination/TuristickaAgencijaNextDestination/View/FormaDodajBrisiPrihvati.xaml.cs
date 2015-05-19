@@ -15,18 +15,24 @@ using System.Windows.Shapes;
 namespace TuristickaAgencijaNextDestination.View
 {
     /// <summary>
-    /// Interaction logic for FormaPlacanje.xaml
+    /// Interaction logic for FormaDodajBrisiPrihvati.xaml
     /// </summary>
-    public partial class FormaPlacanje : Window
+    public partial class FormaDodajBrisiPrihvati : Window
     {
-        public FormaPlacanje()
+        public FormaDodajBrisiPrihvati()
         {
             InitializeComponent();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            FormaZaDodavanjePutovanja forma2 = new FormaZaDodavanjePutovanja();
+            forma2.Show();
+        }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

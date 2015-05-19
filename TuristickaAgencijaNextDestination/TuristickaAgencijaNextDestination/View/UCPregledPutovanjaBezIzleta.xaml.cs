@@ -10,23 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace TuristickaAgencijaNextDestination.View
 {
     /// <summary>
-    /// Interaction logic for FormaPlacanje.xaml
+    /// Interaction logic for UCPregledPutovanjaBezIzleta.xaml
     /// </summary>
-    public partial class FormaPlacanje : Window
+    public partial class UCPregledPutovanjaBezIzleta : UserControl
     {
-        public FormaPlacanje()
+        public UCPregledPutovanjaBezIzleta()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
+            TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.DodajPutovanjeBezIzleta();
+            gridPregledPutovanjaBezIzleta.ItemsSource = null;
+            gridPregledPutovanjaBezIzleta.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta;
         }
     }
 }

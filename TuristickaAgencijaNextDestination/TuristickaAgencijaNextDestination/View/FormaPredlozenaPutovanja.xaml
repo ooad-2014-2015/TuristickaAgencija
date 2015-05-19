@@ -17,7 +17,7 @@
         <DatePicker x:Name="datumDolaskaPredlozenog" HorizontalAlignment="Left" Margin="157,103,0,0" VerticalAlignment="Top" Width="282"/>
         <ComboBox HorizontalAlignment="Left" Margin="157,196,0,0" VerticalAlignment="Top" Width="282"/>
         <ComboBox HorizontalAlignment="Left" Margin="157,223,0,0" VerticalAlignment="Top" Width="282"/>
-        <Button x:Name="dodavanjePredlozenog" Content="DodajPutovanje" HorizontalAlignment="Left" Margin="351,330,0,0" VerticalAlignment="Top" Width="99"/>
+        <Button x:Name="dodavanjePredlozenog" Content="DodajPutovanje" HorizontalAlignment="Left" Margin="351,330,0,0" VerticalAlignment="Top" Width="99" RenderTransformOrigin="-0.254,-0.089"/>
         <GroupBox Header="BrisanjePredlozenogPutovanja" HorizontalAlignment="Left" Margin="455,10,0,0" VerticalAlignment="Top" Width="405" Height="315"/>
         <RichTextBox x:Name="predlozenaPutovanja" HorizontalAlignment="Left" Height="242" Margin="464,40,0,0" VerticalAlignment="Top" Width="387" TextChanged="RichTextBox_TextChanged" FontStyle="Italic">
             <FlowDocument>

@@ -1,0 +1,32 @@
+﻿<Window x:Class="TuristickaAgencijaNextDestination.View.FormaZaDodavanjePutovanja"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FormaPutovanja" Height="347" Width="1024">
+    <Grid Margin="0,0,2,0">
+        <Label Content="Drzava" HorizontalAlignment="Left" Margin="114,42,0,0" VerticalAlignment="Top"/>
+        <Label Content="Datum polaska&#xD;&#xA;" HorizontalAlignment="Left" Margin="71,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="Datum odlaska&#xD;&#xA;" HorizontalAlignment="Left" Margin="71,135,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.5"/>
+        <Label Content="Cijena&#xD;&#xA;" HorizontalAlignment="Left" Margin="118,72,0,0" VerticalAlignment="Top"/>
+        <Label Content="Trajanje putovanja&#xD;&#xA;" HorizontalAlignment="Left" Margin="53,168,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prevozno sredstvo&#xD;&#xA;" HorizontalAlignment="Left" Margin="487,40,0,0" VerticalAlignment="Top"/>
+        <Label Content="Broj mjesta&#xD;&#xA;" HorizontalAlignment="Left" Margin="91,215,0,0" VerticalAlignment="Top"/>
+        <Label Content="Putno osiguranje&#xD;&#xA;" HorizontalAlignment="Left" Margin="494,134,0,0" VerticalAlignment="Top"/>
+        <Label Content="DODAJ PUTOVANJE&#xD;&#xA;" HorizontalAlignment="Left" Margin="35,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDrzava" HorizontalAlignment="Left" Height="23" Margin="165,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCijena" HorizontalAlignment="Left" Height="23" Margin="165,72,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtTrajanjePutovanja" HorizontalAlignment="Left" Height="23" Margin="165,175,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBrojMjesta" HorizontalAlignment="Left" Height="23" Margin="165,215,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <RadioButton x:Name="rbAvion" Content="Avion" HorizontalAlignment="Left" Margin="595,55,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbAutobus" Content="Autobus" HorizontalAlignment="Left" Margin="595,78,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbBrod" Content="Brod" HorizontalAlignment="Left" Margin="595,98,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbASAOsiguranje" Content="ASA Osiguranje" HorizontalAlignment="Left" Margin="595,167,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbSarajevoOsiguranje" Content="Sarajevo Osiguranje" HorizontalAlignment="Left" Margin="595,188,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbTriglavOsiguranje" Content="Triglav Osiguranje" HorizontalAlignment="Left" Margin="595,208,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbSunceOsiguranje" Content="Sunce Osiguranje" HorizontalAlignment="Left" Margin="595,228,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <DatePicker x:Name="dtpDatumPolaska" HorizontalAlignment="Left" Margin="165,100,0,0" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="dtpdatumOdlaska" HorizontalAlignment="Left" Margin="165,135,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSnimiPutovanje" Content="Snimi" HorizontalAlignment="Left" Margin="900,263,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+
+
+    </Grid>
+</Window>

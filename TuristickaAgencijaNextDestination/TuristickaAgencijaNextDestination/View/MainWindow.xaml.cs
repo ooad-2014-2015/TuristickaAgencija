@@ -34,11 +34,14 @@ namespace TuristickaAgencijaNextDestination
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            FormaPergledPutovanja pregled = new FormaPergledPutovanja();
+            pregled.Show();
+            //Close();
         }
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
+           
             FormaRegistracija registracija = new FormaRegistracija();
             registracija.ShowDialog();
         }
