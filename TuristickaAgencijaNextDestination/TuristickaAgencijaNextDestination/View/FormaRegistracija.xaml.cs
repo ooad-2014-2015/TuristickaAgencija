@@ -42,7 +42,7 @@ namespace TuristickaAgencijaNextDestination
             Klijent k = new Klijent(Klijent.listaKlijenata.Count + 1, txtIme.Text, txtPrezime.Text,
                 txtEmail.Text, brojKartice, status);
 
-            KorisnickiNalog.listaKNaloga.Add(new KorisnickiNalog(KorisnickiNalog.listaKNaloga.Count + 1, k, txtUsername.Text, txtPassword.Text));
+            Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Add(new Model.KorisnickiNalogKlijent( Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Count+1, k, txtUsername.Text, txtPassword.Text));
 
             MessageBox.Show("Uspjesna registracija. Dobrodosao/la: " + k.ime, "Poruka");
 

@@ -30,17 +30,45 @@ namespace TuristickaAgencijaNextDestination
             string userName = txbUsername.Text;
             string password = txbPassword.Password.ToString();
             bool pronasao = false;
-            for (int i = 0; i < KorisnickiNalog.listaKNaloga.Count; i++)
+
+            if ((userName == "admin") && (password == "admin"))
             {
-                if (KorisnickiNalog.listaKNaloga[i].username == userName &&
-                    KorisnickiNalog.listaKNaloga[i].password == password)
-                {
                     Close();
-                    FormaPergledPutovanja pregled = new FormaPergledPutovanja();
+                    View.FormaDodajBrisiPrihvati pregled = new View.FormaDodajBrisiPrihvati();
                     pregled.Show();
                     pronasao = true;
+            }
+
+            if (!pronasao)
+            {
+                for (int i = 0; i < Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Count; i++)
+                {
+                    if (Model.KorisnickiNalogKlijent.listaKNalogaKlijenti[i].username == userName &&
+                             Model.KorisnickiNalogKlijent.listaKNalogaKlijenti[i].password == password)
+                    {
+                        Close();
+                        FormaPergledPutovanja pregled = new FormaPergledPutovanja();
+                        pregled.Show();
+                        pronasao = true;
+                    }
                 }
             }
+
+            if (!pronasao)
+            {
+                for (int i = 0; i < Model.KorisnickiNalogTAgent.listaKNalogaTAgent.Count; i++)
+                {
+                    if (Model.KorisnickiNalogTAgent.listaKNalogaTAgent[i].username == userName &&
+                             Model.KorisnickiNalogTAgent.listaKNalogaTAgent[i].password == password)
+                    {
+                        Close();
+                        View.FormaPredlozenaPutovanja pregled = new View.FormaPredlozenaPutovanja();
+                        pregled.Show();
+                        pronasao = true;
+                    }
+                }
+            }
+            
             if (!pronasao)
             {
                 MessageBox.Show("Korisnicki nalog sa ovim podacima nije registrovan.", "Poruka");

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuristickaAgencijaNextDestination
 {
-    class Osoba
+    public class Osoba
     {
         public int id { get; set; }
 
