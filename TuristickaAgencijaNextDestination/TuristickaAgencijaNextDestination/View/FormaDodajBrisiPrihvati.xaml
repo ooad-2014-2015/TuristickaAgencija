@@ -3,9 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="FormaDodajBrisiPrihvati" Height="300" Width="300">
     <Grid>
-        <Button Content="Dodaj putovanje" HorizontalAlignment="Left" Margin="120,100,0,0" VerticalAlignment="Top" Width="130" Click="Button_Click_1"/>
-        <Button Content="Obrisi putovanje" HorizontalAlignment="Left" Margin="120,140,0,0" VerticalAlignment="Top" Width="130" Click="Button_Click_2"/>
-        <Button Content="Odobri putovanje" HorizontalAlignment="Left" Margin="120,180,0,0" VerticalAlignment="Top" Width="130"/>
-
+        <GroupBox Header="Pristup administratora" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="249" Width="272"></GroupBox>
+            <Button HorizontalAlignment="Left" Margin="90,100,0,0" VerticalAlignment="Top" Width="160">Dodaj putovanje sa izletom</Button>
+            <Button HorizontalAlignment="Left" Margin="90,140,0,0" VerticalAlignment="Top" Width="160">Obrisi putovanje</Button>
+            <Button HorizontalAlignment="Left" Margin="90,180,0,0" VerticalAlignment="Top" Width="160">Odobri putovanje</Button>
+            <Button HorizontalAlignment="Left" Margin="90,65,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_3">Dodaj putovanje bez izleta</Button>
+        
     </Grid>
 </Window>

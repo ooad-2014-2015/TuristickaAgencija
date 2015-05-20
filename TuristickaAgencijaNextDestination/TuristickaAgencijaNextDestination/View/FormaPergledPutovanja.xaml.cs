@@ -19,8 +19,8 @@ namespace TuristickaAgencijaNextDestination
     /// </summary>
     public partial class FormaPergledPutovanja : Window
     {
-        TuristickaAgencijaNextDestination.View.UCPregledPutovanja pregled = new TuristickaAgencijaNextDestination.View.UCPregledPutovanja();
-        TuristickaAgencijaNextDestination.View.UCPregledPutovanjaBezIzleta pregled2 = new TuristickaAgencijaNextDestination.View.UCPregledPutovanjaBezIzleta();
+        TuristickaAgencijaNextDestination.View.UCPregledPutovanja pregled;
+        TuristickaAgencijaNextDestination.View.UCPregledPutovanjaBezIzleta pregled2;
         public FormaPergledPutovanja()
         {
             InitializeComponent();

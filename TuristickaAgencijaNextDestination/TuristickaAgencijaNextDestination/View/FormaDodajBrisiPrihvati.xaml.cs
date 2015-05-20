@@ -34,5 +34,11 @@ namespace TuristickaAgencijaNextDestination.View
         {
             
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            TuristickaAgencijaNextDestination.View.FormaZaDodavanjePutovanja frm = new FormaZaDodavanjePutovanja();
+            frm.Show();
+        }
     }
 }
