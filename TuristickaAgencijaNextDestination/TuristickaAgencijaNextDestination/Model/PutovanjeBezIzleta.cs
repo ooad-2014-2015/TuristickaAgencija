@@ -44,5 +44,6 @@ namespace TuristickaAgencijaNextDestination.Model
         {
             listaPutovanjaBezIzleta.RemoveAt(id);
         }
+
     }
 }

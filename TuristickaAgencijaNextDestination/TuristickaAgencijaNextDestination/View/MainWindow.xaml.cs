@@ -60,5 +60,11 @@ namespace TuristickaAgencijaNextDestination
             TuristickaAgencijaNextDestination.View.FormaDodajBrisiPrihvati frmDodajBrisiPrihvati = new View.FormaDodajBrisiPrihvati();
             frmDodajBrisiPrihvati.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            FormaPergledPutovanja frm = new FormaPergledPutovanja();
+            frm.Show();
+        }
     }
 }

@@ -28,33 +28,33 @@ namespace TuristickaAgencijaNextDestination.View
         {
             TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom putovanje1 = new TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom();
             int id = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.DajMiNaredniID();
-            if (rbASAOsiguranje.IsChecked == true)
+            if (cbASAOsiguranje.IsChecked == true)
             {
                 putovanje1.PutnoOsiguranje = TuristickaAgencijaNextDestination.Model.PutnoOsiguranje.ASAOsiguranje;
             }
-            if (rbSarajevoOsiguranje.IsChecked == true)
+            if (cbSarajevoOsiguranje.IsChecked == true)
             {
                 putovanje1.PutnoOsiguranje = TuristickaAgencijaNextDestination.Model.PutnoOsiguranje.SarajevoOsiguranje;
             }
-            if (rbSunceOsiguranje.IsChecked == true)
+            if (cbSunceOsiguranje.IsChecked == true)
             {
                 putovanje1.PutnoOsiguranje = TuristickaAgencijaNextDestination.Model.PutnoOsiguranje.SunceOsiguranje;
             }
-            if (rbTriglavOsiguranje.IsChecked == true)
+            if (cbTriglavOsiguranje.IsChecked == true)
             {
                 putovanje1.PutnoOsiguranje = TuristickaAgencijaNextDestination.Model.PutnoOsiguranje.TriglavOsiguranje;
             }
 
 
-            if (rbAutobus.IsChecked == true)
+            if (cbAutobus.IsChecked == true)
             {
                 putovanje1.PrevoznoSredstvo = TuristickaAgencijaNextDestination.Model.PrevoznoSredstvo.autobus;
             }
-            if (rbAvion.IsChecked == true)
+            if (cbAvion.IsChecked == true)
             {
                 putovanje1.PrevoznoSredstvo = TuristickaAgencijaNextDestination.Model.PrevoznoSredstvo.avion;
             }
-            if (rbBrod.IsChecked == true)
+            if (cbBrod.IsChecked == true)
             {
                 putovanje1.PrevoznoSredstvo = TuristickaAgencijaNextDestination.Model.PrevoznoSredstvo.brod;
             }
@@ -62,6 +62,7 @@ namespace TuristickaAgencijaNextDestination.View
 
             //TuristickaAgencijaNextDestination.Model.PutovanjeSaIzleta putovanja = new TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta();
             TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom putovanja = new Model.PutovanjeSaIzletom();
+            putovanja.Id = id;
             putovanja.Destinacija = txtDrzava.Text;
             putovanja.Izlet = txtIzlet.Text;
             putovanja.Cijena = Convert.ToDouble(txtCijena.Text);
@@ -83,6 +84,18 @@ namespace TuristickaAgencijaNextDestination.View
             txtDrzava.Text = "";
             txtTrajanjePutovanja.Text = "";
             txtIzlet.Text = "";
+            dtpdatumOdlaska.Text = "";
+            dtpDatumPolaska.Text = "";
+            cbASAOsiguranje.IsChecked = false;
+            cbAutobus.IsChecked = false;
+            cbAvion.IsChecked = false;
+            cbBrod.IsChecked = false;
+            cbSarajevoOsiguranje.IsChecked = false;
+            cbSunceOsiguranje.IsChecked = false;
+            cbTriglavOsiguranje.IsChecked = false;
+
+
+
 
         }
 

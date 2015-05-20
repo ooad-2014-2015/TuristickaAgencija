@@ -41,10 +41,5 @@ namespace TuristickaAgencijaNextDestination
             panelPregledPutovanja.Children.Add(pregled2);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            TuristickaAgencijaNextDestination.View.FormaObrisiPutovanje forma = new View.FormaObrisiPutovanje();
-            forma.Show();
-        }
     }
 }
