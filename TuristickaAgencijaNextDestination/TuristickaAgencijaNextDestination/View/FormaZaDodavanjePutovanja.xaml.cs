@@ -67,7 +67,7 @@ namespace TuristickaAgencijaNextDestination.View
             putovanja.PrevoznoSredstvo = putovanje1.PrevoznoSredstvo;
             putovanja.PutnoOsiguranje = putovanje1.PutnoOsiguranje;
             putovanja.TrajanjePutovanja = Convert.ToInt32(txtTrajanjePutovanja.Text);
-            TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanja.Add(putovanja);
+            //TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanja.Add(putovanja);
             MessageBox.Show("Snimljeno!");
             txtBrojMjesta.Text = "";
             txtCijena.Text = "";
