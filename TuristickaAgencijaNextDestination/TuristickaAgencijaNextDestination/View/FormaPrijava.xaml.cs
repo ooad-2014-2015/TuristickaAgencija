@@ -30,21 +30,13 @@ namespace TuristickaAgencijaNextDestination
             string userName = txbUsername.Text;
             string password = txbPassword.Password.ToString();
             bool pronasao = false;
-            for (int i = 0; i < KorisnickiNalogKlijent.listaKNalogaKlijenata.Count; i++)
+            for (int i = 0; i < KorisnickiNalog.listaKNaloga.Count; i++)
             {
-                if (KorisnickiNalogKlijent.listaKNalogaKlijenata[i].username == userName &&
-                    KorisnickiNalogKlijent.listaKNalogaKlijenata[i].password == password)
+                if (KorisnickiNalog.listaKNaloga[i].username == userName &&
+                    KorisnickiNalog.listaKNaloga[i].password == password)
                 {
                     Close();
                     FormaPergledPutovanja pregled = new FormaPergledPutovanja();
-                    pregled.Show();
-                    pronasao = true;
-                }
-                else if (Model.KorisnickiNalogTAgent.listaKNalogaTAgenata[i].username == userName &&
-                         Model.KorisnickiNalogTAgent.listaKNalogaTAgenata[i].password == password)
-                {
-                    Close();
-                    View.FormaPredlozenaPutovanja pregled = new View.FormaPredlozenaPutovanja();
                     pregled.Show();
                     pronasao = true;
                 }

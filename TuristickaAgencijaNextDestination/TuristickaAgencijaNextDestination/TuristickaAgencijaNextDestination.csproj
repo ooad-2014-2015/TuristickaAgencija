@@ -54,8 +54,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\KorisnickiNalogKlijent.cs" />
-    <Compile Include="Model\KorisnickiNalogTAgent.cs" />
     <Compile Include="View\FormaDodajBrisiPrihvati.xaml.cs">
       <DependentUpon>FormaDodajBrisiPrihvati.xaml</DependentUpon>
     </Compile>

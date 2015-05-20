@@ -25,11 +25,10 @@ namespace TuristickaAgencijaNextDestination
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen; // postavila sam na centar ekrana da se pojavljuje(Lejla)
             Klijent admin = new Klijent(0, "Admin", "Admin", "", 000, StatusKlijenta.ostalo);
-            KorisnickiNalogKlijent.listaKNalogaKlijenata.Add(new KorisnickiNalogKlijent(0, admin, "admin", "admin"));
+            KorisnickiNalog.listaKNaloga.Add(new KorisnickiNalog(0, admin, "admin", "admin"));
 
-            TuristickiAgent tAgent = new TuristickiAgent (0, "TAgent", "TAgent", "");
-            Model.KorisnickiNalogTAgent.listaKNalogaTAgenata.Add(new Model.KorisnickiNalogTAgent(0, tAgent, "tagent", "tagent"));
-            
+            Klijent tAgent = new Klijent(1, "TAgent", "TAgent", "", 000, StatusKlijenta.ostalo);
+            KorisnickiNalog.listaKNaloga.Add(new KorisnickiNalog(1, tAgent, "tagent", "tagent"));
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -49,6 +48,12 @@ namespace TuristickaAgencijaNextDestination
         {
             FormaRegistracija registracija = new FormaRegistracija();
             registracija.ShowDialog();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            TuristickaAgencijaNextDestination.View.FormaDodajBrisiPrihvati frmDodajBrisiPrihvati = new View.FormaDodajBrisiPrihvati();
+            frmDodajBrisiPrihvati.Show();
         }
     }
 }

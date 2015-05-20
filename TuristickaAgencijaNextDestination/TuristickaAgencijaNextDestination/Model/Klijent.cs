@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TuristickaAgencijaNextDestination
 {
-    public enum StatusKlijenta {student, penzioner, ostalo};
-    public class Klijent : Osoba
+    enum StatusKlijenta {student, penzioner, ostalo};
+    class Klijent : Osoba
     {
         public int brojKreditneKartice { get; set; }
 
