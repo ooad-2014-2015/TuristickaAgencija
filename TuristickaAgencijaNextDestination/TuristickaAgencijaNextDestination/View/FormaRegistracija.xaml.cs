@@ -24,5 +24,30 @@ namespace TuristickaAgencijaNextDestination
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
+
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+            StatusKlijenta status;
+    
+            if (cmbStatus.SelectedIndex == 0)
+                status = StatusKlijenta.student;
+            else if (cmbStatus.SelectedIndex == 1)
+                status = StatusKlijenta.penzioner;
+            else
+                status = StatusKlijenta.ostalo;
+
+            string kartica = txtBrojKreditneKartice.Text;
+            int brojKartice = int.Parse(kartica);
+
+            Klijent k = new Klijent(Klijent.listaKlijenata.Count + 1, txtIme.Text, txtPrezime.Text,
+                txtEmail.Text, brojKartice, status);
+
+            KorisnickiNalog.listaKNaloga.Add(new KorisnickiNalog(KorisnickiNalog.listaKNaloga.Count + 1, k, txtUsername.Text, txtPassword.Text));
+
+            MessageBox.Show("Uspjesna registracija. Dobrodosao/la: " + k.ime, "Poruka");
+
+            Close();
+
+        }
     }
 }

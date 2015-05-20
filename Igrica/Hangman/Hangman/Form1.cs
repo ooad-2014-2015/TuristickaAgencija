@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Hangman
 {
@@ -17,13 +20,30 @@ namespace Hangman
         public Form1()
         {
             InitializeComponent();
-            Igrac novi1 = new Igrac("Lejla", 2);
+            /*Igrac novi1 = new Igrac("Lejla", 2);
             Igrac novi2 = new Igrac("Merseda", 0);
             Igrac novi3 = new Igrac("Ramiza", 4);
             igraci.Add(novi1);
             igraci.Add(novi2);
-            igraci.Add(novi3);
+            igraci.Add(novi3);*/
+            ucitajIzXml();
             sortirajIgracePoBodovima();
+        }
+
+        private void ucitajIzXml()
+        {
+            try
+            {
+                using (FileStream fs = new FileStream(@"C:\Users\Lejla\Documents\Lejla\Fakultet\4. semestar\OOAD\Projekat\Igrica\Hangman\Igraci.xml", FileMode.Open))
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(List<Igrac>));
+                    igraci = serializer.Deserialize(fs) as List<Igrac>;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Izuzetak pri deserijalizaciji: " + ex.Message, "Izuzetak");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

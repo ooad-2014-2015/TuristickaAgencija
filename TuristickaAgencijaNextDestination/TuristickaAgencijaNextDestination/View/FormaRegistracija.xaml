@@ -9,17 +9,21 @@
         <Label x:Name="lblUsername" Content="Username" HorizontalAlignment="Left" Margin="284,126,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblPassword" Content="Password" HorizontalAlignment="Left" Margin="287,157,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblStatus" Content="Status" HorizontalAlignment="Left" Margin="305,188,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtIme" HorizontalAlignment="Left" Height="23" Margin="352,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtPrezime" HorizontalAlignment="Left" Height="23" Margin="352,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="352,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="23" Margin="352,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="352,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="cmbStatus" HorizontalAlignment="Left" Margin="352,188,0,0" VerticalAlignment="Top" Width="120">
+        <TextBox x:Name="txtIme" TabIndex="0" HorizontalAlignment="Left" Height="23" Margin="352,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtPrezime" TabIndex="1" HorizontalAlignment="Left" Height="23" Margin="352,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtEmail" TabIndex="2" HorizontalAlignment="Left" Height="23" Margin="352,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtUsername" TabIndex="3" HorizontalAlignment="Left" Height="23" Margin="352,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtPassword" TabIndex="4" HorizontalAlignment="Left" Height="23" Margin="352,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cmbStatus" TabIndex="5" HorizontalAlignment="Left" Margin="352,192,0,0" VerticalAlignment="Top" Width="120">
             <ListBoxItem Content="Student"/>
             <ListBoxItem Content="Penzioner"/>
             <ListBoxItem Content="Ostalo"/>
         </ComboBox>
-        <Button x:Name="btnSignUp" Content="SignUp" HorizontalAlignment="Left" Margin="352,232,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.504,0.008"/>
+        <Button x:Name="btnSignUp" TabIndex="7" Content="SignUp" HorizontalAlignment="Left" Margin="352,257,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.504,0.008" Click="btnSignUp_Click" ForceCursor="True">
+        </Button>
+        <Label x:Name="lblBrojKreditneKartice" Content="Broj kreditne kartice" HorizontalAlignment="Left" Margin="231,219,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBrojKreditneKartice" TabIndex="6" HorizontalAlignment="Left" Height="23" Margin="352,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120">
+        </TextBox>
 
     </Grid>
 </Window>

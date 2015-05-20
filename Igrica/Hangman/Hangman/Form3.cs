@@ -13,7 +13,8 @@ namespace Hangman
     public partial class Form3 : Form
     {
         public string level;
-        public string field; 
+        public string field;
+
         public Form3()
         {
             InitializeComponent();
@@ -24,6 +25,8 @@ namespace Hangman
         {
             level = kojiJeLevel();
             field = kojiJeField();
+           
+
             Form2 igra = new Form2(level, field);
             igra.Show();
             Close(); 
