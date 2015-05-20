@@ -16,15 +16,19 @@ namespace TuristickaAgencijaNextDestination.Model
             set { izlet = value; }
         }
         //static zato da ogu koristiti liste u drugim klasama i to kao PUtovanjaSaIZletom.listaPutovanja
-        public static List<Putovanje> listaPutovanja = new List<Putovanje>();
+
+
+       //OVDJE ZELIM DA NAPRAVIM LISTU SA IZLETOM
+        public static List<PutovanjeSaIzletom> listaPutovanja = new List<PutovanjeSaIzletom>();
 
         //public static List<Izleti> listaIzleta = new List<Izleti>();
    
          
        public static void DodajPutovanjaUListu()
          {
+           //OVO JE BILO ZA LISTU BEZ IZLETA
              
-             Putovanje putovanje1 = new Putovanje(2, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
+            /* Putovanje putovanje1 = new Putovanje(2, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
              Putovanje putovanje2 = new Putovanje(3, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
              Putovanje putovanje3 = new Putovanje(4, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
              Putovanje putovanje4 = new Putovanje(5, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
@@ -34,7 +38,9 @@ namespace TuristickaAgencijaNextDestination.Model
              listaPutovanja.Add(putovanje2);
              listaPutovanja.Add(putovanje3);
              listaPutovanja.Add(putovanje4);
-             listaPutovanja.Add(putovanje5);
+             listaPutovanja.Add(putovanje5);*/
+         //listaPutovanja.Add(new PutovanjeSaIzletom(1,
+
 
          }
        public static int DajMiNaredniID()
