@@ -9,6 +9,7 @@ namespace TuristickaAgencijaNextDestination
     public enum StatusKlijenta {student, penzioner, ostalo};
     public class Klijent : Osoba
     {
+        //Komentar by bajgorio
         public int brojKreditneKartice { get; set; }
 
         public StatusKlijenta statusKlijenta { get; set; }
