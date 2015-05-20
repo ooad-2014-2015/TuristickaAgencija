@@ -47,5 +47,22 @@ namespace TuristickaAgencijaNextDestination.View
             FormaZaDodavanjeSaIzletom frmDodavanje = new FormaZaDodavanjeSaIzletom();
             frmDodavanje.Show();
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            FormaObrisiPutovanje frm = new FormaObrisiPutovanje();
+            frm.Show();
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            FormaObrisiPutovanjeSaIzletom frm = new FormaObrisiPutovanjeSaIzletom();
+            frm.Show();
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

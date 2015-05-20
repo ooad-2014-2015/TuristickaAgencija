@@ -48,5 +48,9 @@ namespace TuristickaAgencijaNextDestination.Model
        {
            return listaPutovanja.Count + 1;
        }
+       public static void ObrisiPutovanjeSaIzletom(int id)
+       {
+           listaPutovanja.RemoveAt(id);
+       }
     }
 }

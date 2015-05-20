@@ -62,6 +62,12 @@
     <Compile Include="View\FormaObrisiPutovanje.xaml.cs">
       <DependentUpon>FormaObrisiPutovanje.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\FormaObrisiPutovanjeSaIzletom.xaml.cs">
+      <DependentUpon>FormaObrisiPutovanjeSaIzletom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormaOdobriPutovanje.xaml.cs">
+      <DependentUpon>FormaOdobriPutovanje.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FormaPergledPutovanja.xaml.cs">
       <DependentUpon>FormaPergledPutovanja.xaml</DependentUpon>
     </Compile>
@@ -105,6 +111,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\FormaObrisiPutovanje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormaObrisiPutovanjeSaIzletom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormaOdobriPutovanje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,6 +194,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -194,7 +209,7 @@
     <None Include="Resources\ikona.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slika1.jpg" />
+    <None Include="Images\Slika1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Slika2.jpg" />
