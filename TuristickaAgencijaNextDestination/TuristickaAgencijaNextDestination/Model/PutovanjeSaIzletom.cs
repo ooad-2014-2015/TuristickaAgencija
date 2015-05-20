@@ -26,7 +26,7 @@ namespace TuristickaAgencijaNextDestination.Model
          
        public static void DodajPutovanjaUListu()
          {
-           //OVO JE BILO ZA LISTU BEZ IZLETA
+           //OVO JE BILO ZA LISTU BEZ IZLETA 
              
             /* Putovanje putovanje1 = new Putovanje(2, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
              Putovanje putovanje2 = new Putovanje(3, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
