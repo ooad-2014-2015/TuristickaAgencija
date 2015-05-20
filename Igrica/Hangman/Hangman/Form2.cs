@@ -30,6 +30,8 @@ namespace Hangman
 
         List<int> niz = new List<int>();
 
+        public Vjesala vjesalo;
+
         public Form2(string _level, string _field)
         {
             InitializeComponent();
@@ -70,31 +72,71 @@ namespace Hangman
 
             if (level == "Easy")
             {
+                Easy tezina = new Easy();
+                tezina.TezinaIgre(level);
+
                 if (field == "Cities")
                 {
+                    Grad oblast = new Grad();
+                    oblast.Oblast(field);
+
+                    vjesalo = new Vjesala(oblast, tezina);
+
                     index = random.Next(easyCities.Count);
                     return easyCities[index];
                 }
+
+                Drzava _oblast = new Drzava();
+                _oblast.Oblast(field);
+
+                vjesalo = new Vjesala(_oblast, tezina);
+
                 index = random.Next(easyCountries.Count);
                 return easyCountries[index];
             }
             if (level == "Normal")
             {
+                Normal tezina = new Normal();
+                tezina.TezinaIgre(level);
+
                 if (field == "Cities")
                 {
+                    Grad oblast = new Grad();
+                    oblast.Oblast(field);
+
+                    vjesalo = new Vjesala(oblast, tezina);
+
                     index = random.Next(normalCities.Count);
                     return normalCities[index];
                 }
+                Drzava _oblast = new Drzava();
+                _oblast.Oblast(field);
+
+                vjesalo = new Vjesala(_oblast, tezina);
+
                 index = random.Next(normalCountries.Count);
                 return normalCountries[index];
             }
             else
             {
+                Hard tezina = new Hard();
+                tezina.TezinaIgre(level);
+
                 if (field == "Cities")
                 {
+                    Grad oblast = new Grad();
+                    oblast.Oblast(field);
+
+                    vjesalo = new Vjesala(oblast, tezina);
+
                     index = random.Next(hardCities.Count);
                     return hardCities[index];
                 }
+                Drzava _oblast = new Drzava();
+                _oblast.Oblast(field);
+
+                vjesalo = new Vjesala(_oblast, tezina);
+
                 index = random.Next(hardCountries.Count);
                 return hardCountries[index];
             }
@@ -209,6 +251,8 @@ namespace Hangman
             button24.Enabled = false;
             button25.Enabled = false;
             button26.Enabled = false;
+
+            vjesalo.brojacNepogodjenihSlova = brojacGreski;
         }
 
         private void staviTriSlovaUPolja()
@@ -777,10 +821,6 @@ namespace Hangman
         {
             Form4 upisRezultataa = new Form4(brojacGreski);
             upisRezultataa.Show();
-            
-            //Igrac _novi = new Igrac(upisRezultataa.ime, brojacGreski);
-
-            //igraci.Add(_novi);
         }
 
         public void ucitajNovogIgraca(string _ime)
@@ -788,6 +828,8 @@ namespace Hangman
             Igrac _novi = new Igrac(_ime, brojacGreski);
 
             igraci.Add(_novi);
+
+            vjesalo.igrac = _novi;
         }
     }
 }

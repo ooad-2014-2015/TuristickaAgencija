@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hangman
 {
-    class Igrac
+    public class Igrac
     {
         public String ime { get; set; }
         public int brojBodova { get; set; }

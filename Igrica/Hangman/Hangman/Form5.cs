@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Hangman
 {
@@ -25,6 +28,7 @@ namespace Hangman
                 //textBox1.Text += ime;
                 richTextBox1.Text += _igraci[i].ime + Environment.NewLine;
                 richTextBox2.Text += _igraci[i].brojBodova + Environment.NewLine;
+                upisiUXml(_igraci);
             }
         }
 
@@ -33,5 +37,21 @@ namespace Hangman
             Close();
         }
 
+        public static void upisiUXml(List<Igrac> _igraci)
+        {
+            try
+            {
+
+                XmlSerializer x = new XmlSerializer(typeof(List<Igrac>));
+                StreamWriter sw = new StreamWriter(@"C:\Users\Lejla\Documents\Lejla\Fakultet\4. semestar\OOAD\Projekat\Igrica\Hangman\Igraci.xml");
+
+                x.Serialize(sw, _igraci);
+                sw.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Izuzetak pri xml serijalizaciji: " + ex.Message, "Izuzetak");
+            }
+        }
     }
 }
