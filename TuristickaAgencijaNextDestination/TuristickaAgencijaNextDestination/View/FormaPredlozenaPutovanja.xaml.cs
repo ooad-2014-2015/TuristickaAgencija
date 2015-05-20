@@ -24,6 +24,8 @@ namespace TuristickaAgencijaNextDestination.View
             InitializeComponent();
         }
 
+        //KOMENTAR!!
+
         private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
