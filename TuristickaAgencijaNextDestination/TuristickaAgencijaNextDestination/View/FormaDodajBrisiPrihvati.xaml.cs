@@ -26,6 +26,7 @@ namespace TuristickaAgencijaNextDestination.View
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            //komentar22222
             FormaZaDodavanjePutovanja forma2 = new FormaZaDodavanjePutovanja();
             forma2.Show();
         }
