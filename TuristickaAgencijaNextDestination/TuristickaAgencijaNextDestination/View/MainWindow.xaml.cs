@@ -29,7 +29,7 @@ namespace TuristickaAgencijaNextDestination
 
             TuristickiAgent tAgent = new TuristickiAgent (0, "TAgent", "TAgent", "");
             Model.KorisnickiNalogTAgent.listaKNalogaTAgenata.Add(new Model.KorisnickiNalogTAgent(0, tAgent, "tagent", "tagent"));
-            
+            //komentar
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
