@@ -34,9 +34,9 @@ namespace Hangman
         {
             try
             {
-                string putanja = Path.Combine(Environment.CurrentDirectory, @"\Igraci.xml");
-                MessageBox.Show(putanja);
-                using (FileStream fs = new FileStream(putanja, FileMode.Open))
+                //string putanja = Path.Combine(Environment.CurrentDirectory, @"\Igraci.xml");
+                //MessageBox.Show(putanja);
+                using (FileStream fs = new FileStream("Igraci.xml", FileMode.Open))
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(List<Igrac>));
                     igraci = serializer.Deserialize(fs) as List<Igrac>;
