@@ -41,9 +41,9 @@ namespace Hangman
         {
             try
             {
-                string putanja = Path.GetDirectoryName(Application.ExecutablePath);
+                //string putanja = Path.GetDirectoryName(Application.ExecutablePath);
                 XmlSerializer x = new XmlSerializer(typeof(List<Igrac>));
-                StreamWriter sw = new StreamWriter(putanja+@"\Igraci.xml");
+                StreamWriter sw = new StreamWriter("Igraci.xml");
 
                 x.Serialize(sw, _igraci);
                 sw.Close();

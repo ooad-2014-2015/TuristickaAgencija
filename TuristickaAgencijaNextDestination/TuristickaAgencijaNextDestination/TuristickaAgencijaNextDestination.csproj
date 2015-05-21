@@ -216,9 +216,6 @@
     <None Include="Resources\ikona.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Slika1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\Slika2.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +226,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Slika1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Slike\Slika1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Slike\Maldivi1.jpg" />
+    <Resource Include="Slike\Maldivi2.jpg" />
+    <Resource Include="Slike\Maldivi3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,9 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="FormaPergledPutovanja" Height="300" Width="679">
     <Window.Background>
-        <ImageBrush ImageSource="pack://application:,,,/Images/Slika1.png"/>
+        <ImageBrush ImageSource="/TuristickaAgencijaNextDestination;component/Slike/Slika1.png"/>
     </Window.Background>
-
     <Grid Margin="0,0,-8,0">
         <Button x:Name="btnPutovanjaSaIzletom" Content="Putovanja sa izletom&#xD;&#xA;" HorizontalAlignment="Left" Margin="530,175,0,0" VerticalAlignment="Top" Width="125" Click="btnPutovanjaSaIzletom_Click" Height="20"/>
         <Canvas x:Name="panelPregledPutovanja" HorizontalAlignment="Left" Height="135" Margin="0,10,0,0" VerticalAlignment="Top" Width="669"/>
