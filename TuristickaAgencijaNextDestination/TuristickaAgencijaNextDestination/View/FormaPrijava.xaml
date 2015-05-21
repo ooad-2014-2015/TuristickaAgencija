@@ -2,12 +2,15 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Next Destination - Login" Height="358.209" Width="719.403">
+    <Window.Background>
+        <ImageBrush ImageSource="/TuristickaAgencijaNextDestination;component/Slike/Maldivi1.jpg"/>
+    </Window.Background>
     <Grid>
-        <Label x:Name="lblUserame" Content="username" HorizontalAlignment="Left" Margin="180,137,0,0" VerticalAlignment="Top" Background="Transparent"/>
-        <Label x:Name="lblPassword" Content="password" HorizontalAlignment="Left" Margin="182,168,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txbUsername" TabIndex="0" HorizontalAlignment="Left" Height="23" Margin="247,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnLogin" TabIndex="2" Content="Login" HorizontalAlignment="Left" Margin="247,210,0,0" VerticalAlignment="Top" Width="120" Click="btnLogin_Click"/>
-        <PasswordBox x:Name="txbPassword" TabIndex="1" HorizontalAlignment="Left" Margin="247,168,0,0" VerticalAlignment="Top" Width="120" Height="26" PasswordChar="*"/>
+        <Label x:Name="lblUserame" Content="username" HorizontalAlignment="Left" Margin="274,171,0,0" VerticalAlignment="Top" Background="Transparent"/>
+        <Label x:Name="lblPassword" Content="password" HorizontalAlignment="Left" Margin="276,202,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbUsername" TabIndex="0" HorizontalAlignment="Left" Height="23" Margin="341,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnLogin" TabIndex="2" Content="Login" HorizontalAlignment="Left" Margin="341,244,0,0" VerticalAlignment="Top" Width="120" Click="btnLogin_Click"/>
+        <PasswordBox x:Name="txbPassword" TabIndex="1" HorizontalAlignment="Left" Margin="341,202,0,0" VerticalAlignment="Top" Width="120" Height="26" PasswordChar="*"/>
     </Grid>
 
 </Window>

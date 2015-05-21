@@ -56,11 +56,22 @@
     </ApplicationDefinition>
     <Compile Include="Model\KorisnickiNalogKlijent.cs" />
     <Compile Include="Model\KorisnickiNalogTAgent.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="View\FormaDodajBrisiPrihvati.xaml.cs">
       <DependentUpon>FormaDodajBrisiPrihvati.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\FormaObrisiPutovanje.xaml.cs">
       <DependentUpon>FormaObrisiPutovanje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormaObrisiPutovanjeSaIzletom.xaml.cs">
+      <DependentUpon>FormaObrisiPutovanjeSaIzletom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormaOdobriPutovanje.xaml.cs">
+      <DependentUpon>FormaOdobriPutovanje.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\FormaPergledPutovanja.xaml.cs">
       <DependentUpon>FormaPergledPutovanja.xaml</DependentUpon>
@@ -105,6 +116,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\FormaObrisiPutovanje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormaObrisiPutovanjeSaIzletom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormaOdobriPutovanje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -167,11 +186,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -179,6 +193,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -194,18 +209,25 @@
     <None Include="Resources\ikona.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slika1.jpg" />
+    <None Include="Images\Slika2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slika2.jpg" />
+    <None Include="Images\Slika3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slika3.jpg" />
+    <None Include="Images\Slika5.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Slika5.jpg" />
+    <None Include="Images\Slika1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Slike\Slika1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Slike\Maldivi1.jpg" />
+    <Resource Include="Slike\Maldivi2.jpg" />
+    <Resource Include="Slike\Maldivi3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -83,6 +83,16 @@ namespace TuristickaAgencijaNextDestination.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Slika11 {
+            get {
+                object obj = ResourceManager.GetObject("Slika11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Slika2 {
             get {
                 object obj = ResourceManager.GetObject("Slika2", resourceCulture);

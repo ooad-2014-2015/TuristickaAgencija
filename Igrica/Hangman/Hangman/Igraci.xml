@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfIgrac xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Igrac>
+    <ime>Merseda</ime>
+    <brojBodova>30</brojBodova>
+    <brojGresaka>0</brojGresaka>
+  </Igrac>
+  <Igrac>
+    <ime>Lejla</ime>
+    <brojBodova>20</brojBodova>
+    <brojGresaka>2</brojGresaka>
+  </Igrac>
+  <Igrac>
+    <ime>Adnan</ime>
+    <brojBodova>20</brojBodova>
+    <brojGresaka>2</brojGresaka>
+  </Igrac>
+  <Igrac>
+    <ime>Ramiza</ime>
+    <brojBodova>10</brojBodova>
+    <brojGresaka>4</brojGresaka>
+  </Igrac>
+  <Igrac>
+    <ime>Niko</ime>
+    <brojBodova>0</brojBodova>
+    <brojGresaka>6</brojGresaka>
+  </Igrac>
+</ArrayOfIgrac>

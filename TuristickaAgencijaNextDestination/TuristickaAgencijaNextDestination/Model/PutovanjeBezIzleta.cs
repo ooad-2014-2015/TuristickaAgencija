@@ -61,5 +61,10 @@ namespace TuristickaAgencijaNextDestination.Model
         {
             listaPutovanjaBezIzleta.RemoveAt(id);
         }
+        public static void ObrisiPredlozenoPutovanje(int id)
+        {
+           // listaPredlozenihPutovanjaBezIzleta.RemoveAt(id);
+        }
+
     }
 }

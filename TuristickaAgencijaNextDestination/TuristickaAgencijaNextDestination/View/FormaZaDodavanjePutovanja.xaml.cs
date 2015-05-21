@@ -27,44 +27,41 @@ namespace TuristickaAgencijaNextDestination.View
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             TuristickaAgencijaNextDestination.Model.Putovanje putovanje1=new TuristickaAgencijaNextDestination.Model.Putovanje();
-            int id = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.DajMiNaredniID();
-            if(rbASAOsiguranje.IsChecked==true)
+            int id = TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.DajMiNaredniID();
+            
+            if(cbASAOsiguranje.IsChecked==true)
             {
                 putovanje1.PutnoOsiguranje=TuristickaAgencijaNextDestination.Model.PutnoOsiguranje.ASAOsiguranje;  
             }
-            if (rbSarajevoOsiguranje.IsChecked==true)
+            if (cbSarajevoOsiguranje.IsChecked==true)
             {
                 putovanje1.PutnoOsiguranje = TuristickaAgencijaNextDestination.Model.PutnoOsiguranje.SarajevoOsiguranje;
             }
-            if (rbSunceOsiguranje.IsChecked==true)
+            if (cbSunceOsiguranje.IsChecked==true)
             {
                 putovanje1.PutnoOsiguranje = TuristickaAgencijaNextDestination.Model.PutnoOsiguranje.SunceOsiguranje;
             }
-            if (rbTriglavOsiguranje.IsChecked == true)
+            if (cbTriglavOsiguranje.IsChecked == true)
             {
                 putovanje1.PutnoOsiguranje = TuristickaAgencijaNextDestination.Model.PutnoOsiguranje.TriglavOsiguranje;
             }
 
 
-            if (rbAutobus.IsChecked == true)
+            if (cbAutobus.IsChecked == true)
             {
                 putovanje1.PrevoznoSredstvo = TuristickaAgencijaNextDestination.Model.PrevoznoSredstvo.autobus;
             }
-            if (rbAvion.IsChecked == true)
+            if (cbAvion.IsChecked == true)
             {
                 putovanje1.PrevoznoSredstvo = TuristickaAgencijaNextDestination.Model.PrevoznoSredstvo.avion;
             }
-            if (rbBrod.IsChecked == true)
+            if (cbBrod.IsChecked == true)
             {
                 putovanje1.PrevoznoSredstvo = TuristickaAgencijaNextDestination.Model.PrevoznoSredstvo.brod;
             }
 
-           
-            //PITANJE!!!!!!!!!!!!!!!!
-
-
-
             TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta putovanja = new TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta();
+            putovanja.Id = id;
             putovanja.Destinacija = txtDrzava.Text;
             putovanja.Cijena = Convert.ToDouble(txtCijena.Text);
             putovanja.DatumDolaska = Convert.ToDateTime(dtpdatumOdlaska.Text);
@@ -77,11 +74,23 @@ namespace TuristickaAgencijaNextDestination.View
             putovanja.PutnoOsiguranje = putovanje1.PutnoOsiguranje;
             putovanja.TrajanjePutovanja = Convert.ToInt32(txtTrajanjePutovanja.Text);
             TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Add(putovanja);
+            
             MessageBox.Show("Snimljeno!");
             txtBrojMjesta.Text = "";
             txtCijena.Text = "";
             txtDrzava.Text = "";
             txtTrajanjePutovanja.Text = "";
+            
+            dtpdatumOdlaska.Text = "";
+            dtpDatumPolaska.Text = "";
+            cbASAOsiguranje.IsChecked = false;
+            cbAutobus.IsChecked = false;
+            cbAvion.IsChecked = false;
+            cbBrod.IsChecked = false;
+            cbSarajevoOsiguranje.IsChecked = false;
+            cbSunceOsiguranje.IsChecked = false;
+            cbTriglavOsiguranje.IsChecked = false;
+
          
 
            
@@ -90,6 +99,12 @@ namespace TuristickaAgencijaNextDestination.View
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             FormaPergledPutovanja frm = new FormaPergledPutovanja();
+            frm.Show();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            FormaObrisiPutovanjeSaIzletom frm = new FormaObrisiPutovanjeSaIzletom();
             frm.Show();
         }
 
