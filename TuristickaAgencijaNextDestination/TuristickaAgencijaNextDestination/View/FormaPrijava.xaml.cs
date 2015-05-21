@@ -76,5 +76,10 @@ namespace TuristickaAgencijaNextDestination
                 txbPassword.Password = "";
             }
         }
+
+        private void btnNazad_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
