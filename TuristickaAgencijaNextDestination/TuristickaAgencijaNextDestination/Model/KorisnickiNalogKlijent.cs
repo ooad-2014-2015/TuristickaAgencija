@@ -12,6 +12,8 @@ namespace TuristickaAgencijaNextDestination.Model
 
         public static List<KorisnickiNalogKlijent> listaKNalogaKlijenti = new List<KorisnickiNalogKlijent>();
 
+        public static List<KorisnickiNalogKlijent> listaKorisnickihNalogaZaBrisanje = new List<KorisnickiNalogKlijent>();
+
         public KorisnickiNalogKlijent()
         {
 
@@ -21,6 +23,13 @@ namespace TuristickaAgencijaNextDestination.Model
             : base(_id, _username, _password)
         {
             vlasnik = _vlasnik;
+        }
+        // Ramiza: dodala sam ovu funkciju radi brisanja u formi 
+
+        public static void obrisiKorisnickiNalog (int id)
+        {
+            listaKorisnickihNalogaZaBrisanje.RemoveAt(id);
+
         }
     }
 }

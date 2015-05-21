@@ -56,6 +56,16 @@ namespace TuristickaAgencijaNextDestination.Model
 
        public static List<Putovanje> _listaPredlozenihPutovanjaSaIzletom = new List<Putovanje>();
 
+       public static int dajNaredniIdPredlozeno()
+       {
+           return _listaPredlozenihPutovanjaSaIzletom.Count + 1;
+       }
+
+       public static void ObrisiPredlozenoPutovanjeSaIzletom(int id)
+       {
+           _listaPredlozenihPutovanjaSaIzletom.RemoveAt(id);
+       }
+
   /*     public static void dodajPredlozenoPutovanjeSaIzletom()
        {
            Putovanje _putovanje1 = new PutovanjeSaIzletom("Rim", 500.0, DateTime.Now, DateTime.Now, 10, 50, PrevoznoSredstvo.autobus, PutnoOsiguranje.ASAOsiguranje, 22, "Coloseum");
