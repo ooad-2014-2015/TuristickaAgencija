@@ -7,7 +7,7 @@
         </GroupBox>
             <Button HorizontalAlignment="Left" Margin="90,100,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_4">Dodaj putovanje sa izletom</Button>
         <Button HorizontalAlignment="Left" Margin="90,140,0,0" VerticalAlignment="Top" Width="160" Content="Obrisi putovanje bez izleta" Click="Button_Click_5"/>
-        <Button HorizontalAlignment="Left" Margin="90,210,0,0" VerticalAlignment="Top" Width="160">Odobri putovanje</Button>
+        <Button HorizontalAlignment="Left" Margin="90,210,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_8">Odobri putovanje</Button>
             <Button HorizontalAlignment="Left" Margin="90,65,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_3">Dodaj putovanje bez izleta</Button>
         <Button Content="Obrisi putovanja sa izletom" HorizontalAlignment="Left" Margin="90,175,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_6"/>
         <Button Content="Nazad" HorizontalAlignment="Left" Margin="207,275,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_7"/>
