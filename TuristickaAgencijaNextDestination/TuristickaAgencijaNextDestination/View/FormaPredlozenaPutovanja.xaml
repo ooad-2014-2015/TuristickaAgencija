@@ -1,32 +1,68 @@
 ﻿<Window x:Class="TuristickaAgencijaNextDestination.View.FormaPredlozenaPutovanja"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FormaPredlozenaPutovanja" Height="401" Width="878">
-    <Grid>
-        <GroupBox Header="DodavanjePredlozenogPutovanja" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="440" Height="315"/>
-        <Label Content="Unesi destinaciju:" HorizontalAlignment="Left" Margin="47,40,0,0" VerticalAlignment="Top" Width="105"/>
-        <Label Content="Datum polaska:" HorizontalAlignment="Left" Margin="60,72,0,0" VerticalAlignment="Top"/>
-        <Label Content="Datum dolaska:" HorizontalAlignment="Left" Margin="60,103,0,0" VerticalAlignment="Top"/>
-        <Label Content="Trajanje putovanja:" HorizontalAlignment="Left" Margin="42,134,0,0" VerticalAlignment="Top"/>
-        <Label Content="Broj slobodnih mjesta:" HorizontalAlignment="Left" Margin="24,165,0,0" VerticalAlignment="Top"/>
-        <Label Content="Putno osiguranje:" HorizontalAlignment="Left" Margin="47,196,0,0" VerticalAlignment="Top"/>
-        <Label Content="Prevozno sredstvo:" HorizontalAlignment="Left" Margin="42,225,0,0" VerticalAlignment="Top"/>
-        <Label Content="Cijena:" HorizontalAlignment="Left" Margin="104,256,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="predlozenaDestinacija" HorizontalAlignment="Left" Height="23" Margin="157,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
-        <DatePicker x:Name="datumPolaskaPredlozenog" HorizontalAlignment="Left" Margin="157,72,0,0" VerticalAlignment="Top" Width="282"/>
-        <DatePicker x:Name="datumDolaskaPredlozenog" HorizontalAlignment="Left" Margin="157,103,0,0" VerticalAlignment="Top" Width="282"/>
-        <ComboBox HorizontalAlignment="Left" Margin="157,196,0,0" VerticalAlignment="Top" Width="282"/>
-        <ComboBox HorizontalAlignment="Left" Margin="157,223,0,0" VerticalAlignment="Top" Width="282"/>
-        <Button x:Name="dodavanjePredlozenog" Content="DodajPutovanje" HorizontalAlignment="Left" Margin="351,330,0,0" VerticalAlignment="Top" Width="99" RenderTransformOrigin="-0.254,-0.089"/>
-        <GroupBox Header="BrisanjePredlozenogPutovanja" HorizontalAlignment="Left" Margin="455,10,0,0" VerticalAlignment="Top" Width="405" Height="315"/>
-        <RichTextBox x:Name="predlozenaPutovanja" HorizontalAlignment="Left" Height="242" Margin="464,40,0,0" VerticalAlignment="Top" Width="387" TextChanged="RichTextBox_TextChanged" FontStyle="Italic">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Language="bs-latn-ba" Text="Predlozena putovanja"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
-        <Button x:Name="brisanjePredlozenog" Content="ObrisiPutovanje" HorizontalAlignment="Left" Margin="758,330,0,0" VerticalAlignment="Top" Width="102"/>
+        Title="FormaPredlozenaPutovanja" Height="469" Width="878">
+    <Grid Margin="0,0,0,-20">
+        <GroupBox Header="DodavanjePredlozenogPutovanja" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="440" Height="384">
+            <RadioButton x:Name="predlozenoBezIzleta" Content="PutovanjeBezIzleta" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="212" RenderTransformOrigin="0.5,0.5" Margin="34,11,0,0">
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-1.548"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-0.473"/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </GroupBox>
+        <Label Content="Unesi destinaciju:" HorizontalAlignment="Left" Margin="44,78,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.429,1.192"/>
+        <Label Content="Datum polaska:" HorizontalAlignment="Left" Margin="57,140,0,0" VerticalAlignment="Top"/>
+        <Label Content="Datum dolaska:" HorizontalAlignment="Left" Margin="57,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.435,3.385"/>
+        <Label Content="Trajanje putovanja:" HorizontalAlignment="Left" Margin="39,202,0,0" VerticalAlignment="Top"/>
+        <Label Content="Broj slobodnih mjesta:" HorizontalAlignment="Left" Margin="24,233,0,0" VerticalAlignment="Top"/>
+        <Label Content="Putno osiguranje:" HorizontalAlignment="Left" Margin="47,264,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prevozno sredstvo:" HorizontalAlignment="Left" Margin="42,290,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cijena:" HorizontalAlignment="Left" Margin="104,321,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.378,-1.115"/>
+        <TextBox x:Name="predlozenaDestinacija" HorizontalAlignment="Left" Height="23" Margin="157,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
+        <DatePicker x:Name="datumPolaskaPredlozenog" HorizontalAlignment="Left" Margin="157,141,0,0" VerticalAlignment="Top" Width="282"/>
+        <DatePicker x:Name="datumDolaskaPredlozenog" HorizontalAlignment="Left" Margin="157,173,0,0" VerticalAlignment="Top" Width="282"/>
+        <ComboBox x:Name="predlozenoPutno" HorizontalAlignment="Left" Margin="154,264,0,0" VerticalAlignment="Top" Width="282" IsEditable="True"/>
+        <ComboBox x:Name="predlozenoPrevozno" HorizontalAlignment="Left" Margin="154,291,0,0" VerticalAlignment="Top" Width="282" IsEditable="True">
+            <CheckBox/>
+            <CheckBox/>
+            <CheckBox/>
+            <CheckBox/>
+        </ComboBox>
+        <Button x:Name="dodavanjePredlozenog" Content="DodajPutovanje" HorizontalAlignment="Left" Margin="356,407,0,0" VerticalAlignment="Top" Width="99" RenderTransformOrigin="-0.254,-0.089" Click="dodavanjePredlozenog_Click"/>
+        <GroupBox Header="BrisanjePredlozenogPutovanja" HorizontalAlignment="Left" Margin="460,10,0,0" VerticalAlignment="Top" Width="405" Height="384">
+            <RichTextBox x:Name="predlozenaPutovanja" HorizontalAlignment="Left" Height="320" VerticalAlignment="Top" Width="375" Margin="10,10,0,0">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Language="bs-latn-ba" Text="Predlozena putovanja"/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </GroupBox>
+
+        <Button x:Name="brisanjePredlozenog" Content="ObrisiPutovanje" HorizontalAlignment="Left" Margin="758,407,0,0" VerticalAlignment="Top" Width="102"/>
+
+        <Label x:Name="labelPredlozeniIzlet" Content="Izlet:" HorizontalAlignment="Left" Margin="115,109,0,0" VerticalAlignment="Top" Width="34"/>
+        <TextBox x:Name="trajanjePredlozenog" HorizontalAlignment="Left" Height="23" Margin="157,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
+        <TextBox x:Name="cijenaPredlozenog" HorizontalAlignment="Left" Height="26" Margin="157,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279"/>
+        <TextBox x:Name="slobodnaMjestaPredlozeno" HorizontalAlignment="Left" Height="23" Margin="157,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
+        <TextBox x:Name="predlozeniIzlet" HorizontalAlignment="Left" Height="23" Margin="157,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
+        <RadioButton x:Name="predlozenoSaIzletom" Content="PutovanjeSaIzletom" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="212" RenderTransformOrigin="0.5,0.5" Margin="194,35,0,0">
+            <RadioButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.548"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.473"/>
+                </TransformGroup>
+            </RadioButton.RenderTransform>
+        </RadioButton>
+        <TextBox x:Name="idPredlozenog" HorizontalAlignment="Left" Height="23" Margin="157,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
+
 
     </Grid>
 </Window>

@@ -71,6 +71,9 @@
     <Compile Include="View\FormaObrisiPutovanjeSaIzletom.xaml.cs">
       <DependentUpon>FormaObrisiPutovanjeSaIzletom.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\FormaOdaberiPutovanje.xaml.cs">
+      <DependentUpon>FormaOdaberiPutovanje.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FormaOdobriPutovanje.xaml.cs">
       <DependentUpon>FormaOdobriPutovanje.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\FormaObrisiPutovanjeSaIzletom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormaOdaberiPutovanje.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
