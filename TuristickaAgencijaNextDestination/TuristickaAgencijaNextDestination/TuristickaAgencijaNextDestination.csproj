@@ -61,6 +61,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\PrijavaViewModel.cs" />
     <Compile Include="View\FormaDodajBrisiPrihvati.xaml.cs">
       <DependentUpon>FormaDodajBrisiPrihvati.xaml</DependentUpon>
     </Compile>
