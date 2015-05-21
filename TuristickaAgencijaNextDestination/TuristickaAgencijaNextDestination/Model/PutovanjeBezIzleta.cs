@@ -20,11 +20,9 @@ namespace TuristickaAgencijaNextDestination.Model
 
         public PutovanjaBezIzleta() { }
         public static List<Putovanje> listaPutovanjaBezIzleta = new List<Putovanje>();
-<<<<<<< HEAD
-        public static List<Putovanje> listaOdabranihPutovanja = new List<Putovanje>();
-=======
 
->>>>>>> origin/master
+        public static List<Putovanje> listaOdabranihPutovanja = new List<Putovanje>();
+
         public static void DodajPutovanjeBezIzleta()
         {
 

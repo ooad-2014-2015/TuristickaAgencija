@@ -31,13 +31,13 @@ namespace TuristickaAgencijaNextDestination.View
             if (rbPutovanjeBezIzleta.IsChecked == true)
             {
                 gridOdobriPutovanja.ItemsSource = null;
-                gridOdobriPutovanja.ItemsSource = Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta;
+                gridOdobriPutovanja.ItemsSource = Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta;
             }
             else if (rbPutovanjeSaizletom.IsChecked == true)
             {
                 //putovanja sa izletom
                 gridOdobriPutovanja.ItemsSource = null;
-                gridOdobriPutovanja.ItemsSource = Model.PutovanjeSaIzletom.listaPutovanja;
+                gridOdobriPutovanja.ItemsSource = Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom;
             }
             else if (rbPutovanjeSaizletom.IsChecked == false && rbPutovanjeBezIzleta.IsChecked == false)
             {
@@ -75,13 +75,11 @@ namespace TuristickaAgencijaNextDestination.View
 
 
                     //njega dodaje u listu
-                    Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Add(pbz);//gdje ga doda???
-                    //trebam li ja promijeniti rucno id???
-                    pbz.Id = Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Capacity + 1;//+1?
+                    Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Add(pbz);
+     
+                    pbz.Id = Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Capacity + 1;
                     
-                     // PITATI!!!!
-                    //obrisi iz grida i iz liste te
-                    int id = pbz.Id;//sta se u dataGrid upisuju, stringovi ??
+                    int id = pbz.Id;
                      Model.PutovanjaBezIzleta.ObrisiPredlozenoPutovanje(id);
 
                     //potrebno je izbrisati sa grida
