@@ -70,7 +70,10 @@ namespace TuristickaAgencijaNextDestination.View
                 {
                     //onaj selektovani
                     TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta pbz = (Model.PutovanjaBezIzleta)gridOdobriPutovanja.SelectedItem;
-      
+                        
+
+
+
                     //njega dodaje u listu
                     Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Add(pbz);//gdje ga doda???
                     //trebam li ja promijeniti rucno id???

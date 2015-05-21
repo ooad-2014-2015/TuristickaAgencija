@@ -20,6 +20,7 @@ namespace TuristickaAgencijaNextDestination.Model
 
         public PutovanjaBezIzleta() { }
         public static List<Putovanje> listaPutovanjaBezIzleta = new List<Putovanje>();
+        public static List<Putovanje> listaOdabranihPutovanja = new List<Putovanje>();
         public static void DodajPutovanjeBezIzleta()
         {
 
@@ -42,7 +43,7 @@ namespace TuristickaAgencijaNextDestination.Model
         }
         public static void ObrisiPutovanje(int id)
         {
-            listaPutovanjaBezIzleta.RemoveAt(id);
+            listaPutovanjaBezIzleta.RemoveAt(id-1);
         }
         public static void ObrisiPredlozenoPutovanje(int id)
         {

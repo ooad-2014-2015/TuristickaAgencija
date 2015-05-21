@@ -20,7 +20,7 @@ namespace TuristickaAgencijaNextDestination.Model
 
        //OVDJE ZELIM DA NAPRAVIM LISTU SA IZLETOM
         public static List<PutovanjeSaIzletom> listaPutovanja = new List<PutovanjeSaIzletom>();
-
+        public static List<PutovanjeSaIzletom> listaOdabranihPutovanja = new List<PutovanjeSaIzletom>();
         //public static List<Izleti> listaIzleta = new List<Izleti>();
    
 
@@ -50,7 +50,7 @@ namespace TuristickaAgencijaNextDestination.Model
        }
        public static void ObrisiPutovanjeSaIzletom(int id)
        {
-           listaPutovanja.RemoveAt(id);
+           listaPutovanja.RemoveAt(id-1);
        }
     }
 }
