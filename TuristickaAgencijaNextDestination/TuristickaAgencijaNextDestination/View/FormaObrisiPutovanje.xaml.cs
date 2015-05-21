@@ -34,12 +34,13 @@ namespace TuristickaAgencijaNextDestination.View
             else
             {
                 TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta pbz= (Model.PutovanjaBezIzleta)gridObrisiPutovanje.SelectedItem;
-                int id=pbz.Id;
+                int id=Convert.ToInt32(pbz.Id);
                 Model.PutovanjaBezIzleta.ObrisiPutovanje(id);
                 gridObrisiPutovanje.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta;
-                Close();
-                TuristickaAgencijaNextDestination.View.FormaObrisiPutovanje forma = new FormaObrisiPutovanje();
-                forma.Show();
+                gridObrisiPutovanje.Items.Refresh();
+                //Close();
+                //TuristickaAgencijaNextDestination.View.FormaObrisiPutovanje forma = new FormaObrisiPutovanje();
+                //forma.Show();
             }
         }
 

@@ -4,6 +4,10 @@
         Title="FormaOdobriPutovanje" Height="342" Width="789">
     <Grid Margin="0,0,0,0">
         <DataGrid x:Name="gridOdobriPutovanja" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="190" Width="761"/>
+        <Button x:Name="btnPrikazi" Content="Prikazi" HorizontalAlignment="Left" Margin="355,255,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="-0.2,-0.25" Click="Button_Click_1"/>
+        <Button x:Name="btnOdobri" Content="Odobri" HorizontalAlignment="Left" Margin="550,255,0,0" VerticalAlignment="Top" Width="105" Click="btnOdobri_Click"/>
+        <RadioButton x:Name="rbPutovanjeSaizletom" Content="Putovanja sa izletom" HorizontalAlignment="Left" Margin="170,230,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbPutovanjeBezIzleta" Content="Putovanja bez izleta" HorizontalAlignment="Left" Margin="170,255,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

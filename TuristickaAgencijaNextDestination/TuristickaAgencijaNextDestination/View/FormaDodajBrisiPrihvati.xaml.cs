@@ -64,5 +64,11 @@ namespace TuristickaAgencijaNextDestination.View
         {
             Close();
         }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            FormaOdobriPutovanje f = new FormaOdobriPutovanje();
+            f.Show();
+        }
     }
 }
