@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="135" Width="805">
-    <Grid Margin="0,0,119,0" Height="135" VerticalAlignment="Top">
-        <DataGrid x:Name="gridPregledPutovanjaBezIzleta" HorizontalAlignment="Left" Margin="0,0,119,0" VerticalAlignment="Top" IsReadOnly="True"/>
+             mc:Ignorable="d" Width="955" Height="270">
+    <Grid Height="210" VerticalAlignment="Top" Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="gridPregledPutovanjaBezIzleta" HorizontalAlignment="Left" VerticalAlignment="Top" IsReadOnly="True" Height="125" Width="790" Margin="0,10,0,0" Grid.Column="1"/>
 
 
     </Grid>

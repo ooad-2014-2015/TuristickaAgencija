@@ -6,11 +6,11 @@
         <ImageBrush ImageSource="/TuristickaAgencijaNextDestination;component/Slike/Maldivi1.jpg"/>
     </Window.Background>
     <Grid>
-        <Label x:Name="lblUserame" Content="username" HorizontalAlignment="Left" Margin="274,171,0,0" VerticalAlignment="Top" Background="Transparent"/>
-        <Label x:Name="lblPassword" Content="password" HorizontalAlignment="Left" Margin="276,202,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txbUsername" TabIndex="0" HorizontalAlignment="Left" Height="23" Margin="341,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnLogin" TabIndex="2" Content="Login" HorizontalAlignment="Left" Margin="341,244,0,0" VerticalAlignment="Top" Width="120" Click="btnLogin_Click"/>
-        <PasswordBox x:Name="txbPassword" TabIndex="1" HorizontalAlignment="Left" Margin="341,202,0,0" VerticalAlignment="Top" Width="120" Height="26" PasswordChar="*"/>
+        <Label x:Name="lblUserame" Content="username" HorizontalAlignment="Left" Margin="258,168,0,0" VerticalAlignment="Top" Background="Transparent"/>
+        <Label x:Name="lblPassword" Content="password" HorizontalAlignment="Left" Margin="260,199,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbUsername" TabIndex="0" HorizontalAlignment="Left" Height="23" Margin="325,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnLogin" TabIndex="2" Content="Login" HorizontalAlignment="Left" Margin="325,245,0,0" VerticalAlignment="Top" Width="120" Click="btnLogin_Click"/>
+        <PasswordBox x:Name="txbPassword" TabIndex="1" HorizontalAlignment="Left" Margin="325,199,0,0" VerticalAlignment="Top" Width="120" Height="26" PasswordChar="*"/>
     </Grid>
 
 </Window>

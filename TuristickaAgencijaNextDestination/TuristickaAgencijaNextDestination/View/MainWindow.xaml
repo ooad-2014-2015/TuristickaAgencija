@@ -9,7 +9,10 @@
         <Button x:Name="btnLogin" TabIndex="0" Content="Login" HorizontalAlignment="Left" Margin="217,264,0,0" VerticalAlignment="Top" Width="75" Click="btnLogin_Click"/>
         <Button x:Name="btnExit" TabIndex="2" Content="Exit" HorizontalAlignment="Left" Margin="405,264,0,0" VerticalAlignment="Top" Width="75" Click="btnExit_Click"/>
         <Button x:Name="btnSignUp" TabIndex="1" Content="Sign up" HorizontalAlignment="Left" Margin="312,264,0,0" VerticalAlignment="Top" Width="75" Click="btnSignUp_Click"/>
-        <Button Content="Merseda Forme" HorizontalAlignment="Left" Margin="70,264,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click_1"/>
+        <Label Content="NEXT" Foreground="#FFE0E0E0" FontSize="50" FontFamily="Buxton Sketch" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="125" RenderTransformOrigin="0.531,-0.736"/>
+        <Label Content="DESTINATION" Foreground="#FFE0E0E0" FontSize="50" FontFamily="Buxton Sketch" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,120,0,0" Width="320"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="-210,264,0,0" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="135,264,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
 
     </Grid>
 </Window>

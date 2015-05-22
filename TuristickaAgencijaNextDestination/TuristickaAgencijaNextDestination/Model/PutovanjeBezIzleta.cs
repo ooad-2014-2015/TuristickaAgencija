@@ -25,18 +25,18 @@ namespace TuristickaAgencijaNextDestination.Model
 
         public static void DodajPutovanjeBezIzleta()
         {
-
-           /* Putovanje putovanje1 = new Putovanje(2, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
-            Putovanje putovanje2 = new Putovanje(3, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
-            Putovanje putovanje3 = new Putovanje(4, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
-            Putovanje putovanje4 = new Putovanje(5, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
-            Putovanje putovanje5 = new Putovanje(6, "Bosna", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje);
-
-            listaPutovanjaBezIzleta.Add(putovanje1);
-            listaPutovanjaBezIzleta.Add(putovanje2);
-            listaPutovanjaBezIzleta.Add(putovanje3);
-            listaPutovanjaBezIzleta.Add(putovanje4);
-            listaPutovanjaBezIzleta.Add(putovanje5);*/
+            Putovanje p = new Putovanje("Turska", 200, DateTime.Now, DateTime.Now, 12, 40, PrevoznoSredstvo.avion, PutnoOsiguranje.SarajevoOsiguranje, 1);
+             Putovanje putovanje1 = new Putovanje("Egipat", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje,2);
+             Putovanje putovanje2 = new Putovanje("Bugarska", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje,3);
+             Putovanje putovanje3 = new Putovanje("Njemacka", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje,4);
+             Putovanje putovanje4 = new Putovanje("Svedska", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje,5);
+             Putovanje putovanje5 = new Putovanje("Spanija", 10, DateTime.Now, DateTime.Now, 2, 4, PrevoznoSredstvo.autobus, PutnoOsiguranje.TriglavOsiguranje,5);
+             listaPutovanjaBezIzleta.Add(p);
+             listaPutovanjaBezIzleta.Add(putovanje1);
+             listaPutovanjaBezIzleta.Add(putovanje2);
+             listaPutovanjaBezIzleta.Add(putovanje3);
+             listaPutovanjaBezIzleta.Add(putovanje4);
+             listaPutovanjaBezIzleta.Add(putovanje5);
 
         }
         

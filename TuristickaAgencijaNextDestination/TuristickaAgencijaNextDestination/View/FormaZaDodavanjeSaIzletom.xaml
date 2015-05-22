@@ -1,8 +1,8 @@
 ﻿<Window x:Class="TuristickaAgencijaNextDestination.View.FormaZaDodavanjeSaIzletom"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FormaZaDodavanjeSaIzletom" Height="427" Width="934">
-    <Grid Margin="0,0,0,0" HorizontalAlignment="Left" Width="924">
+        Title="FormaZaDodavanjeSaIzletom" Height="387" Width="644">
+    <Grid Margin="0,0,0,0" HorizontalAlignment="Left" Width="784">
         <Label Content="Drzava" HorizontalAlignment="Left" Margin="129,49,0,0" VerticalAlignment="Top"/>
         <Label Content="Datum polaska&#xA;" HorizontalAlignment="Left" Margin="86,141,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
         <Label Content="Datum odlaska&#xA;" HorizontalAlignment="Left" Margin="86,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.5"/>
@@ -15,17 +15,18 @@
         <TextBox x:Name="txtBrojMjesta" HorizontalAlignment="Left" Height="23" TabIndex="6" Margin="180,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <DatePicker x:Name="dtpDatumPolaska" HorizontalAlignment="Left" TabIndex="3" Margin="180,144,0,0" VerticalAlignment="Top" Width="120"/>
         <DatePicker x:Name="dtpdatumOdlaska" HorizontalAlignment="Left" TabIndex="4" Margin="180,179,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnSnimiPutovanje" Content="Snimi" HorizontalAlignment="Left" Margin="687,310,0,0" TabIndex="14" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="595,310,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Button x:Name="btnSnimiPutovanje" Content="Snimi" HorizontalAlignment="Left" Margin="520,310,0,0" TabIndex="14" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <TextBox x:Name="txtIzlet" HorizontalAlignment="Left" Height="23" Margin="180,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Izlet" HorizontalAlignment="Left" Margin="129,85,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cbAvion" Content="Avion" HorizontalAlignment="Left" Margin="500,48,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cbAutobus" Content="Autobus" HorizontalAlignment="Left" Margin="500,78,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cbBrod" Content="Brod" HorizontalAlignment="Left" Margin="500,109,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cbSarajevoOsiguranje" Content="Sarajevo osiguranje" HorizontalAlignment="Left" Margin="500,168,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cbTriglavOsiguranje" Content="Triglav osiguranje" HorizontalAlignment="Left" Margin="500,195,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cbASAOsiguranje" Content="ASA osiguranje" HorizontalAlignment="Left" Margin="500,223,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="cbSunceOsiguranje" Content="Sunce osiguranje" HorizontalAlignment="Left" Margin="500,250,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbAvion" Content="Avion" HorizontalAlignment="Left" Margin="460,55,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbAutobus" Content="Autobus" HorizontalAlignment="Left" Margin="460,85,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbBrod" Content="Brod" HorizontalAlignment="Left" Margin="460,116,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbSarajevoOsiguranje" Content="Sarajevo osiguranje" HorizontalAlignment="Left" Margin="460,177,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbTriglavOsiguranje" Content="Triglav osiguranje" HorizontalAlignment="Left" Margin="460,204,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbASAOsiguranje" Content="ASA osiguranje" HorizontalAlignment="Left" Margin="460,232,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbSunceOsiguranje" Content="Sunce osiguranje" HorizontalAlignment="Left" Margin="460,259,0,0" VerticalAlignment="Top"/>
+        <Label Content="Putno osiguranje" HorizontalAlignment="Left" Margin="370,143,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prevozno sredstvo" HorizontalAlignment="Left" Margin="370,20,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

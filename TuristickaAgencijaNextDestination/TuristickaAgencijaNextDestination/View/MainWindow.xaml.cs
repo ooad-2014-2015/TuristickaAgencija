@@ -63,7 +63,12 @@ namespace TuristickaAgencijaNextDestination
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            FormaPergledPutovanja frm = new FormaPergledPutovanja();
+            
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            View.FormaDodajBrisiPrihvati frm = new View.FormaDodajBrisiPrihvati();
             frm.Show();
         }
     }
