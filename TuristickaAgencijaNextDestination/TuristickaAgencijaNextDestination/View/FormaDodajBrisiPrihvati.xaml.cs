@@ -70,5 +70,11 @@ namespace TuristickaAgencijaNextDestination.View
             FormaOdobriPutovanje f = new FormaOdobriPutovanje();
             f.Show();
         }
+
+        private void btnKorisnickiNalog_Click(object sender, RoutedEventArgs e)
+        {
+            FormaBrisanjeNaloga f = new FormaBrisanjeNaloga();
+            f.Show();
+        }
     }
 }

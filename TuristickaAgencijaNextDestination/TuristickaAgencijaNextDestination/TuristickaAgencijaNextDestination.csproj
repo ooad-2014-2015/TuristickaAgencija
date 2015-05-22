@@ -61,8 +61,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\PrijavaViewModel.cs" />
     <Compile Include="View\FormaDodajBrisiPrihvati.xaml.cs">
       <DependentUpon>FormaDodajBrisiPrihvati.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormaObrisiPredlozenoPutovanje.xaml.cs">
+      <DependentUpon>FormaObrisiPredlozenoPutovanje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormaObrisiPredlozenoPutovanjeSaIzletom.xaml.cs">
+      <DependentUpon>FormaObrisiPredlozenoPutovanjeSaIzletom.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\FormaObrisiPutovanje.xaml.cs">
       <DependentUpon>FormaObrisiPutovanje.xaml</DependentUpon>
@@ -93,8 +100,14 @@
     <Compile Include="View\FormaPredlozenaPutovanja.xaml.cs">
       <DependentUpon>FormaPredlozenaPutovanja.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\FormaPredlozenaPutovanjaSaIzletom.xaml.cs">
+      <DependentUpon>FormaPredlozenaPutovanjaSaIzletom.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FormaPrijava.xaml.cs">
       <DependentUpon>FormaPrijava.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormaTAgentOdabir.xaml.cs">
+      <DependentUpon>FormaTAgentOdabir.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\FormaZaDodavanjePutovanja.xaml.cs">
       <DependentUpon>FormaZaDodavanjePutovanja.xaml</DependentUpon>
@@ -115,6 +128,14 @@
       <DependentUpon>UCPregledPutovanjaBezIzleta.xaml</DependentUpon>
     </Compile>
     <Page Include="View\FormaDodajBrisiPrihvati.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormaObrisiPredlozenoPutovanje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormaObrisiPredlozenoPutovanjeSaIzletom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,7 +171,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\FormaPredlozenaPutovanjaSaIzletom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\FormaPrijava.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FormaTAgentOdabir.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

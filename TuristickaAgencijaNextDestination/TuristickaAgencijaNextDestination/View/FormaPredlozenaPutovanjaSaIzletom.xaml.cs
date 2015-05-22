@@ -15,20 +15,20 @@ using System.Windows.Shapes;
 namespace TuristickaAgencijaNextDestination.View
 {
     /// <summary>
-    /// Interaction logic for FormaPredlozenaPutovanja.xaml
+    /// Interaction logic for FormaPredlozenoPutovanjeBezIzleta.xaml
     /// </summary>
-    public partial class FormaPredlozenaPutovanja : Window
+    public partial class FormaPredlozenoPutovanjeBezIzleta : Window
     {
-        
-        public FormaPredlozenaPutovanja()
+        public FormaPredlozenoPutovanjeBezIzleta()
         {
             InitializeComponent();
         }
 
-        private void dodavanjePredlozenog_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            TuristickaAgencijaNextDestination.Model.Putovanje _putovanje = new TuristickaAgencijaNextDestination.Model.Putovanje();
 
+            TuristickaAgencijaNextDestination.Model.Putovanje _putovanje = new TuristickaAgencijaNextDestination.Model.Putovanje();
+            int id = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.dajNaredniIdPredlozeno();
             if (predlozeniAvion.IsChecked == true)
             {
                 _putovanje.PrevoznoSredstvo = TuristickaAgencijaNextDestination.Model.PrevoznoSredstvo.avion;
@@ -63,34 +63,36 @@ namespace TuristickaAgencijaNextDestination.View
                 _putovanje.PutnoOsiguranje = TuristickaAgencijaNextDestination.Model.PutnoOsiguranje.SunceOsiguranje;
             }
 
-            TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta predlozenoPutovanjeBezIzleta = new TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta();
-            
-           
-            
+            TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom predlozenoPutovanjeSaIzletom = new TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom();
 
-            predlozenoPutovanjeBezIzleta.Destinacija = predlozenaDestinacija.Text;
-            predlozenoPutovanjeBezIzleta.Cijena = Convert.ToDouble(cijenaPredlozenog.Text);
-            predlozenoPutovanjeBezIzleta.DatumPolaska = Convert.ToDateTime(datumPolaskaPredlozenog.Text);
-            predlozenoPutovanjeBezIzleta.DatumDolaska = Convert.ToDateTime(datumDolaskaPredlozenog.Text);
-            predlozenoPutovanjeBezIzleta.TrajanjePutovanja = Convert.ToInt32(trajanjePredlozenog.Text);
-            predlozenoPutovanjeBezIzleta.BrojSlobodnihMjesta = Convert.ToInt32(slobodnaMjestaPredlozeno.Text);
-            predlozenoPutovanjeBezIzleta.PrevoznoSredstvo = _putovanje.PrevoznoSredstvo;
-            predlozenoPutovanjeBezIzleta.PutnoOsiguranje = _putovanje.PutnoOsiguranje;
-           
 
-            Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Add(predlozenoPutovanjeBezIzleta);
-           
-            
-           
+                predlozenoPutovanjeSaIzletom.Id = id;
+                predlozenoPutovanjeSaIzletom.Destinacija = predlozenaDestinacija.Text;
+                predlozenoPutovanjeSaIzletom.Cijena = Convert.ToDouble(cijenaPredlozenog.Text);
+                predlozenoPutovanjeSaIzletom.DatumPolaska = Convert.ToDateTime(datumPolaskaPredlozenog.Text);
+                predlozenoPutovanjeSaIzletom.DatumDolaska = Convert.ToDateTime(datumDolaskaPredlozenog.Text);
+                predlozenoPutovanjeSaIzletom.TrajanjePutovanja = Convert.ToInt32(trajanjePredlozenog.Text);
+                predlozenoPutovanjeSaIzletom.BrojSlobodnihMjesta = Convert.ToInt32(slobodnaMjestaPredlozeno.Text);
+                predlozenoPutovanjeSaIzletom.PrevoznoSredstvo = _putovanje.PrevoznoSredstvo;
+                predlozenoPutovanjeSaIzletom.PutnoOsiguranje = _putovanje.PutnoOsiguranje;
+                predlozenoPutovanjeSaIzletom.Izlet = predlozeniIzlet.Text;
 
+                Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom.Add(predlozenoPutovanjeSaIzletom);
             
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            FormaObrisiPredlozenoPutovanje f = new FormaObrisiPredlozenoPutovanje();
+            FormaObrisiPredlozenoPutovanjeSaIzletom f = new FormaObrisiPredlozenoPutovanjeSaIzletom();
             f.Show();
         }
-    }       
-    
+
+
+       
+
+       
+       
+
+       
+    }
 }

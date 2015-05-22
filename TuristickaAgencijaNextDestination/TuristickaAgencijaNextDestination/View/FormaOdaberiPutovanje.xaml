@@ -7,7 +7,7 @@
         <RadioButton x:Name="rbPutovanjaSaIzletom" Content="Putovanja sa izletom" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="rbPutovanjeBezIzleta" Content="Putovanja bez izleta" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top"/>
         <Button Content="Prikazi putovanja" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="-0.333,0" Click="Button_Click_1"/>
-        <Button Content="Odaberi" HorizontalAlignment="Left" Margin="465,165,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click_2"/>
+        <Button Content="Generisi racun" HorizontalAlignment="Left" Margin="465,165,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click_2"/>
 
     </Grid>
 </Window>

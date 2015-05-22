@@ -62,8 +62,8 @@ namespace TuristickaAgencijaNextDestination
                              Model.KorisnickiNalogTAgent.listaKNalogaTAgent[i].password == password)
                     {
                         Close();
-                        View.FormaPredlozenaPutovanja pregled = new View.FormaPredlozenaPutovanja();
-                        pregled.Show();
+                        View.FormaTAgentOdabir odabir = new View.FormaTAgentOdabir();
+                        odabir.Show();
                         pronasao = true;
                     }
                 }
@@ -75,6 +75,11 @@ namespace TuristickaAgencijaNextDestination
                 txbUsername.Text = "";
                 txbPassword.Password = "";
             }
+        }
+
+        private void btnNazad_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -22,6 +22,23 @@ namespace TuristickaAgencijaNextDestination.View
         public FormaBrisanjeNaloga()
         {
             InitializeComponent();
+            gridObrisiNalog.ItemsSource = TuristickaAgencijaNextDestination.Model.KorisnickiNalogKlijent.listaKorisnickihNalogaZaBrisanje;
+        }
+
+        private void btnObrisiNalog_Click(object sender, RoutedEventArgs e)
+        {
+            if (gridObrisiNalog.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Niste odabrali nalog za obrisati");
+            }
+            else
+            {
+                TuristickaAgencijaNextDestination.Model.KorisnickiNalogKlijent klijent = (Model.KorisnickiNalogKlijent)gridObrisiNalog.SelectedItem;
+                int id = klijent.id;
+                Model.KorisnickiNalogKlijent.obrisiKorisnickiNalog(id);
+                gridObrisiNalog.ItemsSource = TuristickaAgencijaNextDestination.Model.KorisnickiNalogKlijent.listaKorisnickihNalogaZaBrisanje;
+                gridObrisiNalog.Items.Refresh();
+            }
         }
     }
 }

@@ -55,6 +55,7 @@ namespace TuristickaAgencijaNextDestination.Model
             listaPredlozenihPutovanjaBezIzleta.Add(_putovanje2);
         }
         */
+
         public static int DajMiNaredniID()
         {
             return listaPutovanjaBezIzleta.Count + 1;
@@ -63,9 +64,14 @@ namespace TuristickaAgencijaNextDestination.Model
         {
             listaPutovanjaBezIzleta.RemoveAt(id-1);
         }
+
+        public static int dajNaredniIdPredlozeno()
+        {
+            return listaPredlozenihPutovanjaBezIzleta.Count + 1;
+        }
         public static void ObrisiPredlozenoPutovanje(int id)
         {
-           // listaPredlozenihPutovanjaBezIzleta.RemoveAt(id);
+           listaPredlozenihPutovanjaBezIzleta.RemoveAt(id);
         }
 
     }
