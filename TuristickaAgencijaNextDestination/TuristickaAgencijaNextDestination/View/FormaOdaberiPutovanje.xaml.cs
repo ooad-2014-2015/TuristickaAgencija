@@ -71,8 +71,8 @@ namespace TuristickaAgencijaNextDestination.View
                 }
                 else if (rbPutovanjeBezIzleta.IsChecked == true)
                 {
-                    Model.PutovanjaBezIzleta pb = (Model.PutovanjaBezIzleta)gridOdaberiPutovanje.SelectedItem;
-                    if (pb.BrojSlobodnihMjesta == 0) MessageBox.Show("Nema slobodnih mjesta");
+                    Model.Putovanje pb = (Model.Putovanje)gridOdaberiPutovanje.SelectedItem;
+                    if (Convert.ToInt32(pb.BrojSlobodnihMjesta) == 0) MessageBox.Show("Nema slobodnih mjesta");
                     else
                     {
                         Model.PutovanjaBezIzleta.listaOdabranihPutovanja.Add(pb);

@@ -89,6 +89,17 @@ namespace TuristickaAgencijaNextDestination.Model
             }
                
         }
+        public static void ObrisiPutovanje1(Putovanje p)
+        {
+            for(int i=0;i<listaPutovanjaBezIzleta.Count();i++)
+            {
+                if(p.Id==listaPutovanjaBezIzleta[i].Id)
+                {
+                    listaPutovanjaBezIzleta.RemoveAt(i);
+                    break;
+                }
+            }
+        }
 
     }
 }

@@ -33,8 +33,8 @@ namespace TuristickaAgencijaNextDestination.View
             }
             else
             {
-                TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta pbz=(Model.PutovanjaBezIzleta)gridObrisiPutovanje.SelectedItem;
-                Model.PutovanjaBezIzleta.ObrisiPutovanje(pbz);
+                TuristickaAgencijaNextDestination.Model.Putovanje pbz=(Model.Putovanje)gridObrisiPutovanje.SelectedItem;
+                Model.PutovanjaBezIzleta.ObrisiPutovanje1(pbz);
                 gridObrisiPutovanje.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta;
                 gridObrisiPutovanje.Items.Refresh();
             }
