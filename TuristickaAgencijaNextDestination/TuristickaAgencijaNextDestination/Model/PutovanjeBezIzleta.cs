@@ -60,18 +60,34 @@ namespace TuristickaAgencijaNextDestination.Model
         {
             return listaPutovanjaBezIzleta.Count + 1;
         }
-        public static void ObrisiPutovanje(int id)
+        public static void ObrisiPutovanje(PutovanjaBezIzleta pbi)
         {
-            listaPutovanjaBezIzleta.RemoveAt(id-1);
+            
+            for (int i = 0; i < listaPutovanjaBezIzleta.Count(); i++)
+            {
+                if (pbi.id == listaPutovanjaBezIzleta[i].Id)
+                {
+                    listaPutovanjaBezIzleta.RemoveAt(i);
+                    break;
+                }
+            }     
         }
 
         public static int dajNaredniIdPredlozeno()
         {
             return listaPredlozenihPutovanjaBezIzleta.Count + 1;
         }
-        public static void ObrisiPredlozenoPutovanje(int id)
+        public static void ObrisiPredlozenoPutovanje(PutovanjaBezIzleta p)
         {
-           listaPredlozenihPutovanjaBezIzleta.RemoveAt(id);
+            for (int i = 0; i < listaPredlozenihPutovanjaBezIzleta.Count(); i++)
+            {
+                if (listaPredlozenihPutovanjaBezIzleta[i].Id == p.id)
+                {
+                    listaPredlozenihPutovanjaBezIzleta.RemoveAt(i);
+                    break;
+                }
+            }
+               
         }
 
     }

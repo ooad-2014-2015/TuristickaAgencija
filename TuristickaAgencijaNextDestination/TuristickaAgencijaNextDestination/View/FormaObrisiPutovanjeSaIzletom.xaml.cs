@@ -36,8 +36,8 @@ namespace TuristickaAgencijaNextDestination.View
             else
             {
                 TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom pbz = (Model.PutovanjeSaIzletom)gridBrisiPutovanjaSaIzletom.SelectedItem;
-                int id = pbz.Id;
-                Model.PutovanjeSaIzletom.ObrisiPutovanjeSaIzletom(id);
+               // int id = pbz.Id;
+                Model.PutovanjeSaIzletom.ObrisiPutovanjeSaIzletom(pbz);
                 gridBrisiPutovanjaSaIzletom.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanja;
                 gridBrisiPutovanjaSaIzletom.Items.Refresh();
                 //Close();

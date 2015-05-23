@@ -61,9 +61,17 @@ namespace TuristickaAgencijaNextDestination.Model
            return _listaPredlozenihPutovanjaSaIzletom.Count + 1;
        }
 
-       public static void ObrisiPredlozenoPutovanjeSaIzletom(int id)
+       public static void ObrisiPredlozenoPutovanjeSaIzletom(PutovanjeSaIzletom p)
        {
-           _listaPredlozenihPutovanjaSaIzletom.RemoveAt(id);
+           for (int i = 0; i < _listaPredlozenihPutovanjaSaIzletom.Count(); i++)
+           {
+               if (_listaPredlozenihPutovanjaSaIzletom[i].Id == p.Id)
+               {
+                   _listaPredlozenihPutovanjaSaIzletom.RemoveAt(i);
+                   break;
+               }
+           }
+              
        }
 
   /*     public static void dodajPredlozenoPutovanjeSaIzletom()
@@ -79,9 +87,16 @@ namespace TuristickaAgencijaNextDestination.Model
        {
            return listaPutovanja.Count + 1;
        }
-       public static void ObrisiPutovanjeSaIzletom(int id)
+       public static void ObrisiPutovanjeSaIzletom(PutovanjeSaIzletom p)
        {
-           listaPutovanja.RemoveAt(id-1);
+           for (int i = 0; i < listaPutovanja.Count(); i++)
+           {
+               if (p.Id == listaPutovanja[i].Id)
+               {
+                   listaPutovanja.RemoveAt(i);
+                   break;
+               }
+           }
        }
     }
 }

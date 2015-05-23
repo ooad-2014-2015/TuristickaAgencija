@@ -35,8 +35,8 @@ namespace TuristickaAgencijaNextDestination.View
             // Brise putovanje bez izleta
 
             TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom predlozenoSaIzletom = (Model.PutovanjeSaIzletom)gridObrisiPredlozenoPutovanjeSaIzletom.SelectedItem;
-            int id = predlozenoSaIzletom.Id;
-            Model.PutovanjeSaIzletom.ObrisiPredlozenoPutovanjeSaIzletom(id);
+            //int id = predlozenoSaIzletom.Id;
+            Model.PutovanjeSaIzletom.ObrisiPredlozenoPutovanjeSaIzletom(predlozenoSaIzletom);
             gridObrisiPredlozenoPutovanjeSaIzletom.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom;
             gridObrisiPredlozenoPutovanjeSaIzletom.Items.Refresh();
         }

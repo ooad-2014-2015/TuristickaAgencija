@@ -1,13 +1,14 @@
 ﻿<Window x:Class="TuristickaAgencijaNextDestination.View.FormaOdaberiPutovanje"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FormaOdaberiPutovanje" Height="322" Width="714">
+        Title="FormaOdaberiPutovanje" Height="322" Width="714" ResizeMode="CanResizeWithGrip">
     <Grid Margin="0,0,0,0">
         <DataGrid x:Name="gridOdaberiPutovanje" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="130" Width="686"/>
         <RadioButton x:Name="rbPutovanjaSaIzletom" Content="Putovanja sa izletom" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="rbPutovanjeBezIzleta" Content="Putovanja bez izleta" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top"/>
         <Button Content="Prikazi putovanja" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="-0.333,0" Click="Button_Click_1"/>
-        <Button Content="Generisi racun" HorizontalAlignment="Left" Margin="465,165,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click_2"/>
+        <Button Content="Generisi racun" HorizontalAlignment="Left" Margin="580,250,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click_2"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="460,250,0,0" VerticalAlignment="Top" Width="95" Click="Button_Click_3"/>
 
     </Grid>
 </Window>

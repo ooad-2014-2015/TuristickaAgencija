@@ -32,11 +32,15 @@ namespace TuristickaAgencijaNextDestination.View
                 gridOdaberiPutovanje.ItemsSource = null;
                 gridOdaberiPutovanje.ItemsSource = Model.PutovanjeSaIzletom.listaPutovanja;
             }
-            else
+            else if (rbPutovanjeBezIzleta.IsChecked == true)
             {
                 //ucitaj listu bez izleta
                 gridOdaberiPutovanje.ItemsSource = null;
                 gridOdaberiPutovanje.ItemsSource = Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta;
+            }
+            else 
+            {
+                MessageBox.Show("Odaberite kategoriju putovanja!");
             }
         }
 
@@ -52,20 +56,47 @@ namespace TuristickaAgencijaNextDestination.View
                 if (rbPutovanjaSaIzletom.IsChecked == true)
                 {
                     Model.PutovanjeSaIzletom p = (Model.PutovanjeSaIzletom)gridOdaberiPutovanje.SelectedItem;
-                    Model.PutovanjeSaIzletom.listaOdabranihPutovanja.Add(p);
+                    if (p.BrojSlobodnihMjesta == 0) MessageBox.Show("Nema slobodnih mjesta!");
+                    else
+                    {
+                        Model.PutovanjeSaIzletom.listaOdabranihPutovanja.Add(p);
+                        p.BrojSlobodnihMjesta -= 1;
+                        if (p.BrojSlobodnihMjesta == 0)
+                        {
+                            Model.PutovanjeSaIzletom.ObrisiPutovanjeSaIzletom(p);
+                        }
+                        gridOdaberiPutovanje.Items.Refresh();
+
+                    }
                 }
                 else if (rbPutovanjeBezIzleta.IsChecked == true)
                 {
                     Model.PutovanjaBezIzleta pb = (Model.PutovanjaBezIzleta)gridOdaberiPutovanje.SelectedItem;
-                    Model.PutovanjaBezIzleta.listaOdabranihPutovanja.Add(pb);
+                    if (pb.BrojSlobodnihMjesta == 0) MessageBox.Show("Nema slobodnih mjesta");
+                    else
+                    {
+                        Model.PutovanjaBezIzleta.listaOdabranihPutovanja.Add(pb);
+                        pb.BrojSlobodnihMjesta -= 1;
+                        //if (pb.BrojSlobodnihMjesta == 0)
+                        //{
+                        //    Model.PutovanjaBezIzleta.listaOdabranihPutovanja.
+                        //}
+                        gridOdaberiPutovanje.Items.Refresh();
+                    }
                 }
                 else 
                 {
                     MessageBox.Show("Greska!");
                 }
+
                 FormaPlacanje f = new FormaPlacanje();
                 f.Show();
             }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

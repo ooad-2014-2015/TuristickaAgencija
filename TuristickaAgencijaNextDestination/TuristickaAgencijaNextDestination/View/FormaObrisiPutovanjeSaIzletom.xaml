@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="FormaObrisiPutovanjeSaIzletom" Height="300" Width="629">
     <Grid Margin="0,0,0,0">
-        <DataGrid x:Name="gridBrisiPutovanjaSaIzletom" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" Height="160" Width="572"/>
+        <DataGrid x:Name="gridBrisiPutovanjaSaIzletom" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" Height="160" Width="572" IsReadOnly="True"/>
         <Button Content="Obrisi" HorizontalAlignment="Left" Margin="510,220,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Button Content="Nazad" HorizontalAlignment="Left" Margin="410,220,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
 

@@ -1,14 +1,17 @@
 ﻿<Window x:Class="TuristickaAgencijaNextDestination.FormaPergledPutovanja"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FormaPergledPutovanja" Height="300" Width="679">
+        Title="FormaPergledPutovanja" Height="332" Width="679">
     <Window.Background>
         <ImageBrush ImageSource="/TuristickaAgencijaNextDestination;component/Slike/Slika1.png"/>
     </Window.Background>
-    <Grid Margin="0,0,-8,0">
+    <Grid Margin="0,0,-8,-1">
         <Button x:Name="btnPutovanjaSaIzletom" Content="Putovanja sa izletom&#xD;&#xA;" HorizontalAlignment="Left" Margin="530,175,0,0" VerticalAlignment="Top" Width="125" Click="btnPutovanjaSaIzletom_Click" Height="20"/>
         <Canvas x:Name="panelPregledPutovanja" HorizontalAlignment="Left" Height="135" Margin="0,10,0,0" VerticalAlignment="Top" Width="669"/>
         <Button x:Name="btnPutovanjaBezIzleta" Content="Putovanja bez izleta" HorizontalAlignment="Left" Margin="530,210,0,0" VerticalAlignment="Top" Width="125" Click="btnPutovanjaBezIzleta_Click"/>
+        <Button Content="->" HorizontalAlignment="Left" Height="20" Margin="589,257,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.48,0.5" Click="Button_Click_1"/>
+        <Label Content="Odaberi putovanja" HorizontalAlignment="Left" Margin="475,254,0,0" VerticalAlignment="Top"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="20,257,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
 
     </Grid>
 </Window>
