@@ -8,30 +8,53 @@ namespace TuristickaAgencijaNextDestination.Model
 {
     class NalogPutovanja : iRacun
     {
-        public int _id { get; set; }
+        private int _id;
+        private Klijent _klijent;
+        private decimal _cijena;
+        private Putovanje _putovanje;
+        public  static decimal _popust = 0.2M;
 
-        public Klijent _klijent { get; set; }
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        public Klijent Klijent
+        {
+            get { return _klijent; }
+            set { _klijent = value; }
+        }
 
-        public decimal _cijena { get; set; }
+        public decimal Cijena
+        {
+            get { return _cijena; }
+            set {
+                if (Convert.ToBoolean(StatusKlijenta.student) == true || Convert.ToBoolean(StatusKlijenta.penzioner) == true)
+                    Cijena += Cijena * _popust;
+                
+                else
+                _cijena = value; }
+        }
 
-        public Putovanje _putovanje { get; set; }
 
-        public decimal _popust { get; set; }
+        public Putovanje Putovanje
+        {
+            get { return _putovanje; }
+            set { _putovanje = value; }
+        }
+
 
         public NalogPutovanja(int id, decimal cijena, decimal popust)
         {
             _id = id;
             _cijena = cijena;
             _popust = popust;
+            
         }
-
-        //public decimal obracunajPopust(); 
 
        // public override decimal generisiRacun()
 
-      //  public string posaljiObavijest();
-
-      //  public Boolean otkaziPutovanje();
+   
 
     }
 }

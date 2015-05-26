@@ -27,7 +27,7 @@
         <CheckBox x:Name="predlozenoSaOs" Content="Sarajevo osiguranje" HorizontalAlignment="Left" Margin="805,236,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
         
         
-        <Button Content="dodajPutovanje" HorizontalAlignment="Left" Margin="805,446,0,0" VerticalAlignment="Top" Width="156" FontFamily="Arial" FontSize="18" Height="40"/>
+        <Button x:Name="btnDodaj" Content="dodajPutovanje" HorizontalAlignment="Left" Margin="805,446,0,0" VerticalAlignment="Top" Width="156" FontFamily="Arial" FontSize="18" Height="40" Click="btnDodaj_Click"/>
         <Button Content="pregledPutovanja" HorizontalAlignment="Left" Margin="991,446,0,0" VerticalAlignment="Top" Width="158" FontFamily="Arial" FontSize="18" Height="40" Click="Button_Click_1"/>
         <Label Content="Broj slobodnih mjesta:" HorizontalAlignment="Left" Margin="47,307,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
         <TextBox x:Name="trajanjePredlozenog" HorizontalAlignment="Left" Height="31" Margin="239,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="347"/>

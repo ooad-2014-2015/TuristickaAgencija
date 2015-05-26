@@ -121,6 +121,9 @@
     <Compile Include="View\FormaZaDodavanjeSaIzletom.xaml.cs">
       <DependentUpon>FormaZaDodavanjeSaIzletom.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\KreditnaKartica.xaml.cs">
+      <DependentUpon>KreditnaKartica.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UCPregledPutovanja.xaml.cs">
       <DependentUpon>UCPregledPutovanja.xaml</DependentUpon>
     </Compile>
@@ -192,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\FormaZaDodavanjeSaIzletom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KreditnaKartica.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
