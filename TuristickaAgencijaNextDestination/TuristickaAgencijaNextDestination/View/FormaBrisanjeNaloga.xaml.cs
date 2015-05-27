@@ -40,5 +40,10 @@ namespace TuristickaAgencijaNextDestination.View
                 gridObrisiNalog.Items.Refresh();
             }
         }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

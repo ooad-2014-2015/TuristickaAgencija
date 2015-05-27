@@ -76,14 +76,19 @@ namespace TuristickaAgencijaNextDestination.View
             predlozenoPutovanjeBezIzleta.BrojSlobodnihMjesta = Convert.ToInt32(slobodnaMjestaPredlozeno.Text);
             predlozenoPutovanjeBezIzleta.PrevoznoSredstvo = _putovanje.PrevoznoSredstvo;
             predlozenoPutovanjeBezIzleta.PutnoOsiguranje = _putovanje.PutnoOsiguranje;
-           
+
+            //provjera da li putovanje postoji u listi predlozenih putovanja
+
+
+            if (Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Any(postojecePutovanje => postojecePutovanje.Id == predlozenoPutovanjeBezIzleta.Id))
+            {
+                throw new ArgumentException("Putovanje već postoji u listi!");
+            }
+            else
+                // dodaj putovanje u listu
 
             Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Add(predlozenoPutovanjeBezIzleta);
            
-            
-           
-
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

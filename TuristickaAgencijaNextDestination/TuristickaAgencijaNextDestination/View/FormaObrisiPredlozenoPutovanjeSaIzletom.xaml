@@ -4,7 +4,8 @@
         Title="FormaObrisiPredlozenoPutovanjeSaIzletom" Height="375.743" Width="784.158">
     <Grid>
         <DataGrid x:Name="gridObrisiPredlozenoPutovanjeSaIzletom" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="253" Width="756"/>
-        <Button x:Name="gridPredlozenoBezIzleta" Content="Obriši" HorizontalAlignment="Left" Margin="648,280,0,0" VerticalAlignment="Top" Width="118" Height="29" FontSize="16" Click="Button_Click"/>
+        <Button x:Name="gridPredlozenoBezIzleta" Content="Obriši" HorizontalAlignment="Left" Margin="535,286,0,0" VerticalAlignment="Top" Width="118" Height="29" FontSize="16" Click="Button_Click"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="671,286,0,0" VerticalAlignment="Top" Width="95" Height="29" FontSize="16" Click="btnExit_Click"/>
 
     </Grid>
 </Window>

@@ -12,7 +12,8 @@
         <PasswordBox x:Name="txbPassword" TabIndex="1" HorizontalAlignment="Left" Margin="325,199,0,0" VerticalAlignment="Top" Width="120" Height="26" PasswordChar="*"/>
         <Button x:Name="btnLogin1" TabIndex="2" Content="Login" HorizontalAlignment="Left" Margin="354,238,0,0" VerticalAlignment="Top" Width="75" Click="btnLogin_Click"/>
         <Button x:Name="btnNazad" Content="Nazad" HorizontalAlignment="Left" Margin="245,238,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.227,0.591" Click="btnNazad_Click"/>
-        <Button x:Name="btnObrisiNalog" Content="Obrisi" HorizontalAlignment="Left" Margin="461,238,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnObrisiNalog" Content="Obrisi" HorizontalAlignment="Left" Margin="468,238,0,0" VerticalAlignment="Top" Width="75"/>
+
 
     </Grid>
 

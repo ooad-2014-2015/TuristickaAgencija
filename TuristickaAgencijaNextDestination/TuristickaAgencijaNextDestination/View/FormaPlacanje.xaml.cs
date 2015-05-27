@@ -19,15 +19,34 @@ namespace TuristickaAgencijaNextDestination.View
     /// </summary>
     public partial class FormaPlacanje : Window
     {
+        
         public FormaPlacanje()
         {
             InitializeComponent();
+
+            foreach (var item in TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaOdabranihPutovanja)
+            {
+                txtDestinacija.AppendText(item.Destinacija);
+                txtPolazak.AppendText(Convert.ToString(item.DatumPolaska));
+                txtDolazak.AppendText(Convert.ToString(item.DatumDolaska));
+                txtTrajanje.AppendText(Convert.ToString(item.TrajanjePutovanja));
+                txtPrevoznoSredstvo.AppendText(Convert.ToString(item.PrevoznoSredstvo));
+                txtPutnoOsiguranje.AppendText(Convert.ToString(item.PutnoOsiguranje));
+                txtCijena.AppendText(Convert.ToString(item.Cijena));
+               
+            }
+            // da se izbrisu podaci iz liste
+            TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaOdabranihPutovanja.Clear();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Uspješno ste izvršili plaćanje", "Obavještenje", MessageBoxButton.OKCancel, MessageBoxImage.Information);
+            KreditnaKartica fkk = new KreditnaKartica();
+            fkk.Show();
         }
+        
+
+       
 
       
     }

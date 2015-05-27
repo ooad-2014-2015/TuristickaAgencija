@@ -40,5 +40,10 @@ namespace TuristickaAgencijaNextDestination.View
             gridObrisiPredlozenoPutovanjeSaIzletom.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom;
             gridObrisiPredlozenoPutovanjeSaIzletom.Items.Refresh();
         }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -23,11 +23,10 @@ namespace TuristickaAgencijaNextDestination.View
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnDodaj_Click(object sender, RoutedEventArgs e)
         {
-
             TuristickaAgencijaNextDestination.Model.Putovanje _putovanje = new TuristickaAgencijaNextDestination.Model.Putovanje();
+
             int id = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.dajNaredniIdPredlozeno();
             if (predlozeniAvion.IsChecked == true)
             {
@@ -66,20 +65,30 @@ namespace TuristickaAgencijaNextDestination.View
             TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom predlozenoPutovanjeSaIzletom = new TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom();
 
 
-                predlozenoPutovanjeSaIzletom.Id = id;
-                predlozenoPutovanjeSaIzletom.Destinacija = predlozenaDestinacija.Text;
-                predlozenoPutovanjeSaIzletom.Cijena = Convert.ToDouble(cijenaPredlozenog.Text);
-                predlozenoPutovanjeSaIzletom.DatumPolaska = Convert.ToDateTime(datumPolaskaPredlozenog.Text);
-                predlozenoPutovanjeSaIzletom.DatumDolaska = Convert.ToDateTime(datumDolaskaPredlozenog.Text);
-                predlozenoPutovanjeSaIzletom.TrajanjePutovanja = Convert.ToInt32(trajanjePredlozenog.Text);
-                predlozenoPutovanjeSaIzletom.BrojSlobodnihMjesta = Convert.ToInt32(slobodnaMjestaPredlozeno.Text);
-                predlozenoPutovanjeSaIzletom.PrevoznoSredstvo = _putovanje.PrevoznoSredstvo;
-                predlozenoPutovanjeSaIzletom.PutnoOsiguranje = _putovanje.PutnoOsiguranje;
-                predlozenoPutovanjeSaIzletom.Izlet = predlozeniIzlet.Text;
+            predlozenoPutovanjeSaIzletom.Id = id;
+            predlozenoPutovanjeSaIzletom.Destinacija = predlozenaDestinacija.Text;
+            predlozenoPutovanjeSaIzletom.Cijena = Convert.ToDouble(cijenaPredlozenog.Text);
+            predlozenoPutovanjeSaIzletom.DatumPolaska = Convert.ToDateTime(datumPolaskaPredlozenog.Text);
+            predlozenoPutovanjeSaIzletom.DatumDolaska = Convert.ToDateTime(datumDolaskaPredlozenog.Text);
+            predlozenoPutovanjeSaIzletom.TrajanjePutovanja = Convert.ToInt32(trajanjePredlozenog.Text);
+            predlozenoPutovanjeSaIzletom.BrojSlobodnihMjesta = Convert.ToInt32(slobodnaMjestaPredlozeno.Text);
+            predlozenoPutovanjeSaIzletom.PrevoznoSredstvo = _putovanje.PrevoznoSredstvo;
+            predlozenoPutovanjeSaIzletom.PutnoOsiguranje = _putovanje.PutnoOsiguranje;
+            predlozenoPutovanjeSaIzletom.Izlet = predlozeniIzlet.Text;
 
-                Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom.Add(predlozenoPutovanjeSaIzletom);
-            
+            // provjera da li to putovanje vec postoji u listi putovanja
+
+            if (Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom.Any(postojecePutovanje => postojecePutovanje.Id == predlozenoPutovanjeSaIzletom.Id))
+            {
+                throw new ArgumentException("Putovanje već postoji u listi!");
+            }
+            else
+                // dodaj putovanje u listu
+
+            Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom.Add(predlozenoPutovanjeSaIzletom);
+
         }
+        
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -87,6 +96,7 @@ namespace TuristickaAgencijaNextDestination.View
             f.Show();
         }
 
+      
 
        
 

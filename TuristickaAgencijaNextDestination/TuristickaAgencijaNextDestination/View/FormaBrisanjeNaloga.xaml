@@ -3,8 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="FormaBrisanjeNaloga" Height="300" Width="466">
     <Grid>
-        <Button x:Name="btnObrisiNalog" Content="Obrisi" HorizontalAlignment="Left" Margin="373,219,0,0" VerticalAlignment="Top" Width="75" Click="btnObrisiNalog_Click"/>
+        <Button x:Name="btnObrisiNalog" Content="Obrisi" HorizontalAlignment="Left" Margin="284,219,0,0" VerticalAlignment="Top" Width="75" Click="btnObrisiNalog_Click"/>
         <DataGrid x:Name="gridObrisiNalog" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="438" Height="181"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="373,219,0,0" VerticalAlignment="Top" Width="75" Click="btnExit_Click"/>
 
     </Grid>
 </Window>
