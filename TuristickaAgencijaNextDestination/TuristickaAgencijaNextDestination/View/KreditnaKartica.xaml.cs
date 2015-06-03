@@ -23,9 +23,46 @@ namespace TuristickaAgencijaNextDestination.View
         {
             InitializeComponent();
         }
-
+        
         private void btnPlati_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
+               MessageBox.Show("Uspješno ste izvršili plaćanje putovanja!", "Obavještenje", MessageBoxButton.OKCancel, MessageBoxImage.Information);
+               Close();
+        } 
+
+        //Metoda za validaciju kreditne kartice 
+
+        public static bool IsValid(string id)
+        {
+
+            int idLength = id.Length;
+            int currentDigit;
+            int idSum = 0;
+            int currentProcNum = 0; 
+
+            for (int i = idLength - 1; i >= 0; i--)
+            {
+                
+                string idCurrentRightmostDigit = id.Substring(i, 1);
+
+                if (!int.TryParse(idCurrentRightmostDigit, out currentDigit))
+                    return false;
+
+                if (currentProcNum % 2 != 0)
+                {
+                    if ((currentDigit *= 2) > 9)
+                        currentDigit -= 9;
+                }
+                currentProcNum++; 
+
+                idSum += currentDigit;
+            }
+
+            return (idSum % 10 == 0);
+        }
+
+=======
             MessageBox.Show("Uspješno ste izvršili plaćanje putovanja!", "Obavještenje", MessageBoxButton.OKCancel, MessageBoxImage.Information);
             Close();
 
@@ -33,5 +70,6 @@ namespace TuristickaAgencijaNextDestination.View
         }
 
 
+>>>>>>> origin/master
     }
 }
