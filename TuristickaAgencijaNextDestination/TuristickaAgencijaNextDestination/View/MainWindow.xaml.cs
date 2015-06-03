@@ -71,7 +71,7 @@ namespace TuristickaAgencijaNextDestination
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Turisticka agencija Next Destinatination \n Ukoliko niste registrovani registrujte se, nakon toga prijavite sa Vasim podacima i nesmetano pristupajte nasim informacijama");
+            MessageBox.Show("Upustva za pristup stranici \n \n \n Postovani korisnice ukoliko niste registrovani na nasu stranicu, molimo Vas da se na dugme ” Sign up” registrujete. \n Postovani korisnice ukoliko niste registrovani na nasu stranicu, molimo Vas da se na dugme ” Sign up” registrujete. \n Nakon sto ste se registrovali mozete se ulogovati na nasu stranicu. Klikom na dugme “Login” i unoseci validne podatke omogucava Vam se pristup nasoj stranici. \n Prozor koji Vam se automatski nakon logovanja otvara nudi Vam pregled dostupnih putovanja, Vase je samo da odaberete koji tip putovanja zelite. Ponudjena su Vam putovanja sa izletom i bez izleta. \n Pregledom putovanja ne obavezujete se da niti jedno putovanje izaberete kao Vasu destinaciju u svakom momentu slobodni ste da zatvorite stranicu. \n Ukoliko se ipak na nasoj listi putovanja nalazi nesto za vas, u desnom dornjem uglu se nalazi dugme ””  sa kojim Vam omogucavamo da odaberete zeljeno putovanje, rezervisete mjesto te zakljucite placanjem putovanja. Za placanje putovanja ce Vam biti potrebna kreditna kartica i na njoj odgovarajuci iznos ukoliko na Vasem racunu nema dovoljno sredstava otkazujemo Vasu registraciju.\n");
         }
     }
 }
