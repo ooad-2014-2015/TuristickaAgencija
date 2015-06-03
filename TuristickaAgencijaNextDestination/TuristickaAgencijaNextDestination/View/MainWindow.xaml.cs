@@ -71,5 +71,10 @@ namespace TuristickaAgencijaNextDestination
             FormaPergledPutovanja frm = new FormaPergledPutovanja();
             frm.Show();
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Turisticka agencija Next Destinatination \n Ukoliko niste registrovani registrujte se, nakon toga prijavite sa Vasim podacima i nesmetano pristupajte nasim informacijama");
+        }
     }
 }
