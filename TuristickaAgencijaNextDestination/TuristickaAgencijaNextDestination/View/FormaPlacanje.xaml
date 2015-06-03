@@ -22,6 +22,7 @@
         <Label Content="Ukoliko ste student&#xD;&#xA;ili penzioner Vaš &#xD;&#xA;popust od 20 % je &#xD;&#xA;uračunat u cijenu." HorizontalAlignment="Left" Margin="313,305,0,0" VerticalAlignment="Top" Width="119" Height="79"/>
         <Label Content="Username:" HorizontalAlignment="Left" Margin="92,262,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="imetxt" HorizontalAlignment="Left" Height="23" Margin="163,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" IsEnabled="False"/>
+        <Button Content="Printaj racun" Visibility="Hidden" HorizontalAlignment="Left" Name="btnPrintaj" Margin="242,389,0,0" VerticalAlignment="Top"  Width="113" Click="btnPrintaj_Click"/>
 
     </Grid>
 </Window>

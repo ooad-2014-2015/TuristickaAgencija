@@ -47,19 +47,21 @@ namespace TuristickaAgencijaNextDestination.View
         {
             KreditnaKartica fkk = new KreditnaKartica();
             fkk.Show();
-    
-            // za printanje
-            btnPlati.Visibility = Visibility.Hidden;
+
+            btnPrintaj.Visibility = Visibility.Visible;
+        }
+
+        private void btnPrintaj_Click(object sender, RoutedEventArgs e)
+        {
+            btnPrintaj.Visibility = Visibility.Hidden;
             PrintDialog printer = new PrintDialog();
             if (printer.ShowDialog().GetValueOrDefault(false))
             {
                 printer.PrintVisual(this, this.Title);
             }
-            btnPlati.Visibility = Visibility.Visible;
+            btnPrintaj.Visibility = Visibility.Visible;
         }
-        
 
-       
 
       
     }
