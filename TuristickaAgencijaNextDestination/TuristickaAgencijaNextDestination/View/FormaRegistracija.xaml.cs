@@ -44,6 +44,17 @@ namespace TuristickaAgencijaNextDestination
 
             Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Add(new Model.KorisnickiNalogKlijent( Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Count+1, k, txtUsername.Text, txtPassword.Text));
 
+            // rad sa bazom
+            try
+            {
+                string username = "root";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
             MessageBox.Show("Uspjesna registracija. Dobrodosao/la: " + k.ime, "Poruka");
 
             Close();
