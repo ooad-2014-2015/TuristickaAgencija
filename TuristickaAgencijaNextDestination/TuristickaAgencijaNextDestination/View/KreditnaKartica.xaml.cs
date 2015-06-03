@@ -26,8 +26,12 @@ namespace TuristickaAgencijaNextDestination.View
 
         private void btnPlati_Click(object sender, RoutedEventArgs e)
         {
-               MessageBox.Show("Uspješno ste izvršili plaćanje putovanja!", "Obavještenje", MessageBoxButton.OKCancel, MessageBoxImage.Information);
-               Close();
+            MessageBox.Show("Uspješno ste izvršili plaćanje putovanja!", "Obavještenje", MessageBoxButton.OKCancel, MessageBoxImage.Information);
+            Close();
+
+            
         }
+
+
     }
 }

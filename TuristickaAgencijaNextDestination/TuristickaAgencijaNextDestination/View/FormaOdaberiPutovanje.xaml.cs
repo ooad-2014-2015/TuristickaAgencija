@@ -91,6 +91,8 @@ namespace TuristickaAgencijaNextDestination.View
 
                 FormaPlacanje f = new FormaPlacanje();
                 f.Show();
+
+             
             }
         }
 
