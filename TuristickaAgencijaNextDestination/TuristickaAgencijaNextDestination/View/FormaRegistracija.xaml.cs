@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace TuristickaAgencijaNextDestination
 {
@@ -48,6 +49,17 @@ namespace TuristickaAgencijaNextDestination
             try
             {
                 string username = "root";
+                string password = "";
+                string db = "TuristickaAgencija";
+
+                string connectionString = "server=localhost;user=" + username + ";pwd=" + password + ";database=" + db;
+                MySqlConnection msc = new MySqlConnection(connectionString);
+                msc.Open();
+
+                MySqlCommand insertUpit = new MySqlCommand("insert into Klijenti(ID, Username, Password) values ('" + Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Count + 1 + "','" + txtUsername.Text + "','" + txtPassword.Text  + "')", msc);
+                insertUpit.ExecuteNonQuery();
+
+                msc.Close(); 
             }
             catch(Exception ex)
             {
