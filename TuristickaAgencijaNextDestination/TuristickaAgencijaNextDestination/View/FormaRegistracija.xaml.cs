@@ -59,7 +59,8 @@ namespace TuristickaAgencijaNextDestination
                 MySqlCommand insertUpit = new MySqlCommand("insert into Klijenti(ID, Username, Password) values ('" + Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Count + 1 + "','" + txtUsername.Text + "','" + txtPassword.Text  + "')", msc);
                 insertUpit.ExecuteNonQuery();
 
-                msc.Close(); 
+                msc.Close(); 
+
             }
             catch(Exception ex)
             {
