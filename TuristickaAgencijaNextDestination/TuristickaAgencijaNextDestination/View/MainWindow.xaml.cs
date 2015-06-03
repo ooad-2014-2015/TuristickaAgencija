@@ -25,9 +25,6 @@ namespace TuristickaAgencijaNextDestination
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen; // postavila sam na centar ekrana da se pojavljuje(Lejla)
             
-            Klijent admin = new Klijent(0, "Admin", "Admin", "", 000, StatusKlijenta.ostalo);
-            Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Add(new Model.KorisnickiNalogKlijent(0, admin, "admin", "admin"));
-
             TuristickiAgent tAgent = new TuristickiAgent(0, "tagent", "tagent", "");
             Model.KorisnickiNalogTAgent.listaKNalogaTAgent.Add(new Model.KorisnickiNalogTAgent(0, tAgent, "tagent", "tagent"));
 
