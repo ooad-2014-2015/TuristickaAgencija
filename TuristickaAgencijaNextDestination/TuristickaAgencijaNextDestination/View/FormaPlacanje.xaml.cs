@@ -35,6 +35,10 @@ namespace TuristickaAgencijaNextDestination.View
                 txtCijena.AppendText(Convert.ToString(item.Cijena));
                
             }
+            foreach (var ime in TuristickaAgencijaNextDestination.Model.KorisnickiNalogKlijent.listaKNalogaKlijenti)
+            {
+                imetxt.AppendText(Convert.ToString(ime.username));
+            }
             // da se izbrisu podaci iz liste
             TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaOdabranihPutovanja.Clear();
         }
