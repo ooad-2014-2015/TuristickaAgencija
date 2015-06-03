@@ -58,27 +58,36 @@ namespace TuristickaAgencijaNextDestination.View
             {
                 putovanje1.PrevoznoSredstvo = TuristickaAgencijaNextDestination.Model.PrevoznoSredstvo.brod;
             }
+            if (txtDrzava.Text == "" || txtIzlet.Text == "" || txtCijena.Text == "" || txtBrojMjesta.Text == "")
+            {
+
+                MessageBox.Show("Niste unijeli sve podatke");
+            }
+            else
+            {
+
+                //TuristickaAgencijaNextDestination.Model.PutovanjeSaIzleta putovanja = new TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta();
+                TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom putovanja = new Model.PutovanjeSaIzletom();
+                putovanja.Id = id;
+                putovanja.Destinacija = txtDrzava.Text;
+                putovanja.Izlet = txtIzlet.Text;
+                putovanja.Cijena = Convert.ToDouble(txtCijena.Text);
+                putovanja.DatumDolaska = Convert.ToDateTime(dtpdatumOdlaska.Text);
+                putovanja.DatumPolaska = Convert.ToDateTime(dtpDatumPolaska.Text);
+                //oduzimanje dana
+                int d = putovanja.DatumDolaska.DayOfYear - putovanja.DatumPolaska.DayOfYear + 1;
+                txtTrajanjePutovanja.Text = d.ToString();
+                putovanja.BrojSlobodnihMjesta = Convert.ToInt32(txtBrojMjesta.Text);
+                putovanja.PrevoznoSredstvo = putovanje1.PrevoznoSredstvo;
+                putovanja.PutnoOsiguranje = putovanje1.PutnoOsiguranje;
+                putovanja.TrajanjePutovanja = Convert.ToInt32(txtTrajanjePutovanja.Text);
+                // TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Add(putovanja);
+                TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanja.Add(putovanja);
 
 
-            //TuristickaAgencijaNextDestination.Model.PutovanjeSaIzleta putovanja = new TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta();
-            TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom putovanja = new Model.PutovanjeSaIzletom();
-            putovanja.Id = id;
-            putovanja.Destinacija = txtDrzava.Text;
-            putovanja.Izlet = txtIzlet.Text;
-            putovanja.Cijena = Convert.ToDouble(txtCijena.Text);
-            putovanja.DatumDolaska = Convert.ToDateTime(dtpdatumOdlaska.Text);
-            putovanja.DatumPolaska = Convert.ToDateTime(dtpDatumPolaska.Text);
-            //oduzimanje dana
-            int d = putovanja.DatumDolaska.DayOfYear - putovanja.DatumPolaska.DayOfYear + 1;
-            txtTrajanjePutovanja.Text = d.ToString();
-            putovanja.BrojSlobodnihMjesta = Convert.ToInt32(txtBrojMjesta.Text);
-            putovanja.PrevoznoSredstvo = putovanje1.PrevoznoSredstvo;
-            putovanja.PutnoOsiguranje = putovanje1.PutnoOsiguranje;
-            putovanja.TrajanjePutovanja = Convert.ToInt32(txtTrajanjePutovanja.Text);
-           // TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Add(putovanja);
-            TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanja.Add(putovanja);
 
-            MessageBox.Show("Snimljeno!");
+                MessageBox.Show("Snimljeno!");
+            }
             txtBrojMjesta.Text = "";
             txtCijena.Text = "";
             txtDrzava.Text = "";
