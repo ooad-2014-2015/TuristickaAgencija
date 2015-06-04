@@ -24,7 +24,7 @@ namespace TuristickaAgencijaNextDestination.View
         {
             InitializeComponent();
             
-            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            //WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
 
             TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.DodajPutovanjaUListu();
             gridPregledPutovanja.ItemsSource = null;
