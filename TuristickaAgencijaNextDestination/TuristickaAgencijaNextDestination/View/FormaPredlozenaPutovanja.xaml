@@ -4,7 +4,7 @@
         Title="FormaPredlozenaPutovanja" Height="420" Width="883">
     <Grid Margin="0,0,0,-20">
         <GroupBox Header="DodavanjePredlozenogPutovanjaBezIzleta" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="855" Height="333">
-            <CheckBox x:Name="predlozeniAvion" Content="Avion" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="144" Margin="552,54,0,0"/>
+            <CheckBox x:Name="predlozeniAvion" Content="Avion" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="144" Margin="552,54,0,0" TabIndex="7"/>
         </GroupBox>
         <Label Content="Unesi destinaciju:" HorizontalAlignment="Left" Margin="44,57,0,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.429,1.192"/>
         <Label Content="Datum polaska:" HorizontalAlignment="Left" Margin="57,119,0,0" VerticalAlignment="Top"/>
@@ -14,20 +14,21 @@
         <Label Content="Putno osiguranje:" HorizontalAlignment="Left" Margin="489,173,0,0" VerticalAlignment="Top"/>
         <Label Content="Prevozno sredstvo:" HorizontalAlignment="Left" Margin="489,42,0,0" VerticalAlignment="Top"/>
         <Label Content="Cijena:" HorizontalAlignment="Left" Margin="93,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.378,-1.115"/>
-        <TextBox x:Name="predlozenaDestinacija" HorizontalAlignment="Left" Height="23" Margin="157,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
-        <DatePicker x:Name="datumPolaskaPredlozenog" HorizontalAlignment="Left" Margin="157,121,0,0" VerticalAlignment="Top" Width="282"/>
-        <DatePicker x:Name="datumDolaskaPredlozenog" HorizontalAlignment="Left" Margin="157,152,0,0" VerticalAlignment="Top" Width="282"/>
-        <Button x:Name="dodavanjePredlozenog" Content="DodajPutovanje" HorizontalAlignment="Left" Margin="602,348,0,0" VerticalAlignment="Top" Width="113" RenderTransformOrigin="-0.254,-0.089" Click="dodavanjePredlozenog_Click"/>
-        <TextBox x:Name="trajanjePredlozenog" HorizontalAlignment="Left" Height="23" Margin="157,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
-        <TextBox x:Name="cijenaPredlozenog" HorizontalAlignment="Left" Height="26" Margin="157,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279"/>
-        <TextBox x:Name="slobodnaMjestaPredlozeno" HorizontalAlignment="Left" Height="23" Margin="157,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282"/>
-        <CheckBox x:Name="predlozeniAutobus" Content="Autobus" HorizontalAlignment="Left" Margin="569,109,0,0" VerticalAlignment="Top" Width="84" Height="22"/>
-        <CheckBox x:Name="predlozeniBrod" Content="Brod" HorizontalAlignment="Left" Margin="569,136,0,0" VerticalAlignment="Top" Width="55" Height="21"/>
-        <CheckBox x:Name="predlozenoSaOs" Content="Sarajevo osiguranje" HorizontalAlignment="Left" Margin="569,212,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="predlozenoTrOs" Content="Triglav osiguranje" HorizontalAlignment="Left" Margin="569,240,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="predlozenoASAOs" Content="ASA osiguranje" HorizontalAlignment="Left" Margin="569,264,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.779,-8.812"/>
-        <CheckBox x:Name="predlozenoSuOs" Content="Sunce osiguranje" HorizontalAlignment="Left" Margin="569,294,0,0" VerticalAlignment="Top"/>
-        <Button Content="pregledPutovanja" HorizontalAlignment="Left" Margin="735,348,0,0" VerticalAlignment="Top" Width="121" Click="Button_Click"/>
+        <TextBox x:Name="predlozenaDestinacija" HorizontalAlignment="Left" Height="23" Margin="157,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" TabIndex="1"/>
+        <DatePicker x:Name="datumPolaskaPredlozenog" HorizontalAlignment="Left" Margin="157,121,0,0" VerticalAlignment="Top" Width="282" TabIndex="3"/>
+        <DatePicker x:Name="datumDolaskaPredlozenog" HorizontalAlignment="Left" Margin="157,152,0,0" VerticalAlignment="Top" Width="282" TabIndex="4"/>
+        <Button x:Name="dodavanjePredlozenog" Content="DodajPutovanje" HorizontalAlignment="Left" Margin="602,348,0,0" VerticalAlignment="Top" Width="113" RenderTransformOrigin="-0.254,-0.089" Click="dodavanjePredlozenog_Click" TabIndex="15"/>
+        <TextBox x:Name="trajanjePredlozenog" HorizontalAlignment="Left" Height="23" Margin="157,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" TabIndex="5" IsEnabled="False"/>
+        <TextBox x:Name="cijenaPredlozenog" HorizontalAlignment="Left" Height="26" Margin="157,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" TabIndex="2"/>
+        <TextBox x:Name="slobodnaMjestaPredlozeno" HorizontalAlignment="Left" Height="23" Margin="157,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" TabIndex="6"/>
+        <CheckBox x:Name="predlozeniAutobus" Content="Autobus" HorizontalAlignment="Left" Margin="569,109,0,0" VerticalAlignment="Top" Width="84" Height="22" TabIndex="8"/>
+        <CheckBox x:Name="predlozeniBrod" Content="Brod" HorizontalAlignment="Left" Margin="569,136,0,0" VerticalAlignment="Top" Width="55" Height="21" TabIndex="9"/>
+        <CheckBox x:Name="predlozenoSaOs" Content="Sarajevo osiguranje" HorizontalAlignment="Left" Margin="569,212,0,0" VerticalAlignment="Top" TabIndex="10"/>
+        <CheckBox x:Name="predlozenoTrOs" Content="Triglav osiguranje" HorizontalAlignment="Left" Margin="569,240,0,0" VerticalAlignment="Top" TabIndex="11"/>
+        <CheckBox x:Name="predlozenoASAOs" Content="ASA osiguranje" HorizontalAlignment="Left" Margin="569,264,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.779,-8.812" TabIndex="12"/>
+        <CheckBox x:Name="predlozenoSuOs" Content="Sunce osiguranje" HorizontalAlignment="Left" Margin="569,294,0,0" VerticalAlignment="Top" TabIndex="13"/>
+        <Button Content="pregledPutovanja" HorizontalAlignment="Left" Margin="735,348,0,0" VerticalAlignment="Top" Width="121" Click="Button_Click" TabIndex="16"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="512,348,0,0" VerticalAlignment="Top" Width="85" TabIndex="14" Click="Button_Click_1"/>
 
 
     </Grid>

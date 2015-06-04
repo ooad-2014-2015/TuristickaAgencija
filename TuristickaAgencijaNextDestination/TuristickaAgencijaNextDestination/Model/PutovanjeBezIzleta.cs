@@ -23,6 +23,9 @@ namespace TuristickaAgencijaNextDestination.Model
 
         public static List<Putovanje> listaOdabranihPutovanja = new List<Putovanje>();
 
+        public static List<Putovanje> listaPredlozenihPutovanjaBezIzleta = new List<Putovanje>();
+
+
         public static void DodajPutovanjeBezIzleta()
         {
             Putovanje p = new Putovanje("Turska", 200, DateTime.Now, DateTime.Now, 12, 40, PrevoznoSredstvo.avion, PutnoOsiguranje.SarajevoOsiguranje, 1);
@@ -45,7 +48,7 @@ namespace TuristickaAgencijaNextDestination.Model
         public PutovanjaBezIzleta(string destinacija, double cijena, DateTime datumPolaska, DateTime datumDolaska, int trajanjePutovanja, int brojSlobodnihMjesta, PrevoznoSredstvo prevoznoSredstvo, PutnoOsiguranje putnoOsiguranje, int id)
             : base(destinacija, cijena, datumPolaska, datumDolaska, trajanjePutovanja, brojSlobodnihMjesta, prevoznoSredstvo, putnoOsiguranje, id) { }
       
-        public static List<Putovanje> listaPredlozenihPutovanjaBezIzleta = new List<Putovanje>();
+       
        
        /* public static void DodajPredlozenoPutovanjeBezIzleta()
         {

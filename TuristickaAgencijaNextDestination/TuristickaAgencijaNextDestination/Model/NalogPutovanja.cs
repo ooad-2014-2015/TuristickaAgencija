@@ -28,12 +28,7 @@ namespace TuristickaAgencijaNextDestination.Model
         public decimal Cijena
         {
             get { return _cijena; }
-            set {
-                if (Convert.ToBoolean(StatusKlijenta.student) == true || Convert.ToBoolean(StatusKlijenta.penzioner) == true)
-                    Cijena += Cijena * _popust;
-                
-                else
-                _cijena = value; }
+            set { _cijena = value; }
         }
 
 
@@ -54,7 +49,15 @@ namespace TuristickaAgencijaNextDestination.Model
 
        // public override decimal generisiRacun()
 
-   
 
+        public static double ObracunajPopust(double cijena)
+        {
+            if (Convert.ToBoolean(StatusKlijenta.student) == true || Convert.ToBoolean(StatusKlijenta.penzioner) == true)
+            {
+                return (cijena = cijena + cijena * 0.1);
+            }
+            else
+                return cijena;
+        }
     }
 }

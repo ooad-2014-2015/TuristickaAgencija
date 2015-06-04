@@ -22,6 +22,7 @@ namespace TuristickaAgencijaNextDestination.View
         public FormaObrisiPredlozenoPutovanje()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             
             gridObrisiPredlozenoPutovanje.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta;
 
@@ -44,6 +45,8 @@ namespace TuristickaAgencijaNextDestination.View
                 Model.PutovanjaBezIzleta.ObrisiPredlozenoPutovanje(predlozenoBezIzleta);
                 gridObrisiPredlozenoPutovanje.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta;
                 gridObrisiPredlozenoPutovanje.Items.Refresh();
+
+                MessageBox.Show("Uspješno ste obrisali putovanje!", "Obavještenje", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 

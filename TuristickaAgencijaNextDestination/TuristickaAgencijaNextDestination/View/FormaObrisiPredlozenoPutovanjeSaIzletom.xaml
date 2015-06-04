@@ -1,11 +1,11 @@
 ﻿<Window x:Class="TuristickaAgencijaNextDestination.View.FormaObrisiPredlozenoPutovanjeSaIzletom"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FormaObrisiPredlozenoPutovanjeSaIzletom" Height="375.743" Width="784.158">
+        Title="FormaObrisiPredlozenoPutovanjeSaIzletom" Height="360.743" Width="784.158">
     <Grid>
         <DataGrid x:Name="gridObrisiPredlozenoPutovanjeSaIzletom" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="253" Width="756"/>
-        <Button x:Name="gridPredlozenoBezIzleta" Content="Obriši" HorizontalAlignment="Left" Margin="535,286,0,0" VerticalAlignment="Top" Width="118" Height="29" FontSize="16" Click="Button_Click"/>
-        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="671,286,0,0" VerticalAlignment="Top" Width="95" Height="29" FontSize="16" Click="btnExit_Click"/>
+        <Button x:Name="gridPredlozenoBezIzleta" Content="Obriši" HorizontalAlignment="Left" Margin="535,286,0,0" VerticalAlignment="Top" Width="118" Height="29" FontSize="16" Click="Button_Click" TabIndex="1"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="671,286,0,0" VerticalAlignment="Top" Width="95" Height="29" FontSize="16" Click="btnExit_Click" TabIndex="2"/>
 
     </Grid>
 </Window>

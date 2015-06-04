@@ -42,12 +42,7 @@ namespace TuristickaAgencijaNextDestination.Model
         public double Cijena
         {
             get { return cijena; }
-            set { 
-                //Obracun popusta
-                if (Convert.ToBoolean(StatusKlijenta.penzioner) == true || Convert.ToBoolean(StatusKlijenta.student) == true )
-                    cijena = cijena + cijena * 0.20;
-                else
-                cijena = value; }
+            set { cijena = value; }
         }
         DateTime datumPolaska;
 

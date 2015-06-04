@@ -60,5 +60,10 @@ namespace TuristickaAgencijaNextDestination.View
 
             return (idSum % 10 == 0);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

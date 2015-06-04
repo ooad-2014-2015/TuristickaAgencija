@@ -23,16 +23,18 @@ namespace TuristickaAgencijaNextDestination.View
         public FormaPlacanje()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
 
             foreach (var item in TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaOdabranihPutovanja)
             {
+
                 txtDestinacija.AppendText(item.Destinacija);
                 txtPolazak.AppendText(Convert.ToString(item.DatumPolaska));
                 txtDolazak.AppendText(Convert.ToString(item.DatumDolaska));
                 txtTrajanje.AppendText(Convert.ToString(item.TrajanjePutovanja));
                 txtPrevoznoSredstvo.AppendText(Convert.ToString(item.PrevoznoSredstvo));
                 txtPutnoOsiguranje.AppendText(Convert.ToString(item.PutnoOsiguranje));
-                txtCijena.AppendText(Convert.ToString(item.Cijena));
+                txtCijena.AppendText(Convert.ToString(TuristickaAgencijaNextDestination.Model.NalogPutovanja.ObracunajPopust(item.Cijena)));
                
             }
             foreach (var ime in TuristickaAgencijaNextDestination.Model.KorisnickiNalogKlijent.listaKNalogaKlijenti)
@@ -60,6 +62,11 @@ namespace TuristickaAgencijaNextDestination.View
                 printer.PrintVisual(this, this.Title);
             }
             btnPrintaj.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
 
 

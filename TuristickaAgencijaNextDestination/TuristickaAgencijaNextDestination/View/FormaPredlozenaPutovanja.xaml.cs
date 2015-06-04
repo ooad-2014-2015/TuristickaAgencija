@@ -23,6 +23,7 @@ namespace TuristickaAgencijaNextDestination.View
         public FormaPredlozenaPutovanja()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void dodavanjePredlozenog_Click(object sender, RoutedEventArgs e)
@@ -65,40 +66,53 @@ namespace TuristickaAgencijaNextDestination.View
 
             //Validacije
 
-            if (predlozenaDestinacija.Text == "" || cijenaPredlozenog == null)
-                MessageBox.Show("Niste unijeli destinaciju i cijenu", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
-
-            if (datumDolaskaPredlozenog == null || datumDolaskaPredlozenog == null)
-                MessageBox.Show("Niste unijeli datum polaska i dolaska !" ,"Greška", MessageBoxButton.OK, MessageBoxImage.Error);
-
-            if (trajanjePredlozenog == null)
-                MessageBox.Show("Niste unijeli dužinu trajanja putovanja", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
-
-            TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta predlozenoPutovanjeBezIzleta = new TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta();
-            
-           
-            
-
-            predlozenoPutovanjeBezIzleta.Destinacija = predlozenaDestinacija.Text;
-            predlozenoPutovanjeBezIzleta.Cijena = Convert.ToDouble(cijenaPredlozenog.Text);
-            predlozenoPutovanjeBezIzleta.DatumPolaska = Convert.ToDateTime(datumPolaskaPredlozenog.Text);
-            predlozenoPutovanjeBezIzleta.DatumDolaska = Convert.ToDateTime(datumDolaskaPredlozenog.Text);
-            predlozenoPutovanjeBezIzleta.TrajanjePutovanja = Convert.ToInt32(trajanjePredlozenog.Text);
-            predlozenoPutovanjeBezIzleta.BrojSlobodnihMjesta = Convert.ToInt32(slobodnaMjestaPredlozeno.Text);
-            predlozenoPutovanjeBezIzleta.PrevoznoSredstvo = _putovanje.PrevoznoSredstvo;
-            predlozenoPutovanjeBezIzleta.PutnoOsiguranje = _putovanje.PutnoOsiguranje;
-
-            //provjera da li putovanje postoji u listi predlozenih putovanja
-
-
-            if (Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Any(postojecePutovanje => postojecePutovanje.Id == predlozenoPutovanjeBezIzleta.Id))
+            if (predlozenaDestinacija.Text == "" || cijenaPredlozenog == null || slobodnaMjestaPredlozeno.Text == "")
             {
-                throw new ArgumentException("Putovanje već postoji u listi!");
+                MessageBox.Show("Niste unijeli destinaciju, cijenu i broj slobodnih mjesta", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
-                // dodaj putovanje u listu
+            {
+                TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta predlozenoPutovanjeBezIzleta = new TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta();
 
-            Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Add(predlozenoPutovanjeBezIzleta);
+                predlozenoPutovanjeBezIzleta.Destinacija = predlozenaDestinacija.Text;
+                predlozenoPutovanjeBezIzleta.Cijena = Convert.ToDouble(cijenaPredlozenog.Text);
+                predlozenoPutovanjeBezIzleta.DatumPolaska = Convert.ToDateTime(datumPolaskaPredlozenog.Text);
+                predlozenoPutovanjeBezIzleta.DatumDolaska = Convert.ToDateTime(datumDolaskaPredlozenog.Text);
+                //racunanje trajanja putovanja
+                int d = predlozenoPutovanjeBezIzleta.DatumDolaska.DayOfYear - predlozenoPutovanjeBezIzleta.DatumPolaska.DayOfYear + 1;
+                predlozenoPutovanjeBezIzleta.TrajanjePutovanja = d;
+                predlozenoPutovanjeBezIzleta.TrajanjePutovanja = Convert.ToInt32(trajanjePredlozenog.Text);
+                predlozenoPutovanjeBezIzleta.BrojSlobodnihMjesta = Convert.ToInt32(slobodnaMjestaPredlozeno.Text);
+                predlozenoPutovanjeBezIzleta.PrevoznoSredstvo = _putovanje.PrevoznoSredstvo;
+                predlozenoPutovanjeBezIzleta.PutnoOsiguranje = _putovanje.PutnoOsiguranje;
+
+                //provjera da li putovanje postoji u listi predlozenih putovanja
+
+
+                if (Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Any(postojecePutovanje => postojecePutovanje.Id == predlozenoPutovanjeBezIzleta.Id))
+                {
+                    throw new ArgumentException("Putovanje već postoji u listi!");
+                }
+                else
+                    // dodaj putovanje u listu
+
+                    Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Add(predlozenoPutovanjeBezIzleta);
+                    MessageBox.Show("Uspješno ste dodali putovanje bez izleta!", "Obavještenje", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+            predlozenaDestinacija.Text = "";
+            cijenaPredlozenog.Text = "";
+            trajanjePredlozenog.Text = "";
+            slobodnaMjestaPredlozeno.Text = "";
+            datumDolaskaPredlozenog.Text = "";
+            datumPolaskaPredlozenog.Text = "";
+            predlozeniAutobus.IsChecked = false;
+            predlozeniAvion.IsChecked = false;
+            predlozeniBrod.IsChecked = false;
+            predlozenoASAOs.IsChecked = false;
+            predlozenoSaOs.IsChecked = false;
+            predlozenoSuOs.IsChecked = false;
+            predlozenoTrOs.IsChecked = false;
            
         }
 
@@ -106,6 +120,11 @@ namespace TuristickaAgencijaNextDestination.View
         {
             FormaObrisiPredlozenoPutovanje f = new FormaObrisiPredlozenoPutovanje();
             f.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }       
     
