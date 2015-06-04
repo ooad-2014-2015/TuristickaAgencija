@@ -15,7 +15,7 @@
         <TextBox x:Name="txtBrojMjesta" HorizontalAlignment="Left" Height="23" TabIndex="6" Margin="165,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <DatePicker x:Name="dtpDatumPolaska" HorizontalAlignment="Left" TabIndex="3" Margin="165,100,0,0" VerticalAlignment="Top" Width="120"/>
         <DatePicker x:Name="dtpdatumOdlaska" HorizontalAlignment="Left" TabIndex="4" Margin="165,135,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnSnimiPutovanje" Content="Snimi" HorizontalAlignment="Left" Margin="506,315,0,0" TabIndex="14" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button x:Name="btnSnimiPutovanje" Content="Snimi" HorizontalAlignment="Left" Margin="505,312,0,0" TabIndex="14" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <CheckBox x:Name="cbAvion" Content="Avion" HorizontalAlignment="Left" Margin="460,55,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="cbAutobus" Content="Autobus" HorizontalAlignment="Left" Margin="460,85,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="cbBrod" Content="Brod" HorizontalAlignment="Left" Margin="460,116,0,0" VerticalAlignment="Top"/>
@@ -25,5 +25,6 @@
         <CheckBox x:Name="cbSunceOsiguranje" Content="Sunce osiguranje" HorizontalAlignment="Left" Margin="460,244,0,0" VerticalAlignment="Top"/>
         <Label Content="Putno osiguranje" HorizontalAlignment="Left" Margin="370,143,0,0" VerticalAlignment="Top"/>
         <Label Content="Prevozno sredstvo" HorizontalAlignment="Left" Margin="370,20,0,0" VerticalAlignment="Top"/>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="596,312,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" TabIndex="15"/>
     </Grid>
 </Window>

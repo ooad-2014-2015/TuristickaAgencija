@@ -22,6 +22,7 @@ namespace TuristickaAgencijaNextDestination.View
         public FormaTAgentOdabir()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void btnPredlozenoPutovanjeBezIzleta_Click(object sender, RoutedEventArgs e)

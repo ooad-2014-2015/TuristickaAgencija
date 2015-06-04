@@ -22,6 +22,7 @@ namespace TuristickaAgencijaNextDestination.View
         public FormaZaDodavanjeSaIzletom()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -112,6 +113,11 @@ namespace TuristickaAgencijaNextDestination.View
         {
             FormaPergledPutovanja frm = new FormaPergledPutovanja();
             frm.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

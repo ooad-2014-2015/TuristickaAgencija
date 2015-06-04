@@ -22,6 +22,7 @@ namespace TuristickaAgencijaNextDestination.View
         public FormaOdobriPutovanje()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             //ucitati grid sa odobrenim putovanjima
         }
 

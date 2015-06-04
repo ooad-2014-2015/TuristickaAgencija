@@ -22,6 +22,8 @@ namespace TuristickaAgencijaNextDestination.View
         public FormaObrisiPutovanje()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+
             gridObrisiPutovanje.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta;
         }
 

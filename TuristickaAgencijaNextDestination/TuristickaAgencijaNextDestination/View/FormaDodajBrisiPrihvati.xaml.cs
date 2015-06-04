@@ -22,6 +22,7 @@ namespace TuristickaAgencijaNextDestination.View
         public FormaDodajBrisiPrihvati()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

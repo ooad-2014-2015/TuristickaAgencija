@@ -24,6 +24,7 @@ namespace TuristickaAgencijaNextDestination
         public FormaPergledPutovanja()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void btnPutovanjaSaIzletom_Click(object sender, RoutedEventArgs e)
