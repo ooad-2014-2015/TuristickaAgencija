@@ -34,8 +34,8 @@ namespace TuristickaAgencijaNextDestination.View
             else
             {
                 TuristickaAgencijaNextDestination.Model.KorisnickiNalogKlijent klijent = (Model.KorisnickiNalogKlijent)gridObrisiNalog.SelectedItem;
-                int id = klijent.id;
-                Model.KorisnickiNalogKlijent.obrisiKorisnickiNalog(id);
+                //int id = klijent.id;
+                //Model.KorisnickiNalogKlijent.obrisiKorisnickiNalog(id);
                 gridObrisiNalog.ItemsSource = TuristickaAgencijaNextDestination.Model.KorisnickiNalogKlijent.listaKorisnickihNalogaZaBrisanje;
                 gridObrisiNalog.Items.Refresh();
             }

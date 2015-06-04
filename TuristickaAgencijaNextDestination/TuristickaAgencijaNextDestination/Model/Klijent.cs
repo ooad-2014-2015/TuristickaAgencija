@@ -21,8 +21,8 @@ namespace TuristickaAgencijaNextDestination
 
         }
       
-        public Klijent(int _id, String _ime, String _prezime, String _eMail, int _broj, StatusKlijenta _status) 
-            : base(_id, _ime, _prezime, _eMail)
+        public Klijent(String _ime, String _prezime, String _eMail, int _broj, StatusKlijenta _status) 
+            : base(_ime, _prezime, _eMail)
         {
             brojKreditneKartice = _broj;
             statusKlijenta = _status;

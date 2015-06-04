@@ -80,14 +80,16 @@ namespace TuristickaAgencijaNextDestination.View
             //provjera da li putovanje postoji u listi predlozenih putovanja
 
 
-            if (Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Any(postojecePutovanje => postojecePutovanje.Id == predlozenoPutovanjeBezIzleta.Id))
-            {
-                throw new ArgumentException("Putovanje već postoji u listi!");
-            }
-            else
+            //if (Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Any(postojecePutovanje => postojecePutovanje.Id == predlozenoPutovanjeBezIzleta.Id))
+            //{
+            //    throw new ArgumentException("Putovanje već postoji u listi!");
+            //}
+            //else
                 // dodaj putovanje u listu
 
             Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Add(predlozenoPutovanjeBezIzleta);
+
+            MessageBox.Show("Uspjesno ste dodali putovanje");
            
         }
 
