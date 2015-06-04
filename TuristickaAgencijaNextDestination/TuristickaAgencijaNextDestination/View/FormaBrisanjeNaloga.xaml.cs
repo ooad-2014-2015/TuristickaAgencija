@@ -22,6 +22,8 @@ namespace TuristickaAgencijaNextDestination.View
         public FormaBrisanjeNaloga()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+
             gridObrisiNalog.ItemsSource = TuristickaAgencijaNextDestination.Model.KorisnickiNalogKlijent.listaKorisnickihNalogaZaBrisanje;
         }
 
@@ -35,7 +37,7 @@ namespace TuristickaAgencijaNextDestination.View
             {
                 TuristickaAgencijaNextDestination.Model.KorisnickiNalogKlijent klijent = (Model.KorisnickiNalogKlijent)gridObrisiNalog.SelectedItem;
                 //int id = klijent.id;
-                //Model.KorisnickiNalogKlijent.obrisiKorisnickiNalog(id);
+                Model.KorisnickiNalogKlijent.ObrisiKorisnickiNalog(klijent);
                 gridObrisiNalog.ItemsSource = TuristickaAgencijaNextDestination.Model.KorisnickiNalogKlijent.listaKorisnickihNalogaZaBrisanje;
                 gridObrisiNalog.Items.Refresh();
             }

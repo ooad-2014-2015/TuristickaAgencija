@@ -22,44 +22,26 @@ namespace TuristickaAgencijaNextDestination.View
         public KreditnaKartica()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+
         }
         
         private void btnPlati_Click(object sender, RoutedEventArgs e)
         {
-               MessageBox.Show("Uspješno ste izvršili plaćanje putovanja!", "Obavještenje", MessageBoxButton.OKCancel, MessageBoxImage.Information);
-               Close();
-        } 
-
-        //Metoda za validaciju kreditne kartice 
-
-        public static bool IsValid(string id)
-        {
-
-            int idLength = id.Length;
-            int currentDigit;
-            int idSum = 0;
-            int currentProcNum = 0; 
-
-            for (int i = idLength - 1; i >= 0; i--)
+            // poziv metode za verifikacuju kreditne kartice
+            if (TuristickaAgencijaNextDestination.Klijent.IsValid(brojKreditneKartice.Text))
             {
-                
-                string idCurrentRightmostDigit = id.Substring(i, 1);
-
-                if (!int.TryParse(idCurrentRightmostDigit, out currentDigit))
-                    return false;
-
-                if (currentProcNum % 2 != 0)
-                {
-                    if ((currentDigit *= 2) > 9)
-                        currentDigit -= 9;
-                }
-                currentProcNum++; 
-
-                idSum += currentDigit;
+                MessageBox.Show("Uspješno ste izvršili plaćanje putovanja!", "Obavještenje", MessageBoxButton.OKCancel, MessageBoxImage.Information);
             }
 
-            return (idSum % 10 == 0);
-        }
+            else
+            {
+                MessageBox.Show("Broj kreditne kartice nije validan", "Obavještenje", MessageBoxButton.OKCancel, MessageBoxImage.Error);
+            }
+
+            imePlacanje.Text = "";
+            brojKreditneKartice.Text = "";
+        } 
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
