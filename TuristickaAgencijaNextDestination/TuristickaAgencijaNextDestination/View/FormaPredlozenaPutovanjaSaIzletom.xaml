@@ -18,7 +18,7 @@
         <TextBox x:Name="predlozeniIzlet" HorizontalAlignment="Left" Height="34" Margin="239,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="347" RenderTransformOrigin="0.188,-4.231" TabIndex="7"/>
         <Label Content="Unesi destinaciju:" HorizontalAlignment="Left" Margin="114,34,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"/>
         <Label Content="Prevozno sredstvo:" HorizontalAlignment="Left" Margin="619,30,0,0" VerticalAlignment="Top" Width="169" FontFamily="Arial" FontSize="14"/>
-        <CheckBox x:Name="predlozeniAvion" Content="Avion" HorizontalAlignment="Left" Margin="764,56,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" TabIndex="8" Checked="predlozeniAvion_Checked"/>
+        <CheckBox x:Name="predlozeniAvion" Content="Avion" HorizontalAlignment="Left" Margin="764,56,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" TabIndex="8" />
         <CheckBox x:Name="predlozeniAutobus" Content="Autobus" HorizontalAlignment="Left" Margin="764,77,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" TabIndex="9"/>
         <CheckBox x:Name="predlozeniBrod" Content="Brod" HorizontalAlignment="Left" Margin="764,101,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" TabIndex="10"/>
         <Label Content="Putno osiguranje:" HorizontalAlignment="Left" Margin="631,129,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"/>
