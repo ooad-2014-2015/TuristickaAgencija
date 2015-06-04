@@ -19,8 +19,8 @@ namespace TuristickaAgencijaNextDestination.Model
 
         }
 
-        public KorisnickiNalogKlijent(int _id, Klijent _vlasnik, string _username, string _password)
-            : base(_id, _username, _password)
+        public KorisnickiNalogKlijent(Klijent _vlasnik, string _username, string _password)
+            : base(_username, _password)
         {
             vlasnik = _vlasnik;
         }

@@ -40,23 +40,29 @@ namespace TuristickaAgencijaNextDestination
             string kartica = txtBrojKreditneKartice.Text;
             int brojKartice = int.Parse(kartica);
 
-            Klijent k = new Klijent(Klijent.listaKlijenata.Count + 1, txtIme.Text, txtPrezime.Text,
+            Klijent k = new Klijent(txtIme.Text, txtPrezime.Text,
                 txtEmail.Text, brojKartice, status);
 
-            Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Add(new Model.KorisnickiNalogKlijent( Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Count+1, k, txtUsername.Text, txtPassword.Text));
+            Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Add(new Model.KorisnickiNalogKlijent(k, txtUsername.Text, txtPassword.Text));
 
             // rad sa bazom
             try
             {
                 string username = "root";
                 string password = "";
-                string db = "TuristickaAgencija";
-
+                string db = "turistickaagencija";
+                
                 string connectionString = "server=localhost;user=" + username + ";pwd=" + password + ";database=" + db;
                 MySqlConnection msc = new MySqlConnection(connectionString);
                 msc.Open();
 
-                MySqlCommand insertUpit = new MySqlCommand("insert into Klijenti(ID, Username, Password) values ('" + Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Count + 1 + "','" + txtUsername.Text + "','" + txtPassword.Text  + "')", msc);
+                MySqlCommand insertUpit = new MySqlCommand("insert into klijenti(username, password) values ('" + txtUsername.Text + "','" + txtPassword.Text  + "')", msc);
+
+                //MySqlCommand insertUpit = new MySqlCommand();
+                //insertUpit.CommandText = "insert into klijent values (@Username,@Password)";
+                //insertUpit.Parameters.AddWithValue("@Username", txtUsername.Text);
+                //insertUpit.Parameters.AddWithValue("@Password", txtPassword.Text);
+
                 insertUpit.ExecuteNonQuery();
 
                 msc.Close(); 

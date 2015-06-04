@@ -8,7 +8,6 @@ namespace TuristickaAgencijaNextDestination
 {
     public class Osoba
     {
-        public int id { get; set; }
 
         public String ime { get; set; }
 
@@ -21,9 +20,8 @@ namespace TuristickaAgencijaNextDestination
 
         }
 
-        public Osoba(int _id, String _ime, String _prezime, String _eMail)
+        public Osoba(String _ime, String _prezime, String _eMail)
         {
-            id = _id;
             ime = _ime;
             prezime = _prezime;
             eMail = _eMail;

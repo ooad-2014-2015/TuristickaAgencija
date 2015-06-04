@@ -66,6 +66,7 @@ namespace TuristickaAgencijaNextDestination.View
 
             //Validacija
 
+<<<<<<< HEAD
             if (predlozenaDestinacija.Text == "" || cijenaPredlozenog == null || predlozeniIzlet.Text == "" || slobodnaMjestaPredlozeno.Text == "")
             {
                 MessageBox.Show("Niste unijeli destinaciju, cijenu, izlet ili slobodna mjesta", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -116,6 +117,17 @@ namespace TuristickaAgencijaNextDestination.View
             predlozenoSuOs.IsChecked = false;
             predlozenoTrOs.IsChecked = false;
 
+=======
+            //if (Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom.Any(postojecePutovanje => postojecePutovanje.Id == predlozenoPutovanjeSaIzletom.Id))
+            //{
+            //    throw new ArgumentException("Putovanje već postoji u listi!");
+            //}
+            //else
+                // dodaj putovanje u listu
+
+            Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom.Add(predlozenoPutovanjeSaIzletom);
+            MessageBox.Show("Uspjesno ste dodali putovanje");
+>>>>>>> origin/master
         }
         
 

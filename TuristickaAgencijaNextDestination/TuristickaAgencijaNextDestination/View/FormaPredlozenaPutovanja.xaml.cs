@@ -66,6 +66,7 @@ namespace TuristickaAgencijaNextDestination.View
 
             //Validacije
 
+<<<<<<< HEAD
             if (predlozenaDestinacija.Text == "" || cijenaPredlozenog == null || slobodnaMjestaPredlozeno.Text == "")
             {
                 MessageBox.Show("Niste unijeli destinaciju, cijenu i broj slobodnih mjesta", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -113,6 +114,44 @@ namespace TuristickaAgencijaNextDestination.View
             predlozenoSaOs.IsChecked = false;
             predlozenoSuOs.IsChecked = false;
             predlozenoTrOs.IsChecked = false;
+=======
+            if (predlozenaDestinacija.Text == "" || cijenaPredlozenog == null)
+                MessageBox.Show("Niste unijeli destinaciju i cijenu", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            if (datumDolaskaPredlozenog == null || datumDolaskaPredlozenog == null)
+                MessageBox.Show("Niste unijeli datum polaska i dolaska !" ,"Greška", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            if (trajanjePredlozenog == null)
+                MessageBox.Show("Niste unijeli dužinu trajanja putovanja", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta predlozenoPutovanjeBezIzleta = new TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta();
+            
+           
+            
+
+            predlozenoPutovanjeBezIzleta.Destinacija = predlozenaDestinacija.Text;
+            predlozenoPutovanjeBezIzleta.Cijena = Convert.ToDouble(cijenaPredlozenog.Text);
+            predlozenoPutovanjeBezIzleta.DatumPolaska = Convert.ToDateTime(datumPolaskaPredlozenog.Text);
+            predlozenoPutovanjeBezIzleta.DatumDolaska = Convert.ToDateTime(datumDolaskaPredlozenog.Text);
+            predlozenoPutovanjeBezIzleta.TrajanjePutovanja = Convert.ToInt32(trajanjePredlozenog.Text);
+            predlozenoPutovanjeBezIzleta.BrojSlobodnihMjesta = Convert.ToInt32(slobodnaMjestaPredlozeno.Text);
+            predlozenoPutovanjeBezIzleta.PrevoznoSredstvo = _putovanje.PrevoznoSredstvo;
+            predlozenoPutovanjeBezIzleta.PutnoOsiguranje = _putovanje.PutnoOsiguranje;
+
+            //provjera da li putovanje postoji u listi predlozenih putovanja
+
+
+            //if (Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Any(postojecePutovanje => postojecePutovanje.Id == predlozenoPutovanjeBezIzleta.Id))
+            //{
+            //    throw new ArgumentException("Putovanje već postoji u listi!");
+            //}
+            //else
+                // dodaj putovanje u listu
+
+            Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Add(predlozenoPutovanjeBezIzleta);
+
+            MessageBox.Show("Uspjesno ste dodali putovanje");
+>>>>>>> origin/master
            
         }
 
