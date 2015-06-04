@@ -63,6 +63,17 @@ namespace TuristickaAgencijaNextDestination.View
                 _putovanje.PutnoOsiguranje = TuristickaAgencijaNextDestination.Model.PutnoOsiguranje.SunceOsiguranje;
             }
 
+            //Validacije
+
+            if (predlozenaDestinacija.Text == "" || cijenaPredlozenog == null)
+                MessageBox.Show("Niste unijeli destinaciju i cijenu", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            if (datumDolaskaPredlozenog == null || datumDolaskaPredlozenog == null)
+                MessageBox.Show("Niste unijeli datum polaska i dolaska !" ,"Greška", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            if (trajanjePredlozenog == null)
+                MessageBox.Show("Niste unijeli dužinu trajanja putovanja", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
+
             TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta predlozenoPutovanjeBezIzleta = new TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta();
             
            
