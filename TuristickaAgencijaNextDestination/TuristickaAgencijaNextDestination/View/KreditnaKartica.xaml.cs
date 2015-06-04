@@ -19,6 +19,7 @@ namespace TuristickaAgencijaNextDestination.View
     /// </summary>
     public partial class KreditnaKartica : Window
     {
+        // KOMENTAR BY RAMIZA
         public KreditnaKartica()
         {
             InitializeComponent();
