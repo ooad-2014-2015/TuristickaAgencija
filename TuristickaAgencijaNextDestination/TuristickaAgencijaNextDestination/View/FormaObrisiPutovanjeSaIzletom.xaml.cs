@@ -40,7 +40,7 @@ namespace TuristickaAgencijaNextDestination.View
                 TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom pbz = (Model.PutovanjeSaIzletom)gridBrisiPutovanjaSaIzletom.SelectedItem;
                // int id = pbz.Id;
                 Model.PutovanjeSaIzletom.ObrisiPutovanjeSaIzletom(pbz);
-                Model.PutovanjeSaIzletom.ucitajPutovanjaSaIzletomUListu();
+      //          //Model.PutovanjeSaIzletom.ucitajPutovanjaSaIzletomUListu();
                 gridBrisiPutovanjaSaIzletom.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom;
                 gridBrisiPutovanjaSaIzletom.Items.Refresh();
                 //Close();
