@@ -26,6 +26,18 @@ namespace TuristickaAgencijaNextDestination
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
+        private bool jeLiPopunjenaForma()
+        {
+            if (txtIme.Text == "") return false;
+            else if (txtPrezime.Text == "") return false;
+            else if (txtEmail.Text == "") return false;
+            else if (txtUsername.Text == "") return false;
+            else if (txtPrezime.Text == "") return false;
+            else if (cmbStatus.SelectedIndex != 0 && cmbStatus.SelectedIndex != 1 && cmbStatus.SelectedIndex != 2) return false;
+            else if (txtBrojKreditneKartice.Text == "") return false;
+            return true;
+        }
+
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
             StatusKlijenta status;
@@ -79,5 +91,7 @@ namespace TuristickaAgencijaNextDestination
             Close();
 
         }
+
+        
     }
 }

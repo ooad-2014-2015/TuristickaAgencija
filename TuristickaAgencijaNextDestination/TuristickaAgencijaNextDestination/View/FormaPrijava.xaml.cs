@@ -68,8 +68,15 @@ namespace TuristickaAgencijaNextDestination
                     }
                 }
             }
+
+            if ((txbUsername.Text == "") || (txbPassword.Password == ""))
+            {
+                MessageBox.Show("Niste unijeli sve potrebne podatke.", "Poruka");
+                txbUsername.Text = "";
+                txbPassword.Password = "";
+            }
             
-            if (!pronasao)
+            if (!pronasao && (txbUsername.Text!="" && txbPassword.Password!=""))
             {
                 MessageBox.Show("Korisnicki nalog sa ovim podacima nije registrovan.", "Poruka");
                 txbUsername.Text = "";
