@@ -34,15 +34,7 @@ namespace TuristickaAgencijaNextDestination.Model
                 listaKNalogaKlijenti.Add(new KorisnickiNalogKlijent(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"), r.GetString("password")));
 
             }
-
-            //MySqlCommand upitKomanda = new MySqlCommand("select * from studenti", con);
-            //MySqlDataReader r = upitKomanda.ExecuteReader();
-            //while (r.Read())
-            //{
-            //    studenti.Add(new Student(r.GetString("Ime"), r.GetString("Prezime"),
-            //   r.GetString("Email"), r.GetDateTime("DatumUpisa")));
-            //    Console.Out.Write(r.GetString("Ime") + " " + r.GetString("Prezime"));
-            //} 
+            con.Close();
         }
 
 

@@ -50,7 +50,7 @@ namespace TuristickaAgencijaNextDestination.View
         {
             //putovanja sa izletom
             gridOdobriPutovanja.ItemsSource = null;
-            gridOdobriPutovanja.ItemsSource = Model.PutovanjeSaIzletom.listaPutovanja;
+            gridOdobriPutovanja.ItemsSource = Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom;
         }
 
         private void btnOdobri_Click(object sender, RoutedEventArgs e)
@@ -98,9 +98,9 @@ namespace TuristickaAgencijaNextDestination.View
                     //selektovan je onaj sa izletom
                     //dodam u listu sa izletom
                     TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom psi = (Model.PutovanjeSaIzletom)gridOdobriPutovanja.SelectedItem;
-                    Model.PutovanjeSaIzletom.listaPutovanja.Add(psi);
+                    Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom.Add(psi);
                    // psi.Id= Model.PutovanjeSaIzletom.listaPutovanja.Capacity + 1;
-                    gridOdobriPutovanja.ItemsSource = Model.PutovanjeSaIzletom.listaPutovanja;
+                    gridOdobriPutovanja.ItemsSource = Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom;
                     gridOdobriPutovanja.Items.Refresh();
                     
                 }

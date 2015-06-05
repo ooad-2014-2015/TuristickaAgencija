@@ -31,7 +31,7 @@ namespace TuristickaAgencijaNextDestination.View
             {
                 //ucitaj listu sa izletom
                 gridOdaberiPutovanje.ItemsSource = null;
-                gridOdaberiPutovanje.ItemsSource = Model.PutovanjeSaIzletom.listaPutovanja;
+                gridOdaberiPutovanje.ItemsSource = Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom;
             }
             else if (rbPutovanjeBezIzleta.IsChecked == true)
             {

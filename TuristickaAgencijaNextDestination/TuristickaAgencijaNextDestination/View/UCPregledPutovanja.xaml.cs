@@ -28,7 +28,7 @@ namespace TuristickaAgencijaNextDestination.View
 
             TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.DodajPutovanjaUListu();
             gridPregledPutovanja.ItemsSource = null;
-            gridPregledPutovanja.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanja;
+            gridPregledPutovanja.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom;
         }
 
 

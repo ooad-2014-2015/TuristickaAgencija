@@ -102,7 +102,7 @@ namespace TuristickaAgencijaNextDestination.Model
         }
         public void DodijeliID()
         {
-            id = PutovanjeSaIzletom.listaPutovanja.Count + 1;
+            id = PutovanjeSaIzletom.listaPutovanjaSaIzletom.Count + 1;
         }
 
 

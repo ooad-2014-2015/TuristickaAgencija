@@ -35,6 +35,9 @@ namespace TuristickaAgencijaNextDestination
             {
 
                 Model.KorisnickiNalogKlijent.ucitajListuKNAlogaIBaze();
+                Model.PutovanjaBezIzleta.DodajPutovanjeBezIzleta(); 
+                Model.PutovanjaBezIzleta.ucitajPutovanjaBezIzletaUListu();
+                
             }
             catch (Exception ex)
             {

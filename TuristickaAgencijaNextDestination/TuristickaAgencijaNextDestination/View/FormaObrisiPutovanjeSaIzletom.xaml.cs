@@ -25,7 +25,7 @@ namespace TuristickaAgencijaNextDestination.View
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
 
             gridBrisiPutovanjaSaIzletom.ItemsSource = null;
-            gridBrisiPutovanjaSaIzletom.ItemsSource = Model.PutovanjeSaIzletom.listaPutovanja;
+            gridBrisiPutovanjaSaIzletom.ItemsSource = Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -40,7 +40,7 @@ namespace TuristickaAgencijaNextDestination.View
                 TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom pbz = (Model.PutovanjeSaIzletom)gridBrisiPutovanjaSaIzletom.SelectedItem;
                // int id = pbz.Id;
                 Model.PutovanjeSaIzletom.ObrisiPutovanjeSaIzletom(pbz);
-                gridBrisiPutovanjaSaIzletom.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanja;
+                gridBrisiPutovanjaSaIzletom.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom;
                 gridBrisiPutovanjaSaIzletom.Items.Refresh();
                 //Close();
                 //TuristickaAgencijaNextDestination.View.FormaObrisiPutovanjeSaIzletom forma = new FormaObrisiPutovanjeSaIzletom();
