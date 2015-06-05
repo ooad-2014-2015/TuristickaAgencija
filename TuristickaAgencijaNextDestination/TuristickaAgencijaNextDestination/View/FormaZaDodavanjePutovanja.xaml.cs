@@ -88,8 +88,10 @@ namespace TuristickaAgencijaNextDestination.View
 
                 // upis putovanja u bazu
                 Model.PutovanjaBezIzleta.upisPutovanjaBezIzletaUBazu(txtDrzava.Text, Convert.ToDouble(txtCijena.Text),
-                    dtpDatumPolaska.Text, dtpdatumOdlaska.Text, Convert.ToInt32((putovanja.DatumDolaska -putovanja.DatumPolaska).TotalDays),
-                    Convert.ToInt32(txtBrojMjesta.Text), putovanja.PrevoznoSredstvo, putovanja.PutnoOsiguranje, 
+                    dtpDatumPolaska.Text, dtpdatumOdlaska.Text, 
+                    Convert.ToInt32((putovanja.DatumDolaska -putovanja.DatumPolaska).TotalDays),
+                    Convert.ToInt32(txtBrojMjesta.Text), putovanja.PrevoznoSredstvo, 
+                    putovanja.PutnoOsiguranje, 
                     Model.PutovanjaBezIzleta.DajMiNaredniID());
 
                 // nova lista putovanja

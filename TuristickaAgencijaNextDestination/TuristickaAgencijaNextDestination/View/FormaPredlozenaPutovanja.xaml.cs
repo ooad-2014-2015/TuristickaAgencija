@@ -82,7 +82,7 @@ namespace TuristickaAgencijaNextDestination.View
                 //racunanje trajanja putovanja
                 int d = predlozenoPutovanjeBezIzleta.DatumDolaska.DayOfYear - predlozenoPutovanjeBezIzleta.DatumPolaska.DayOfYear + 1;
                 predlozenoPutovanjeBezIzleta.TrajanjePutovanja = d;
-                predlozenoPutovanjeBezIzleta.TrajanjePutovanja = Convert.ToInt32(trajanjePredlozenog.Text);
+                //predlozenoPutovanjeBezIzleta.TrajanjePutovanja = Convert.ToInt32(trajanjePredlozenog.Text);
                 predlozenoPutovanjeBezIzleta.BrojSlobodnihMjesta = Convert.ToInt32(slobodnaMjestaPredlozeno.Text);
                 predlozenoPutovanjeBezIzleta.PrevoznoSredstvo = _putovanje.PrevoznoSredstvo;
                 predlozenoPutovanjeBezIzleta.PutnoOsiguranje = _putovanje.PutnoOsiguranje;
@@ -96,6 +96,19 @@ namespace TuristickaAgencijaNextDestination.View
                 }
                 else
                     // dodaj putovanje u listu
+                    try
+                    {
+                        Model.PutovanjaBezIzleta.upisPredlozenogPutovanjaBezIzletaUBazu(predlozenaDestinacija.Text,
+                            Convert.ToDouble(cijenaPredlozenog.Text), datumPolaskaPredlozenog.Text,
+                            datumDolaskaPredlozenog.Text,
+                            Convert.ToInt32((predlozenoPutovanjeBezIzleta.DatumDolaska - predlozenoPutovanjeBezIzleta.DatumPolaska).TotalDays),
+                            predlozenoPutovanjeBezIzleta.BrojSlobodnihMjesta, predlozenoPutovanjeBezIzleta.PrevoznoSredstvo,
+                            predlozenoPutovanjeBezIzleta.PutnoOsiguranje, Model.PutovanjaBezIzleta.dajNaredniIdPredlozeno());
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
 
                     Model.PutovanjaBezIzleta.listaPredlozenihPutovanjaBezIzleta.Add(predlozenoPutovanjeBezIzleta);
                     MessageBox.Show("Uspješno ste dodali putovanje bez izleta!", "Obavještenje", MessageBoxButton.OK, MessageBoxImage.Information);

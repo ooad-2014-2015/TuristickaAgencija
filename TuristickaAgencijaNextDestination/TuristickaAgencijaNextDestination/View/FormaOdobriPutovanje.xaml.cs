@@ -76,12 +76,21 @@ namespace TuristickaAgencijaNextDestination.View
 
 
                     //njega dodaje u listu
-                    Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Add(pbz);
+                    //Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Add(pbz);
+                    Model.PutovanjaBezIzleta.upisPutovanjaBezIzletaUBazu(pbz.Destinacija,
+                        pbz.Cijena, Convert.ToString(pbz.DatumDolaska),
+                        Convert.ToString(pbz.DatumDolaska),
+                        Convert.ToInt32((pbz.DatumDolaska - pbz.DatumDolaska).TotalDays),
+                        pbz.BrojSlobodnihMjesta, pbz.PrevoznoSredstvo, pbz.PutnoOsiguranje,
+                        Model.PutovanjaBezIzleta.DajMiNaredniID());
+
+                    Model.PutovanjaBezIzleta.ucitajPutovanjaBezIzletaUListu();
      
                     //pbz.Id = Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Capacity + 1;
                     
-                    int id = pbz.Id;
+                    //int id = pbz.Id;
                     Model.PutovanjaBezIzleta.ObrisiPredlozenoPutovanje(pbz);
+                    Model.PutovanjaBezIzleta.ucitajPredlozenoPutovanjeBezIzletaUListu();
 
                     //potrebno je izbrisati sa grida
                      gridOdobriPutovanja.ItemsSource = Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta;
@@ -97,9 +106,21 @@ namespace TuristickaAgencijaNextDestination.View
                 {
                     //selektovan je onaj sa izletom
                     //dodam u listu sa izletom
+                    
                     TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom psi = (Model.PutovanjeSaIzletom)gridOdobriPutovanja.SelectedItem;
-                    Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom.Add(psi);
+                    Model.PutovanjeSaIzletom.upisPutovanjaSaIzletomUBazu(psi.Destinacija,
+                        psi.Cijena, Convert.ToString(psi.DatumPolaska),
+                        Convert.ToString(psi.DatumDolaska),
+                        Convert.ToInt32((psi.DatumDolaska - psi.DatumPolaska).TotalDays),
+                        psi.BrojSlobodnihMjesta, psi.PrevoznoSredstvo, psi.PutnoOsiguranje,
+                        Model.PutovanjeSaIzletom.DajMiNaredniID(), psi.Izlet);
+
+                    Model.PutovanjeSaIzletom.ucitajPutovanjaSaIzletomUListu();
+
+                    //Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom.Add(psi);
                    // psi.Id= Model.PutovanjeSaIzletom.listaPutovanja.Capacity + 1;
+                    Model.PutovanjeSaIzletom.ucitajPredlozenoPutovanjeSaIzletomUListu();
+
                     gridOdobriPutovanja.ItemsSource = Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom;
                     gridOdobriPutovanja.Items.Refresh();
                     

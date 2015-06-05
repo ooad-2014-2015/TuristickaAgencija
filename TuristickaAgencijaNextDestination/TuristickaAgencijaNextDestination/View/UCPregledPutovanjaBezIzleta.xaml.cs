@@ -23,7 +23,7 @@ namespace TuristickaAgencijaNextDestination.View
         public UCPregledPutovanjaBezIzleta()
         {
             InitializeComponent();
-            TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.DodajPutovanjeBezIzleta();
+            //TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.DodajPutovanjeBezIzleta();
             gridPregledPutovanjaBezIzleta.ItemsSource = null;
             gridPregledPutovanjaBezIzleta.ItemsSource = TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta;
         }

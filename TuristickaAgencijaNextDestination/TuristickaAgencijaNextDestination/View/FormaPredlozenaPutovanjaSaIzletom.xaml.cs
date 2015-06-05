@@ -84,7 +84,7 @@ namespace TuristickaAgencijaNextDestination.View
                 predlozenoPutovanjeSaIzletom.DatumDolaska = Convert.ToDateTime(datumDolaskaPredlozenog.Text);
                 // racunanje trajanja putovanja
                 predlozenoPutovanjeSaIzletom.TrajanjePutovanja = predlozenoPutovanjeSaIzletom.DatumDolaska.DayOfYear - predlozenoPutovanjeSaIzletom.DatumPolaska.DayOfYear + 1;
-                predlozenoPutovanjeSaIzletom.TrajanjePutovanja = Convert.ToInt32(trajanjePredlozenog.Text);
+                //predlozenoPutovanjeSaIzletom.TrajanjePutovanja = Convert.ToInt32(trajanjePredlozenog.Text);
                 predlozenoPutovanjeSaIzletom.BrojSlobodnihMjesta = Convert.ToInt32(slobodnaMjestaPredlozeno.Text);
                 predlozenoPutovanjeSaIzletom.PrevoznoSredstvo = _putovanje.PrevoznoSredstvo;
                 predlozenoPutovanjeSaIzletom.PutnoOsiguranje = _putovanje.PutnoOsiguranje;
@@ -99,7 +99,18 @@ namespace TuristickaAgencijaNextDestination.View
                 else
                     // dodaj putovanje u listu
 
-                    Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom.Add(predlozenoPutovanjeSaIzletom);
+                    //Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom.Add(predlozenoPutovanjeSaIzletom);
+                Model.PutovanjeSaIzletom.upisPredlozenogPutovanjaSaIzletomUBazu(predlozenoPutovanjeSaIzletom.Destinacija,
+                    predlozenoPutovanjeSaIzletom.Cijena,
+                    Convert.ToString(predlozenoPutovanjeSaIzletom.DatumPolaska),
+                    Convert.ToString(predlozenoPutovanjeSaIzletom.DatumDolaska),
+                    Convert.ToInt32((predlozenoPutovanjeSaIzletom.DatumDolaska - predlozenoPutovanjeSaIzletom.DatumPolaska).TotalDays),
+                    predlozenoPutovanjeSaIzletom.BrojSlobodnihMjesta, predlozenoPutovanjeSaIzletom.PrevoznoSredstvo,
+                    predlozenoPutovanjeSaIzletom.PutnoOsiguranje, predlozenoPutovanjeSaIzletom.Id,
+                    predlozenoPutovanjeSaIzletom.Izlet);
+
+                Model.PutovanjeSaIzletom.ucitajPredlozenoPutovanjeSaIzletomUListu();
+
                     MessageBox.Show("Usješno ste dodali predloženo putovanje", "Informacija", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             predlozenaDestinacija.Text = "";

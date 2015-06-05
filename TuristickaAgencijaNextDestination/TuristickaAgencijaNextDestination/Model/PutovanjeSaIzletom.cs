@@ -167,6 +167,92 @@ namespace TuristickaAgencijaNextDestination.Model
                    break;
                }
            }
+           Model.PutovanjeSaIzletom.obrisiPutovanjeSaIzletomIzBaze(p.Destinacija);
+
        }
+
+       // rad sa bazom za predlozena putovanja sa izletom
+       public static void upisPredlozenogPutovanjaSaIzletomUBazu(string destinacija, double cijena,
+           string datumPolaska, string datumDolaska, int trajanjePutovanja,
+           int brojSlobodnihMjesta, PrevoznoSredstvo prevoznoSredstvo,
+           PutnoOsiguranje putnoOsiguranje, int id, string izlet)
+       {
+           string username = "root";
+           string password = "";
+           string db = "turistickaagencija";
+
+           string connectionString = "server=localhost;user=" + username + ";pwd=" + password + ";database=" + db;
+           MySqlConnection msc = new MySqlConnection(connectionString);
+           msc.Open();
+
+           MySqlCommand insertUpit = new MySqlCommand("insert into predlozenaputovanjasaizletom(destinacija, cijena, datumPolaska, datumDolaska, trajanjePutovanja, brojSlobodnihMjesta, prevoznoSredstvo, putnoOsiguranje, id, izlet) values ('"
+               + destinacija + "','" + cijena + "','" + datumPolaska + "','" + datumDolaska + "','"
+               + trajanjePutovanja + "','" + brojSlobodnihMjesta + "','" + prevoznoSredstvo.ToString()
+               + "','" + putnoOsiguranje.ToString() + "','" + id + "','" + izlet + "')", msc);
+
+           insertUpit.ExecuteNonQuery();
+
+           msc.Close();
+
+       }
+
+       public static void ucitajPredlozenoPutovanjeSaIzletomUListu()
+       {
+           Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom.Clear();
+
+           string username = "root";
+           string password = "";
+           string db = "turistickaagencija";
+           //Konekcija na bazu 
+           string connectionString = "server=localhost;user=" + username + ";pwd=" + password + ";database=" + db;
+           MySqlConnection con = new MySqlConnection(connectionString);
+           con.Open();
+
+           MySqlCommand upitKomanda = new MySqlCommand("select * from predlozenaputovanjasaizletom", con);
+           MySqlDataReader r = upitKomanda.ExecuteReader();
+           while (r.Read())
+           {
+               Model.PutovanjeSaIzletom._listaPredlozenihPutovanjaSaIzletom.Add(new PutovanjeSaIzletom(r.GetString("destinacija"),
+                   r.GetDouble("cijena"), r.GetString("datumPolaska"), r.GetString("datumDolaska"),
+                   r.GetInt32("trajanjePutovanja"), r.GetInt32("brojSlobodnihMjesta"),
+                   r.GetString("prevoznoSredstvo"), r.GetString("putnoOsiguranje"), r.GetInt32("id"),
+                   r.GetString("izlet")));
+           }
+           con.Close();
+       }
+
+       public static void obrisiPredlozenoPutovanjeSaIzletomIzBaze(string _destinacija)
+       {
+           string username = "root";
+           string password = "";
+           string db = "turistickaagencija";
+           //Konekcija na bazu 
+           string connectionString = "server=localhost;user=" + username + ";pwd=" + password + ";database=" + db;
+           MySqlConnection con = new MySqlConnection(connectionString);
+           con.Open();
+
+           MySqlCommand upitKomanda = new MySqlCommand("delete from predlozenaputovanjasaizletom where destinacija=" + _destinacija, con);
+           MySqlDataReader r = upitKomanda.ExecuteReader();
+
+           con.Close();
+       }
+
+       public static void obrisiPutovanjeSaIzletomIzBaze(string _destinacija)
+       {
+           string username = "root";
+           string password = "";
+           string db = "turistickaagencija";
+           //Konekcija na bazu 
+           string connectionString = "server=localhost;user=" + username + ";pwd=" + password + ";database=" + db;
+           MySqlConnection con = new MySqlConnection(connectionString);
+           con.Open();
+
+           MySqlCommand upitKomanda = new MySqlCommand("delete from predlozenaputovanjabezizleta where destinacija=" + _destinacija.ToString(), con);
+
+           MySqlDataReader r = upitKomanda.ExecuteReader();
+
+           con.Close();
+       }
+
     }
 }
