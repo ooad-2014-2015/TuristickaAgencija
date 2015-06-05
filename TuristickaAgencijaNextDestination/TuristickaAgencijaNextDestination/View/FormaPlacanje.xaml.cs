@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -43,6 +44,8 @@ namespace TuristickaAgencijaNextDestination.View
             }
             // da se izbrisu podaci iz liste
             TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaOdabranihPutovanja.Clear();
+
+       
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

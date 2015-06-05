@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -31,6 +32,26 @@ namespace TuristickaAgencijaNextDestination.View
 
         private void btObrisiPredlozeno_Click(object sender, RoutedEventArgs e)
         {
+            //Upotreba Thread - a (punjenje progressBar-a)
+
+            new Thread(() =>
+            {
+
+                btObrisiPredlozeno.Dispatcher.BeginInvoke(new Action(() => { btObrisiPredlozeno.IsEnabled = false; }));
+
+                for (int i = 0; i < 100; i++)
+                {
+                    progress.Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        progress.Value = i;
+                    }));
+                    Thread.Sleep(1000);
+                }
+                btObrisiPredlozeno.Dispatcher.BeginInvoke(new Action(() => { btObrisiPredlozeno.IsEnabled = true; }));
+
+            }).Start();
+
+
             if (gridObrisiPredlozenoPutovanje.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Niste odabrali niti jedno putovanje", "Error", MessageBoxButton.OKCancel, MessageBoxImage.Error);
