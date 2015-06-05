@@ -231,8 +231,10 @@ namespace TuristickaAgencijaNextDestination.Model
            MySqlConnection con = new MySqlConnection(connectionString);
            con.Open();
 
-           MySqlCommand upitKomanda = new MySqlCommand("delete from predlozenaputovanjasaizletom where destinacija=" + _destinacija, con);
-           MySqlDataReader r = upitKomanda.ExecuteReader();
+           MySqlCommand cmd = new MySqlCommand("DELETE FROM predlozenaputovanjasaizletom WHERE destinacija = '" + _destinacija + "'", con);
+
+           cmd.ExecuteNonQuery();
+
 
            con.Close();
        }
@@ -247,9 +249,7 @@ namespace TuristickaAgencijaNextDestination.Model
            MySqlConnection con = new MySqlConnection(connectionString);
            con.Open();
 
-           //MySqlCommand upitKomanda = new MySqlCommand("delete from predlozenaputovanjabezizleta where destinacija='" + _destinacija + "'", con);
-
-           MySqlCommand cmd = new MySqlCommand("DELETE FROM predlozenaputovanjabezizleta WHERE destinacija = '" + _destinacija + "'", con);
+           MySqlCommand cmd = new MySqlCommand("DELETE FROM putovanjabezizleta WHERE destinacija = '" + _destinacija + "'", con);
 
            cmd.ExecuteNonQuery();
 

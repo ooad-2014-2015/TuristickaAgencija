@@ -231,7 +231,7 @@ namespace TuristickaAgencijaNextDestination.Model
                     break;
                 }
             }
-            Model.PutovanjaBezIzleta.obrisiPutovanjeBezIzletaIzBaze(p.Id);
+            Model.PutovanjaBezIzleta.obrisiPutovanjeBezIzletaIzBaze(p.Destinacija);
         }
 
         // rad sa bazom za predlozena putovanja bez izleta
@@ -293,13 +293,14 @@ namespace TuristickaAgencijaNextDestination.Model
             MySqlConnection con = new MySqlConnection(connectionString);
             con.Open();
 
-            MySqlCommand upitKomanda = new MySqlCommand("delete from predlozenaputovanjabezizleta where destinacija="+_destinacija, con);
-            MySqlDataReader r = upitKomanda.ExecuteReader();
+            MySqlCommand cmd = new MySqlCommand("DELETE FROM predlozenaputovanjabezizleta WHERE destinacija = '" + _destinacija + "'", con);
+
+            cmd.ExecuteNonQuery();
 
             con.Close();
         }
 
-        public static void obrisiPutovanjeBezIzletaIzBaze(int _id)
+        public static void obrisiPutovanjeBezIzletaIzBaze(string _destinacija)
         {
             string username = "root";
             string password = "";
@@ -309,8 +310,9 @@ namespace TuristickaAgencijaNextDestination.Model
             MySqlConnection con = new MySqlConnection(connectionString);
             con.Open();
 
-            MySqlCommand upitKomanda = new MySqlCommand("delete from predlozenaputovanjabezizleta where id=" + _id, con);
-            MySqlDataReader r = upitKomanda.ExecuteReader();
+            MySqlCommand cmd = new MySqlCommand("DELETE FROM putovanjabezizleta WHERE destinacija = '" + _destinacija + "'", con);
+
+            cmd.ExecuteNonQuery();
 
             con.Close();
         }
