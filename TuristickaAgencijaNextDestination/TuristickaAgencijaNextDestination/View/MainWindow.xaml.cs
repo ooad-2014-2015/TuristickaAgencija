@@ -29,7 +29,21 @@ namespace TuristickaAgencijaNextDestination
             Model.KorisnickiNalogTAgent.listaKNalogaTAgent.Add(new Model.KorisnickiNalogTAgent(tAgent, "tagent", "tagent"));
 
             Klijent klijent = new Klijent("Klijent", "Klijent", "", 000, StatusKlijenta.ostalo);
-            Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Add(new Model.KorisnickiNalogKlijent(klijent, "klijent", "klijent"));
+            Model.KorisnickiNalogKlijent.listaKNalogaKlijenti.Add(new Model.KorisnickiNalogKlijent(klijent.ime, klijent.prezime, "klijent", "klijent"));
+
+            try
+            {
+
+                Model.KorisnickiNalogKlijent.ucitajListuKNAlogaIBaze();
+                Model.PutovanjaBezIzleta.DodajPutovanjeBezIzleta(); 
+                Model.PutovanjaBezIzleta.ucitajPutovanjaBezIzletaUListu();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             
         }
 

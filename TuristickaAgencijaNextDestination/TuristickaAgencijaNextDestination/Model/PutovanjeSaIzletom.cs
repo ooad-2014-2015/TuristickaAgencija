@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace TuristickaAgencijaNextDestination.Model
 {
    public class PutovanjeSaIzletom:Putovanje
     {
+        public int id { get; set; }
+
         string izlet;
 
         public string Izlet
@@ -19,7 +22,7 @@ namespace TuristickaAgencijaNextDestination.Model
         public PutovanjeSaIzletom() { }
 
        //OVDJE ZELIM DA NAPRAVIM LISTU SA IZLETOM
-        public static List<PutovanjeSaIzletom> listaPutovanja = new List<PutovanjeSaIzletom>();
+        public static List<PutovanjeSaIzletom> listaPutovanjaSaIzletom = new List<PutovanjeSaIzletom>();
         public static List<PutovanjeSaIzletom> listaOdabranihPutovanja = new List<PutovanjeSaIzletom>();
         //public static List<Izleti> listaIzleta = new List<Izleti>();
    
@@ -56,6 +59,73 @@ namespace TuristickaAgencijaNextDestination.Model
 
        public static List<Putovanje> _listaPredlozenihPutovanjaSaIzletom = new List<Putovanje>();
 
+       public PutovanjeSaIzletom(string _destinacija, double _cijena, string _datumPolaska, string _datumDolaska, int _trajanjePutovanja, int _brojSlobodnihMjesta, string _prevoznoSredstvo, string _putnoOsiguranje, int _id, string _izlet)
+        {
+            Destinacija = _destinacija;
+            Cijena = _cijena;
+            DatumDolaska = Convert.ToDateTime(_datumDolaska);
+            DatumPolaska = Convert.ToDateTime(_datumPolaska);
+            TrajanjePutovanja = _trajanjePutovanja;
+            BrojSlobodnihMjesta = _brojSlobodnihMjesta;
+            if (_prevoznoSredstvo == "avion") PrevoznoSredstvo = PrevoznoSredstvo.avion;
+            else if (_prevoznoSredstvo == "brod") PrevoznoSredstvo = PrevoznoSredstvo.brod;
+            else if (_prevoznoSredstvo == "autobus") PrevoznoSredstvo = PrevoznoSredstvo.autobus;
+            else PrevoznoSredstvo = PrevoznoSredstvo.voz;
+
+            if (_putnoOsiguranje == "SarajevoOsiguranje") PutnoOsiguranje = PutnoOsiguranje.SarajevoOsiguranje;
+            else if (_putnoOsiguranje == "TriglavOsiguranje") PutnoOsiguranje = PutnoOsiguranje.TriglavOsiguranje;
+            else if (_putnoOsiguranje == "SunceOsiguranje") PutnoOsiguranje = PutnoOsiguranje.SunceOsiguranje;
+            else PutnoOsiguranje = PutnoOsiguranje.ASAOsiguranje;
+
+            id = _id;
+            izlet = _izlet;
+
+        }
+
+       // unos putovanja sa izletom u bazu
+       public static void upisPutovanjaSaIzletomUBazu(string destinacija, double cijena, string datumPolaska, string datumDolaska, int trajanjePutovanja, int brojSlobodnihMjesta, PrevoznoSredstvo prevoznoSredstvo, PutnoOsiguranje putnoOsiguranje, int id, string izlet)
+       {
+           string username = "root";
+           string password = "";
+           string db = "turistickaagencija";
+
+           string connectionString = "server=localhost;user=" + username + ";pwd=" + password + ";database=" + db;
+           MySqlConnection msc = new MySqlConnection(connectionString);
+           msc.Open();
+
+           MySqlCommand insertUpit = new MySqlCommand("insert into putovanjasaizletom(destinacija, cijena, datumPolaska, datumDolaska, trajanjePutovanja, brojSlobodnihMjesta, prevoznoSredstvo, putnoOsiguranje, id, izlet) values ('" + destinacija + "','" + cijena + "','" + datumPolaska + "','" + datumDolaska + "','" + trajanjePutovanja + "','" + brojSlobodnihMjesta + "','" + prevoznoSredstvo.ToString() + "','" + putnoOsiguranje.ToString() + "','" + id + "','" + izlet + "')", msc);
+
+           insertUpit.ExecuteNonQuery();
+
+           msc.Close();
+
+       }
+
+       public static void ucitajPutovanjaSaIzletomUListu()
+       {
+           Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom.Clear();
+
+           string username = "root";
+           string password = "";
+           string db = "turistickaagencija";
+           //Konekcija na bazu 
+           string connectionString = "server=localhost;user=" + username + ";pwd=" + password + ";database=" + db;
+           MySqlConnection con = new MySqlConnection(connectionString);
+           con.Open();
+
+           MySqlCommand upitKomanda = new MySqlCommand("select * from putovanjasaizletom", con);
+           MySqlDataReader r = upitKomanda.ExecuteReader();
+           while (r.Read())
+           {
+               Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom.Add(new PutovanjeSaIzletom(r.GetString("destinacija"),
+                   r.GetDouble("cijena"), r.GetString("datumPolaska"), r.GetString("datumDolaska"),
+                   r.GetInt32("trajanjePutovanja"), r.GetInt32("brojSlobodnihMjesta"),
+                   r.GetString("prevoznoSredstvo"), r.GetString("putnoOsiguranje"), 
+                   r.GetInt32("id"), r.GetString("izlet")));
+           }
+           con.Close();
+       }
+
        public static int dajNaredniIdPredlozeno()
        {
            return _listaPredlozenihPutovanjaSaIzletom.Count + 1;
@@ -85,15 +155,15 @@ namespace TuristickaAgencijaNextDestination.Model
        */
        public static int DajMiNaredniID()
        {
-           return listaPutovanja.Count + 1;
+           return listaPutovanjaSaIzletom.Count + 1;
        }
        public static void ObrisiPutovanjeSaIzletom(PutovanjeSaIzletom p)
        {
-           for (int i = 0; i < listaPutovanja.Count(); i++)
+           for (int i = 0; i < listaPutovanjaSaIzletom.Count(); i++)
            {
-               if (p.Id == listaPutovanja[i].Id)
+               if (p.Id == listaPutovanjaSaIzletom[i].Id)
                {
-                   listaPutovanja.RemoveAt(i);
+                   listaPutovanjaSaIzletom.RemoveAt(i);
                    break;
                }
            }

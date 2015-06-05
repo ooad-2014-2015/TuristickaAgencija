@@ -83,9 +83,16 @@ namespace TuristickaAgencijaNextDestination.View
                 putovanja.PutnoOsiguranje = putovanje1.PutnoOsiguranje;
                 putovanja.TrajanjePutovanja = Convert.ToInt32(txtTrajanjePutovanja.Text);
                 // TuristickaAgencijaNextDestination.Model.PutovanjaBezIzleta.listaPutovanjaBezIzleta.Add(putovanja);
-                TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanja.Add(putovanja);
+                
+                // nema potrebe sada ubacivati ovako kada imamo bazu
+                //TuristickaAgencijaNextDestination.Model.PutovanjeSaIzletom.listaPutovanjaSaIzletom.Add(putovanja);
 
+                Model.PutovanjeSaIzletom.upisPutovanjaSaIzletomUBazu(txtDrzava.Text, Convert.ToDouble(txtCijena.Text),
+                    dtpDatumPolaska.Text, dtpdatumOdlaska.Text, Convert.ToInt32((putovanja.DatumDolaska - putovanja.DatumPolaska).TotalDays),
+                    Convert.ToInt32(txtBrojMjesta.Text), putovanja.PrevoznoSredstvo, putovanja.PutnoOsiguranje, 
+                    Model.PutovanjeSaIzletom.DajMiNaredniID(), txtIzlet.Text);
 
+                
 
                 MessageBox.Show("Snimljeno!");
             }

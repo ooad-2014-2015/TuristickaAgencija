@@ -3,16 +3,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace TuristickaAgencijaNextDestination.Model
 {
     public class KorisnickiNalogKlijent :KorisnickiNalog
     {
-        public Klijent vlasnik { get; set; }
+        public string imeVlasnika { get; set; }
+        public string prezimeVlasnika { get; set; }
 
         public static List<KorisnickiNalogKlijent> listaKNalogaKlijenti = new List<KorisnickiNalogKlijent>();
 
         public static List<KorisnickiNalogKlijent> listaKorisnickihNalogaZaBrisanje = new List<KorisnickiNalogKlijent>();
+
+        // ucitaj listu korisnickih naloga iz baze
+        public static void ucitajListuKNAlogaIBaze()
+        {
+            string username = "root";
+            string password = "";
+            string db = "turistickaagencija";
+            //Konekcija na bazu 
+            string connectionString = "server=localhost;user=" + username + ";pwd=" + password + ";database=" + db;
+            MySqlConnection con = new MySqlConnection(connectionString);
+            con.Open();
+
+            MySqlCommand upitKomanda = new MySqlCommand("select * from korisnickinalozi", con);
+            MySqlDataReader r = upitKomanda.ExecuteReader();
+            while (r.Read())
+            {
+                listaKNalogaKlijenti.Add(new KorisnickiNalogKlijent(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"), r.GetString("password")));
+
+            }
+            con.Close();
+        }
+
 
         //Funkcija za brisanje korisnickih naloga
 
@@ -32,11 +56,14 @@ namespace TuristickaAgencijaNextDestination.Model
 
         }
 
-        public KorisnickiNalogKlijent(Klijent _vlasnik, string _username, string _password)
+        public KorisnickiNalogKlijent(string _ime, string _prezime, string _username, string _password)
             : base(_username, _password)
         {
-            vlasnik = _vlasnik;
+            imeVlasnika = _ime;
+            prezimeVlasnika = _prezime;
         }
+
+        
      
     }
 }

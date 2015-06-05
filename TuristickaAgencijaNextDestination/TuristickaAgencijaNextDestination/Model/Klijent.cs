@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace TuristickaAgencijaNextDestination
 {
@@ -10,7 +11,6 @@ namespace TuristickaAgencijaNextDestination
 
     public class Klijent : Osoba
     {
-        //Komentar by bajgorio
 
         public int brojKreditneKartice { get; set; }
 
@@ -58,6 +58,25 @@ namespace TuristickaAgencijaNextDestination
             }
 
             return (idSum % 10 == 0);
+        }
+
+
+        // unos korisnickog naloga klijenta u bazu
+        public void upisKNalogaUBazu(string _ime, string _prezime, string _username, string _password)
+        {
+            string username = "root";
+            string password = "";
+            string db = "turistickaagencija";
+
+            string connectionString = "server=localhost;user=" + username + ";pwd=" + password + ";database=" + db;
+            MySqlConnection msc = new MySqlConnection(connectionString);
+            msc.Open();
+
+            MySqlCommand insertUpit = new MySqlCommand("insert into korisnickinalozi(ime, prezime, username, password) values ('" + _ime + "','" + _prezime + "','" + _username + "','" + _password + "')", msc); 
+            insertUpit.ExecuteNonQuery();
+
+            msc.Close();
+
         }
       
     }
