@@ -22,11 +22,12 @@
             <ListBoxItem Content="Penzioner"/>
             <ListBoxItem Content="Ostalo"/>
         </ComboBox>
-        <Button x:Name="btnSignUp" TabIndex="7" Content="SignUp" HorizontalAlignment="Left" Margin="354,263,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.504,0.008" Click="btnSignUp_Click" ForceCursor="True">
+        <Button x:Name="btnSignUp" TabIndex="7" Content="SignUp" HorizontalAlignment="Left" Margin="386,263,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.504,0.008" Click="btnSignUp_Click" ForceCursor="True">
         </Button>
         <Label x:Name="lblBrojKreditneKartice"  Foreground="Brown"  Content="Broj kreditne kartice" HorizontalAlignment="Left" Margin="233,225,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtBrojKreditneKartice" TabIndex="6" HorizontalAlignment="Left" Height="23" Margin="354,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120">
         </TextBox>
+        <Button Content="Nazad" HorizontalAlignment="Left" Margin="272,263,0,0" VerticalAlignment="Top" Width="88" Click="Button_Click"/>
 
     </Grid>
 </Window>
